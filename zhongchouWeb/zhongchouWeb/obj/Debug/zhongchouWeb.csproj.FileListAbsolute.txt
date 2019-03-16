@@ -1,6 +1,12 @@
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\zhongchouWeb.dll.config
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\zhongchouWeb.dll
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\zhongchouWeb.pdb
-F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\obj\Debug\zhongchouWeb.csprojResolveAssemblyReference.cache
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\obj\Debug\zhongchouWeb.dll
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\obj\Debug\zhongchouWeb.pdb
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\obj\Debug\zhongchouWeb.csprojResolveAssemblyReference.cache
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\BLL.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\MODELS.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\DAL.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\BLL.pdb
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\MODELS.pdb
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\zhongchouWeb\bin\DAL.pdb

@@ -3,3 +3,7 @@ F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BL
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\obj\Debug\BLL.dll
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\obj\Debug\BLL.pdb
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\DAL.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\MODELS.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\DAL.pdb
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\MODELS.pdb

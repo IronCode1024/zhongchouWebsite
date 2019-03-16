@@ -1,0 +1,254 @@
+﻿body {
+    color: #333;
+}
+
+
+/*页眉部分样式*/
+.siteMTopBox {
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.mainInnerBox {
+    width: 1024px;
+    margin: 0px auto;
+    display: block;
+    font-size: inherit;
+}
+
+/*登录注册样式字体*/
+.siteHLoginBox {
+    margin-top: 20px;
+    float: right;
+}
+
+    .siteHLoginBox a:hover {
+        color: red;
+    }
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.relative {
+    position: relative;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.siteMIndexA {
+    float: left;
+    width: 160px;
+    height: 70px;
+}
+
+a {
+    color: inherit;
+    *color: #333;
+    text-decoration: none;
+}
+
+a, .btn {
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+
+/*导航栏样式*/
+.siteHNavBox {
+    margin-top: 20px;
+    float: left;
+}
+
+.siteHNavItem {
+    float: left;
+    position: relative;
+    z-index: 10;
+    margin-left: 20px;
+    height: 30px;
+    line-height: 30px;
+}
+
+    .siteHNavItem:hover {
+        float: left;
+        position: relative;
+        z-index: 10;
+        margin-left: 20px;
+        line-height: 30px;
+        border-bottom: 2px solid red;
+        height: 50px;
+        /*border-bottom-color:red;*/
+    }
+
+    .siteHNavItem a:hover {
+        color: red;
+    }
+
+/*发起众筹按钮样式*/
+.siteM_fqBtn {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 90px;
+    text-align: center;
+    color: #fff;
+    margin: 20px 0px 0px 24px;
+    font-size: 14px;
+    border-radius: 3px;
+    background: #2e86cb;
+    background: -moz-linear-gradient(top, #55b5ff 0%, #2e86cb 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#55b5ff), color-stop(100%,#2e86cb));
+    background: -webkit-linear-gradient(top, #55b5ff 0%,#2e86cb 100%);
+    background: -o-linear-gradient(top, #55b5ff 0%,#2e86cb 100%);
+    background: -ms-linear-gradient(top, #55b5ff 0%,#2e86cb 100%);
+    background: linear-gradient(to bottom, #55b5ff 0%,#2e86cb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55b5ff', endColorstr='#2e86cb',GradientType=0 );
+}
+
+/*其他登录样式*/
+.other-login a, .other-login a:hover {
+    background-image: url("../Content/Images/LoginImg/txqq.jpg");
+}
+
+.other-login a {
+    float: left;
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+}
+
+
+/*搜索框样式*/
+.siteMSearch {
+    float: left;
+    margin-top: 22px;
+    line-height: 20px;
+}
+
+.siteMSearchInput {
+    background-image: url(/Content/Images/IndexImg/sosuo.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 130px;
+    background-position-y: 3px;
+    width: 150px;
+    height: 20px;
+    float: left;
+    /*position: relative;*/
+    position: absolute;
+    /*z-index: 10;*/
+}
+
+.fr {
+    position: relative;
+    bottom: 17px;
+    /*right:-25%;*/
+    left: 136px;
+}
+
+.search-input {
+    width: 100px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+/*页脚部分样式*/
+/*页脚大框样式*/
+.siteMBottomBox {
+    height: 302px;
+    border: 1px solid red;
+}
+/*中内容框*/
+.mainBox {
+    width: 1292px;
+    margin: 0px auto;
+    display: block;
+    font-size:12px;
+    /*font-size: inherit;*/
+    /*border: 1px solid red;*/
+}
+
+/*内容上部中部大容框*/
+.mainTopBox {
+    width: 1292px;
+    margin: 0px auto;
+    height: 180px;
+    /*border: 1px solid red;*/
+    border-bottom:1px solid #505050;
+    background-color:#5a5a5a;
+}
+/*内容上部*/
+.mainTopMiddle {
+    width:1140px;
+    margin:0px auto;
+    /*border:1px solid red;*/
+    height: 180px;
+
+    background-image: url(/Content/Images/MasterEditionImg/logo02.png);
+    background-repeat: no-repeat;
+    background-position-x: 962px;
+    background-position-y: -1px;
+}
+
+.sitebottomHNavItem h3 {
+    color: #ff8e54;
+}
+
+.sitebottomHNavItem {
+    float: left;
+    position: relative;
+    z-index: 10;
+    /*margin-left: 40px;*/
+    height: 30px;
+    line-height: 30px;
+}
+
+    ul {
+        list-style: none;
+    }
+
+    .sitebottomHNavItem li {
+        float: left;
+    }
+.topitemUl li a {
+    color:white;
+}
+.topitemUl li a:hover {
+    color:#ff8e54;
+}
+
+.topitemUl li span {
+    color:#6f6b60;
+}
+
+
+
+/*内容下部*/
+.mainBottomBox {
+    width: 1292px;
+    margin: 0px auto;
+    height: 120px;
+    /*border: 1px solid red;*/
+    background-color:#505050;
+}
+.sitebottomItem {
+    width:1140px;
+    margin:0px auto;
+    border:1px solid #505050;
+    height:115px;
+}

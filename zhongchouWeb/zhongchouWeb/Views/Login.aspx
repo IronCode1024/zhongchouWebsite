@@ -35,15 +35,17 @@
                 <div class="panel-heading text-center"><h2 style="margin-top:5px">用户登录</h2></div>
                 <div class="panel-body">
                     <form id="form2" runat="server">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBox1"  class="form-Tips">*用户名不能空</asp:RequiredFieldValidator>
                         <div class="form-group" style="margin-left: 26px">
                             用户名：<asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder = "用户名/邮箱"></asp:TextBox>
                         </div>
 
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBox3"  class="form-Tips">*密码不能为空</asp:RequiredFieldValidator>
                         <div class="form-group" style="margin-left: 41px">
                             密码：<asp:TextBox ID="TextBox3" runat="server" class="form-control" placeholder = "密码"></asp:TextBox>
                         </div>
 
-
+                        <br />
                         <div class="text-center">
                             <asp:Button ID="Button1" runat="server" Text="登录" class="btn btn-success" OnClick="Button1_Click" />
                         </div>

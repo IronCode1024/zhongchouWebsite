@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 public static class DBHelper
 {
-    static SqlConnection conn = new SqlConnection("server=.;database=studb;uid=sa;pwd=123456");
+    static SqlConnection conn = new SqlConnection("server=.;database=zhongchouDB;uid=sa;pwd=123456");
     /// <summary>
     /// 返回受影响行数的，一般用于增删改的操作的
     /// </summary>
@@ -16,11 +16,11 @@ public static class DBHelper
     /// <param name="ct"></param>
     /// <param name="pms">传入sql参数对象</param>
     /// <returns></returns>
-    public static object ExecuteNonQuery(string str, CommandType ct, params SqlParameter[] pms)
+    public static int ExecuteNonQuery(string str, params SqlParameter[] pms)
     {
         conn.Open();
         SqlCommand comm = new SqlCommand(str, conn);
-        comm.CommandType = ct;
+        //comm.CommandType = ct;
         comm.Parameters.AddRange(pms);
         int x = comm.ExecuteNonQuery();
         conn.Close();
@@ -33,14 +33,14 @@ public static class DBHelper
     /// <param name="str">传入一个sql语句</param>
     /// <param name="pms">传入sql参数对象</param>
     /// <returns></returns>
-    public static object ExecuteScalar(string str, CommandType ct, params SqlParameter[] pms)
+    public static object ExecuteScalar(string str,params SqlParameter[] pms)
     {
         conn.Open();
         SqlCommand comm = new SqlCommand(str, conn);
         //StoredProcedure 传入进来的字符串当成存储过程解析
         //TableDirect   传入进来的字符串当成一张表来解析
         //Text   普通的sql语句来解析  默认的
-        comm.CommandType = ct;
+        //comm.CommandType = ct;
         comm.Parameters.AddRange(pms);
         object x = comm.ExecuteScalar();
         conn.Close();
@@ -72,16 +72,16 @@ public static class DBHelper
     /// <param name="ct"></param>
     /// <param name="pms">传入sql参数对象</param>
     /// <returns></returns>
-    public static SqlDataReader GetTable(string str, CommandType ct, params SqlParameter[] pms)
-    {
-        conn.Open();
-        SqlCommand comm = new SqlCommand(str, conn);
-        comm.CommandType = ct;
-        comm.Parameters.AddRange(pms);
-        SqlDataReader x = comm.ExecuteReader();//返回一个游标结果集
-        conn.Close();
-        return x;
-    }
+    //public static SqlDataReader GetTable(string str, CommandType ct, params SqlParameter[] pms)
+    //{
+    //    conn.Open();
+    //    SqlCommand comm = new SqlCommand(str, conn);
+    //    comm.CommandType = ct;
+    //    comm.Parameters.AddRange(pms);
+    //    SqlDataReader x = comm.ExecuteReader();//返回一个游标结果集
+    //    conn.Close();
+    //    return x;
+    //}
 
 
 }

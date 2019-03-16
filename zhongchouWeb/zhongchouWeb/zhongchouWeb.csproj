@@ -57,6 +57,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Css\HeadFootStyle.css" />
     <Content Include="Content\Css\LoginRegisteStyle.css" />
     <Content Include="Content\Images\IndexImg\1.jpg" />
     <Content Include="Content\Images\IndexImg\10.jpg" />
@@ -85,12 +86,23 @@
     <Content Include="Content\Images\IndexImg\icons.PNG" />
     <Content Include="Content\Images\IndexImg\other_login.png" />
     <Content Include="Content\Images\IndexImg\siteHTopBg.png" />
+    <Content Include="Content\Images\IndexImg\sosuo.jpg" />
+    <Content Include="Content\Images\IndexImg\sousuo.PNG" />
     <Content Include="Content\Images\LoginImg\bgLoginImg.PNG" />
     <Content Include="Content\Images\LoginImg\share.png" />
     <Content Include="Content\Images\LoginImg\smallico.png" />
     <Content Include="Content\Images\LoginImg\txqq.jpg" />
     <Content Include="Content\Images\LoginImg\wx.jpg" />
     <Content Include="Content\Images\LoginImg\xl.jpg" />
+    <Content Include="Content\Images\MasterEditionImg\logo02.png" />
+    <None Include="Script\jquery-1.10.2.intellisense.js" />
+    <Content Include="Script\jquery-1.10.2.js" />
+    <Content Include="Script\jquery-1.10.2.min.js" />
+    <None Include="Script\jquery.validate-vsdoc.js" />
+    <Content Include="Script\jquery.validate.js" />
+    <Content Include="Script\jquery.validate.min.js" />
+    <Content Include="Script\jquery.validate.unobtrusive.js" />
+    <Content Include="Script\jquery.validate.unobtrusive.min.js" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
@@ -98,6 +110,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AllPages.Master.cs">
+      <DependentUpon>AllPages.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AllPages.Master.designer.cs">
+      <DependentUpon>AllPages.Master</DependentUpon>
+    </Compile>
     <Compile Include="Views\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,6 +140,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\AllPages.Master" />
+    <Content Include="Script\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -129,7 +150,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Script\" />
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{c114181b-dd89-45c1-a8cf-66084143bf66}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODELS\MODELS.csproj">
+      <Project>{cf17968e-9409-41a9-88b9-ebae2cd6f551}</Project>
+      <Name>MODELS</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
