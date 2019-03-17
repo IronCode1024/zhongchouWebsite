@@ -24,6 +24,17 @@ namespace BLL
         }
 
         /// <summary>
+        /// 验证邮箱是否存在
+        /// </summary>
+        /// <param name="UserEmail"></param>
+        /// <returns></returns>
+        public Object getEmail(UserInfo UserEmail)
+        {
+            object rows = ud.getEmail(UserEmail);
+            return rows;
+        }
+
+        /// <summary>
         /// 登录
         /// </summary>
         /// <param name="Users"></param>

@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Css\HeadFootStyle.css" />
+    <Content Include="Content\Css\IndexStyle.css" />
     <Content Include="Content\Css\LoginRegisteStyle.css" />
     <Content Include="Content\Images\IndexImg\1.jpg" />
     <Content Include="Content\Images\IndexImg\10.jpg" />
@@ -84,6 +85,8 @@
     <Content Include="Content\Images\IndexImg\8.jpg" />
     <Content Include="Content\Images\IndexImg\9.jpg" />
     <Content Include="Content\Images\IndexImg\icons.PNG" />
+    <Content Include="Content\Images\IndexImg\lrs.png" />
+    <Content Include="Content\Images\IndexImg\lrsr.png" />
     <Content Include="Content\Images\IndexImg\other_login.png" />
     <Content Include="Content\Images\IndexImg\siteHTopBg.png" />
     <Content Include="Content\Images\IndexImg\sosuo.jpg" />
@@ -96,6 +99,7 @@
     <Content Include="Content\Images\LoginImg\xl.jpg" />
     <Content Include="Content\Images\MasterEditionImg\logo02.png" />
     <None Include="Script\jquery-1.10.2.intellisense.js" />
+    <Content Include="Script\IndexCarousel.js" />
     <Content Include="Script\jquery-1.10.2.js" />
     <Content Include="Script\jquery-1.10.2.min.js" />
     <None Include="Script\jquery.validate-vsdoc.js" />

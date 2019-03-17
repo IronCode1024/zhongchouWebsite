@@ -1,0 +1,101 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.masterBoxMax {
+    width: 1042px;
+    margin: 0px auto;
+}
+
+.indexBanner {
+    margin: 0px auto;
+}
+
+    .indexBanner .indexB_ul li {
+        width: 1042px;
+    }
+
+        .indexBanner .indexB_ul li a {
+            border-radius: 10px 10px 10px 10px;
+            width: 1042px;
+            height: 360px;
+            display: block;
+            background-position: center top;
+            background-repeat: no-repeat;
+            margin-left: -40px;
+        }
+
+.indexBannerView {
+    width: 1042px;
+    height: 360px;
+    /*float: left;*/
+    position: relative;
+}
+
+    .indexBannerView .indexB_ul {
+        width: 1042px;
+        height: 360px;
+        overflow: hidden;
+    }
+
+.indexBControls {
+    position: absolute;
+    width: 1042px;
+    height: 0px;
+    bottom: 30px;
+    right: 50%;
+    margin-right: -521px;
+    text-align: right;
+    font-size: 0px;
+}
+
+.indexBControls {
+    position: absolute;
+    width: 1042px;
+    height: 0px;
+    bottom: 30px;
+    right: 50%;
+    margin-right: -521px;
+    text-align: right;
+    font-size: 0px;
+}
+
+.indexBPageitem.cur {
+    background-color: #fff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.indexBPage {
+    position: absolute;
+    width: 1042px;
+    height: 0px;
+    left: 50%;
+    margin-left: -521px;
+    top: 150px;
+}
+
+    /*.indexBPage > .pre {
+        background-position: 0px 0px;
+        left: 0px;
+    }*/
+
+    .indexBPage > .next {
+    background-position: 0px -51px;
+    right: 0px;
+}
+.indexBPage > a {
+    /*filter: alpha(opacity=40);    opacity: 0.4;*/
+    /*background-image: url(../Content/Images/IndexImg/lrs.png);*/
+    /*background-position-x: 0%;
+    background-position-y: 0%;*/
+    /*background-color:#808080;*/
+    width: 39px;
+    height: 51px;
+    position: absolute;
+}
+    .indexBPage > a > img {
+        width: 39px;
+    height: 51px;
+    }

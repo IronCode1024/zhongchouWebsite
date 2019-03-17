@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="../Content/Images/IndexImg/icons.PNG" />
     <link href="../Content/Css/LoginRegisteStyle.css" rel="stylesheet" />
     <title>登录</title>
     <style type="text/css">
@@ -16,7 +17,7 @@
 <body>
      <div class="Panelmaster">
         <div class="navTop">
-            <a href="~/Home/Index" style="border:none">
+            <a href="Index.aspx" style="border:none">
                 <img src="../Content/Images/IndexImg/1531469861.png" />
             </a>
 

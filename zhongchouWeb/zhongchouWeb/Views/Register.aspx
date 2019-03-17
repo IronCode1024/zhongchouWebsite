@@ -15,7 +15,7 @@
 <body>
     <div class="Panelmaster">
         <div class="navTop">
-            <a href="~/Home/Index">
+            <a href="Index.aspx">
                 <img src="../Content/Images/IndexImg/1531469861.png" />
             </a>
 
@@ -42,9 +42,10 @@
                             用户名：<asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="用户名"></asp:TextBox>
                         </div>
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox2">*邮箱不能为空</asp:RequiredFieldValidator>
-                        <%--<br />--%>
-                        <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="TextBox2" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" class="form-Tips">*邮箱格式错误</asp:RegularExpressionValidator>--%>
+                       <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox2">*邮箱不能为空</asp:RequiredFieldValidator>--%>                        <%--<br />--%>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="TextBox2" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" class="form-Tips">
+                            *邮箱格式错误</asp:RegularExpressionValidator>
+                        <asp:Label ID="LabelEmail" runat="server" Text="Label" class="form-Tips" ></asp:Label>
                         <div class="form-group" style="margin-left: 41px">
                             邮箱：<asp:TextBox ID="TextBox2" runat="server" class="form-control" placeholder="邮箱"></asp:TextBox>
                         </div>
@@ -59,7 +60,8 @@
                             确认密码：<asp:TextBox ID="TextBox4" runat="server" class="form-control" placeholder="确认密码"></asp:TextBox>
                         </div>
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox5">*请输入验证码</asp:RequiredFieldValidator>
+<%--                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox5">*请输入验证码</asp:RequiredFieldValidator>--%>
+                        <asp:Label ID="LabelCode" class="form-Tips" runat="server" Text='<%# Session["InputVerificationCode"] %>'></asp:Label>
                         <div class="form-group" style="margin-left: 20px">
                             &nbsp;验证码：<asp:TextBox Width="130" ID="TextBox5" runat="server" class="form-control" placeholder="验证码"></asp:TextBox>
 

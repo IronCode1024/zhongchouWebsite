@@ -13,12 +13,12 @@ namespace zhongchouWeb.Views
 {
     public partial class Register : System.Web.UI.Page
     {
-        static string Send = "";
+        static string Sends = "";
         UserInfo ui = new UserInfo();
         UserInfoBll ub = new UserInfoBll();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.LabelEmail.Visible = false;
         }
 
         /// <summary>
@@ -28,19 +28,34 @@ namespace zhongchouWeb.Views
         /// <param name="e"></param>
         protected void ButReSubmit_Click(object sender, EventArgs e)
         {
-            ui.Name = this.TextBox1.Text;
-            ui.Email = this.TextBox2.Text;
-            ui.Password = this.TextBox3.Text;
-            
-            int rows = ub.getRegisters(ui);
-            if (rows > 0)
+            if (this.TextBox5.Text == Sends && this.TextBox5.Text != "")
             {
-                //Response.Write("<script>alert('添加成功！')</script>");
-                Response.Redirect("Index.aspx");
+                ui.Name = this.TextBox1.Text;
+                ui.Email = this.TextBox2.Text;
+                ui.Password = this.TextBox3.Text;
+
+                int rows = ub.getRegisters(ui);
+                if (rows > 0)
+                {
+                    //Response.Write("<script>alert('添加成功！')</script>");
+                    Response.Redirect("Login.aspx");
+                }
+                else if (rows == 0)
+                {
+                    Response.Write("<script>alert('注册异常')</script>");
+                }
+                else if (rows == -1)
+                {
+                    Response.Write("<script>alert('该用户名已存在，请重新输入！')</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('添加失败！')</script>");
+                }
             }
             else
             {
-                Response.Write("<script>alert('添加失败！')</script>");
+                this.LabelCode.Text = "*验证码错误";
             }
         }
 
@@ -51,9 +66,28 @@ namespace zhongchouWeb.Views
         /// <param name="sender"></param>
         protected void Obtain_Click(object sender, EventArgs e)
         {
+            if (this.TextBox2.Text != "")
+            {
+                ui.Email = this.TextBox2.Text;
+                Object rows = ub.getEmail(ui);
+                if (Convert.ToInt32(rows) > 0)
+                {
+                    this.LabelEmail.Visible = true;
+                    this.LabelEmail.Text = "*该邮箱已注册可直接登录";
+                }
+                else
+                {
+                    Sends = SendEmails();
+                    Response.Write("<script>alert('" + Sends + "');</script>");
+                }
+            }
+            else
+            {
+                this.LabelEmail.Visible = true;
+                this.LabelEmail.Text = "*邮箱不能为空";
+            }
             //this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script>textss();</script>", true);
-            string send = SendEmails();
-            //Response.Write("<script>alert('"+ send +"');</script>");
+
         }
 
         /// <summary>
@@ -93,15 +127,14 @@ namespace zhongchouWeb.Views
                 smtpClient.Send(mailMessage); // 发送邮件
 
                 //Response.Write("<script>alert('发送邮件成功')</script>");
-                Send = "发送成功";
-                return Send;
+                //Send = "发送成功";
+                return InputVerificationCode;
             }
             catch (SmtpException ex)
             {
                 string strErr = ex.Message;
                 Response.Write("<script>alert('" + strErr + "')</script>");
-                Send = "发送失败";
-                return Send;
+                return strErr;
             }
         }
     }
