@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MODELS;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace DAL
 {
@@ -86,6 +87,17 @@ namespace DAL
                     };
             object rows = DBHelper.ExecuteScalar(sql, prm);
             return rows;
+        }
+
+        /// <summary>
+        /// 首页图片列表展示 repeater
+        /// </summary>
+        /// <returns></returns>
+        public DataSet getDataSetImg()
+        {
+            string Sql = "select ImageID,ImageUrl,UserID,UserName,Pt.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt";
+            DataSet ds = DBHelper.GetTable(Sql);
+            return ds;
         }
     }
 }

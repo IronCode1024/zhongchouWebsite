@@ -113,7 +113,7 @@
                     <br />
                     <div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #5a5555;"><img class="Mblog" src="../Content/Images/LoginImg/xl.jpg" />&nbsp;新浪微博</a>&nbsp;&nbsp;<span style="color: #5a5555">|</span>&nbsp;&nbsp;<a href="#" style="color: #5a5555"><img class="Mblog" src="../Content/Images/LoginImg/txqq.jpg" />&nbsp;腾讯</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">忘记密码？</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%--<a href="#">忘记密码？</a>--%>
                     </div>
                 </div>
             </div>

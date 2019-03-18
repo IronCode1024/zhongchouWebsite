@@ -67,6 +67,7 @@
     filter: alpha(opacity=100);
 }
 
+/*左右下一张按钮*/
 .indexBPage {
     position: absolute;
     width: 1042px;
@@ -82,20 +83,140 @@
     }*/
 
     .indexBPage > .next {
-    background-position: 0px -51px;
-    right: 0px;
-}
-.indexBPage > a {
-    /*filter: alpha(opacity=40);    opacity: 0.4;*/
-    /*background-image: url(../Content/Images/IndexImg/lrs.png);*/
-    /*background-position-x: 0%;
-    background-position-y: 0%;*/
-    /*background-color:#808080;*/
-    width: 39px;
-    height: 51px;
-    position: absolute;
-}
-    .indexBPage > a > img {
-        width: 39px;
-    height: 51px;
+        background-position: 0px -51px;
+        right: 0px;
     }
+
+    .indexBPage > a {
+        /*filter: alpha(opacity=40);    opacity: 0.4;*/
+        /*background-image: url(../Content/Images/IndexImg/lrs.png);*/
+        /*background-position-x: 0%;
+    background-position-y: 0%;*/
+        /*background-color:#808080;*/
+        width: 39px;
+        height: 51px;
+        position: absolute;
+    }
+
+        .indexBPage > a > img {
+            width: 39px;
+            height: 51px;
+        }
+
+
+
+/*-----首页子导航栏-----*/
+/*大框div*/
+.siteHNavIndex {
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.siteHNavInner {
+    margin: 0px auto;
+    width: 1024px;
+    height: 30px;
+    line-height: 25px;
+    text-align: center;
+}
+
+    .siteHNavInner a {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+        .siteHNavInner a:hover {
+            font-size: 12px;
+            margin-left: 20px;
+            color: red;
+        }
+
+
+/*首页主题部分，显示图片列表Repeater1*/
+.RepeaterBox {
+    height: 2000px;
+    margin: 0px auto;
+    margin-left: -14px;
+}
+
+.RepeaterItemBox {
+    /*height:100px;*/
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+/*项目图片*/
+.RepeaterItmeImg {
+    width: 248px;
+    float: left;
+    margin-left: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px 10px;
+}
+
+    .RepeaterItmeImg img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+
+/*项目概述样式*/
+.indCardICBox {
+    margin: 0px auto;
+    width: 230px;
+    height: 158px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/*项目概述样式*/
+.indCardICText {
+
+}
+/*项目目标样式*/
+.siteCardIC_p {
+    font-size: 12px;
+    color:#808080;
+}
+
+
+/*项目进度条背景灰色条*/
+.siteCardRatio {
+    width:100%;
+    height:5px;
+    background-color:#808080;
+    border-radius:20px 20px;
+}
+/*项目红色实时进度条*/
+.siteCardRatioInner {
+    height:5px;
+    background-color:red;
+    border-radius:20px 20px;
+}
+
+/*众筹筹款情况*/
+.siteCardFData {
+    font-size: 12px;
+    text-align:center;
+    color:#808080;
+}
+/*已达*/
+.ydDiv {
+    width: 40px;
+    height: 30px;
+    float: left;
+}
+/*已筹款*/
+.ycDiv {
+    float: left;
+    margin-left:55px;
+}
+/*剩余时间*/
+.sjDiv {
+    float: right;
+}
+.ftP {
+    color:#070606;
+}

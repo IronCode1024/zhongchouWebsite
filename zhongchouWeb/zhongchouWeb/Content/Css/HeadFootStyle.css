@@ -85,7 +85,8 @@ a, .btn {
         margin-left: 20px;
         line-height: 30px;
         border-bottom: 2px solid red;
-        height: 50px;
+        
+        height: 49px;
         /*border-bottom-color:red;*/
     }
 
@@ -127,37 +128,40 @@ a, .btn {
 }
 
 
-/*搜索框样式*/
+/*搜索框大div样式*/
 .siteMSearch {
     float: left;
     margin-top: 22px;
     line-height: 20px;
 }
-
+/*搜索框第二级div样式*/
+.search-input {
+    width: 100px;
+    height: 20px;
+}
+/*搜索框样式*/
 .siteMSearchInput {
     background-image: url(/Content/Images/IndexImg/sosuo.jpg);
     background-repeat: no-repeat;
-    background-position-x: 130px;
+    background-position-x: 140px;
     background-position-y: 3px;
-    width: 150px;
+    width: 130px;
     height: 20px;
     float: left;
     /*position: relative;*/
     position: absolute;
     /*z-index: 10;*/
+    padding-right:30px;
+    border-radius:10px 10px;
 }
-
+/*搜索按钮*/
 .fr {
     position: relative;
     bottom: 17px;
     /*right:-25%;*/
-    left: 136px;
+    left: 146px;
 }
 
-.search-input {
-    width: 100px;
-    height: 20px;
-}
 
 
 
@@ -171,11 +175,11 @@ a, .btn {
 /*页脚大框样式*/
 .siteMBottomBox {
     height: 302px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 /*中内容框*/
 .mainBox {
-    width: 1292px;
+    width: 100%;
     margin: 0px auto;
     display: block;
     font-size:12px;
@@ -185,7 +189,7 @@ a, .btn {
 
 /*内容上部中部大容框*/
 .mainTopBox {
-    width: 1292px;
+    width: 100%;
     margin: 0px auto;
     height: 180px;
     /*border: 1px solid red;*/
@@ -240,7 +244,7 @@ a, .btn {
 
 /*内容下部*/
 .mainBottomBox {
-    width: 1292px;
+    width: 100%;
     margin: 0px auto;
     height: 120px;
     /*border: 1px solid red;*/

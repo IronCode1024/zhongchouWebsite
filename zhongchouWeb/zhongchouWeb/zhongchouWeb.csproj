@@ -98,15 +98,15 @@
     <Content Include="Content\Images\LoginImg\wx.jpg" />
     <Content Include="Content\Images\LoginImg\xl.jpg" />
     <Content Include="Content\Images\MasterEditionImg\logo02.png" />
-    <None Include="Script\jquery-1.10.2.intellisense.js" />
+    <None Include="Script\jQuerys\jquery-1.10.2.intellisense.js" />
     <Content Include="Script\IndexCarousel.js" />
-    <Content Include="Script\jquery-1.10.2.js" />
-    <Content Include="Script\jquery-1.10.2.min.js" />
-    <None Include="Script\jquery.validate-vsdoc.js" />
-    <Content Include="Script\jquery.validate.js" />
-    <Content Include="Script\jquery.validate.min.js" />
-    <Content Include="Script\jquery.validate.unobtrusive.js" />
-    <Content Include="Script\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Script\jQuerys\jquery-1.10.2.js" />
+    <Content Include="Script\jQuerys\jquery-1.10.2.min.js" />
+    <None Include="Script\jQuerys\jquery.validate-vsdoc.js" />
+    <Content Include="Script\jQuerys\jquery.validate.js" />
+    <Content Include="Script\jQuerys\jquery.validate.min.js" />
+    <Content Include="Script\jQuerys\jquery.validate.unobtrusive.js" />
+    <Content Include="Script\jQuerys\jquery.validate.unobtrusive.min.js" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
@@ -145,7 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\AllPages.Master" />
-    <Content Include="Script\jquery-1.10.2.min.map" />
+    <Content Include="Script\jQuerys\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -162,6 +162,9 @@
       <Project>{cf17968e-9409-41a9-88b9-ebae2cd6f551}</Project>
       <Name>MODELS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Images\UserHeadPortrait\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

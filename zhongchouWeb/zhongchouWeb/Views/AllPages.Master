@@ -12,7 +12,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="icon" href="../Content/Images/IndexImg/icons.PNG" />
     <link href="../Content/Css/HeadFootStyle.css" rel="stylesheet" />
-    <title></title>
+    <title>拾柴众筹网--首页</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -29,27 +29,20 @@
                 </div>
                 <div class="siteHNavItem">
                     <a href="http://www.zhongchou.cn/browse/di-si_c/" class="siteHNavItemA">浏览项目</a>
-                    <!--					<div class="siteHNavInner">-->
-                    <!--						<!--<a href="-->
-                    <!--" class="btn_ALink">科技</a>-->
-                    <!--						<a href="-->
-                    <!--" class="btn_ALink">出版</a>-->
-                    <!--						<a href="-->
-                    <!--" class="btn_ALink">娱乐</a>-->
-                    <!--						<a href="-->
-                    <!--" class="btn_ALink">艺术</a>-->
-                    <!--						<a href="-->
-                    <!--" class="btn_ALink">农业</a>-->
-                    <!--						-->
-                    <!--						<a href="-->
-                    <!--" class="btn_ALink">商铺</a>-->
-                    <!--						<a href="-->
-                    <!--" class="btn_ALink">房产</a>-->
-                    <!--						<a href="-->
-                    <!--" class="btn_ALink">地方站</a>-->
-                    <!--						-->
-                    <!--						-->
-                    <!--					</div>-->
+                    <%--<div class="siteHNavInner">
+                        <a href="#" class="btn_ALink">科技</a>
+                        <a href="#" class="btn_ALink">出版</a>
+                        <a href="#" class="btn_ALink">娱乐</a>
+                        <a href="#" class="btn_ALink">艺术</a>
+                        <a href="#" class="btn_ALink">农业</a>
+                        <a href="#" class="btn_ALink">商铺</a>
+                        <a href="#" class="btn_ALink">房产</a>
+                        <a href="#" class="btn_ALink">音乐</a>
+                        <a href="#" class="btn_ALink">设计</a>
+                        <a href="#" class="btn_ALink">公益</a>
+                        <a href="#" class="btn_ALink">公开课</a>
+                        <a href="#" class="btn_ALink">其他</a>
+                    </div>--%>
                 </div>
                 <div class="siteHNavItem">
                     <a href="http://www.zhongchou.cn/gongyi" class="siteHNavItemA">公益众筹</a>
@@ -80,7 +73,6 @@
             <!--siteMSearch网站搜索    sitePHBox定位盒子-->
             <div class="siteMSearch siteIlB_box sitePHBox" id="search-box">
                 <div class="search-input">
-
                     <input type="text" class="siteMSearchInput siteIlB_item sitePHInput" id="searchInput" autocomplete="off" placeholder="绝世倾城" />
                 </div>
                 <a href="javascript:;" class="siteMSearchA siteIlB_item fr" id="searchBtn">&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -224,7 +216,7 @@
                     </ul>
 
                     <div>
-                        <ul style="margin-left: -40px; margin-top: 20px; float: left;color:#8b8b8d;">
+                        <ul style="margin-left: -40px; margin-top: 20px; float: left; color: #8b8b8d;">
                             <li style="list-style: none;">&copy;绝世倾城拾柴众筹网项目小组&nbsp;zhongchou.com版权所有&nbsp;鄂ICP备14531564号</li>
                         </ul>
                     </div>

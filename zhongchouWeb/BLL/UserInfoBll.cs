@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using MODELS;
+using System.Data;
 
 namespace BLL
 {
@@ -43,6 +44,12 @@ namespace BLL
         {
             object rows = ud.getLogins(Name, Pwds);
             return rows;
+        }
+
+        public DataSet getDataSetImg()
+        {
+            DataSet ds = ud.getDataSetImg();
+            return ds;
         }
     }
 }
