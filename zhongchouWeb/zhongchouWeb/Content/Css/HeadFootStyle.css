@@ -1,6 +1,10 @@
 ﻿body {
     color: #333;
 }
+a img {
+    border:none;
+}
+
 
 
 /*页眉部分样式*/

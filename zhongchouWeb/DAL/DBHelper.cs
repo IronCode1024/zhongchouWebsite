@@ -53,11 +53,11 @@ public static class DBHelper
     /// <param name="ct"></param>
     /// <param name="pms">传入sql参数对象</param>
     /// <returns></returns>
-    public static DataSet GetTable(string str)//, params SqlParameter[] pms
+    public static DataSet GetTable(string str, params SqlParameter[] pms)//, params SqlParameter[] pms
     {
         conn.Open();
         SqlCommand comm = new SqlCommand(str, conn);
-        //comm.Parameters.AddRange(pms);
+        comm.Parameters.AddRange(pms);
         SqlDataAdapter rd = new SqlDataAdapter(comm);
         DataSet set = new DataSet();
         rd.Fill(set, "zcDB");

@@ -32,11 +32,12 @@ namespace DAL
             {
                 try
                 {
-                    string sql = "insert into UserInfoTb values(@a,@b,@c,@d)";
+                    string sql = "insert into UserInfoTb values(@a,@b,@c,@e,@d)";
                     SqlParameter[] prm = new SqlParameter[]{
                             new SqlParameter("@a",Users.Name),  //用户名
                             new SqlParameter("@b",Users.Email), //邮箱
                             new SqlParameter("@c",Users.Password),    //密码
+                            new SqlParameter("@e",""),
                             new SqlParameter("@d","0")   //默认登录状态为0    --不在线
                         };
                     int rows = DBHelper.ExecuteNonQuery(sql, prm);
@@ -88,15 +89,15 @@ namespace DAL
             object rows = DBHelper.ExecuteScalar(sql, prm);
             return rows;
         }
-
-        /// <summary>
-        /// 首页图片列表展示 repeater
-        /// </summary>
-        /// <returns></returns>
-        public DataSet getDataSetImg()
+        public DataSet getLoginState(string nameOremail)
         {
-            string Sql = "select ImageID,ImageUrl,UserID,UserName,Pt.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt";
-            DataSet ds = DBHelper.GetTable(Sql);
+            //select Id,UserName,UserEmail,UserHeadPortrait from UserInfoTb
+            //用户登录成功后查询用户名和图像  并显示到页面中的用户信息处
+            string sql = "select UserName from UserInfoTb where (UserName=@nameOremail or UserEmail=@nameOremail)";
+            SqlParameter[] prm = new SqlParameter[]{
+                        new SqlParameter("@nameOremail",nameOremail),  //用户名
+                    };
+            DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
     }

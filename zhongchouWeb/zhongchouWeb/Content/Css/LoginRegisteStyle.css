@@ -9,6 +9,9 @@
             color:red;
             cursor:pointer;
         }
+a img {
+    border:none;
+}
 
 .Panelmaster {
     margin:0px auto;

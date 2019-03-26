@@ -42,32 +42,31 @@
                             用户名：<asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="用户名"></asp:TextBox>
                         </div>
 
-                       <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox2">*邮箱不能为空</asp:RequiredFieldValidator>--%>                        <%--<br />--%>
+                        <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox2">*邮箱不能为空</asp:RequiredFieldValidator>--%>                        <%--<br />--%>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="TextBox2" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" class="form-Tips">
                             *邮箱格式错误</asp:RegularExpressionValidator>
-                        <asp:Label ID="LabelEmail" runat="server" Text="Label" class="form-Tips" ></asp:Label>
+                        <asp:Label ID="LabelEmail" runat="server" Text="Label" class="form-Tips"></asp:Label>
                         <div class="form-group" style="margin-left: 41px">
                             邮箱：<asp:TextBox ID="TextBox2" runat="server" class="form-control" placeholder="邮箱"></asp:TextBox>
                         </div>
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox3">*密码不能为空</asp:RequiredFieldValidator>
                         <div class="form-group" style="margin-left: 41px">
-                            密码：<asp:TextBox ID="TextBox3" runat="server" class="form-control" placeholder="密码"></asp:TextBox>
+                            密码：<asp:TextBox TextMode="Password" ID="TextBox3" runat="server" class="form-control" placeholder="密码"></asp:TextBox>
                         </div>
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox4">*请输入确认密码</asp:RequiredFieldValidator>
                         <div class="form-group" style="margin-left: 10px">
-                            确认密码：<asp:TextBox ID="TextBox4" runat="server" class="form-control" placeholder="确认密码"></asp:TextBox>
+                            确认密码：<asp:TextBox TextMode="Password" ID="TextBox4" runat="server" class="form-control" placeholder="确认密码"></asp:TextBox>
                         </div>
 
-<%--                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox5">*请输入验证码</asp:RequiredFieldValidator>--%>
+                        <%--                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator" class="form-Tips" ControlToValidate="TextBox5">*请输入验证码</asp:RequiredFieldValidator>--%>
                         <asp:Label ID="LabelCode" class="form-Tips" runat="server" Text='<%# Session["InputVerificationCode"] %>'></asp:Label>
                         <div class="form-group" style="margin-left: 20px">
                             &nbsp;验证码：<asp:TextBox Width="130" ID="TextBox5" runat="server" class="form-control" placeholder="验证码"></asp:TextBox>
 
                             <asp:Button ID="Obtain" runat="server" class="btn btn-success" Text="获取" OnClick="Obtain_Click" />
                             <%--<input id="Obtain" class="btn btn-success" type="button" onclick="btnObtain();" value="获取" />--%>
-
                         </div>
 
                         <br />
@@ -79,34 +78,38 @@
 
 
                     <script type="text/javascript">
+                        var wait = 5;
+                            function time(obj) {
+                                if (wait == 0) {
+                                    obj.className = 'btn';
+                                    obj.removeAttribute("disabled");
+                                    obj.value = "获取";
+                                    wait = 5;  //waait等于0的时候重新赋值                  
+                                } else {
+                                    obj.className = 'btn';//按钮变灰，不可点击
+                                    obj.setAttribute("disabled", true);
+                                    obj.value = "重新发送(" + wait + "秒)";
+                                    wait--;
+                                    setTimeout(function () {
+                                        time(obj);
+                                    },
+                                    1000)
+                                    return false
+                                }
 
-                        //function time(obj) {
+                            }
 
-                        //    if (wait == 0) {
-                        //        obj.className = 'btnCode';
-                        //        obj.removeAttribute("disabled");
-                        //        obj.value = "获取";
-                        //        wait = 60;  //waait等于0的时候重新赋值
-                        //    } else {
-                        //        obj.className = 'btnCodeDisabled';//按钮变灰，不可点击
-                        //        obj.setAttribute("disabled", true);
-                        //        obj.value = "重新发送(" + wait + "秒)";
-                        //        wait--;
-                        //        setTimeout(function () {
-                        //            time(obj)
-                        //        },
-                        //        1000)
+                            //function ss() {
+                            //    time(document.getElementsByClassName("btn"));
+                            //}
+
+
+                        //window.onload = function () {//发送验证码成功按钮编程灰色不可点击状态，并激活60秒倒计时
+                        //    document.getElementById("Obtain").
+                            
+                        //    if (document.getElementsByClassName("btn").value == "获取成功") {
+                        //        time(document.getElementsByClassName("btn"));
                         //    }
-                        //}
-                        //    window.onload = function () {//发送验证码成功按钮编程灰色不可点击状态，并激活60秒倒计时
-                        //        //document.getElementById("Obtain").
-                        //        if (document.getElementById("Obtain").value == "发送成功") {
-                        //            time(document.getElementById("Obtain"));
-                        //        }
-                        //    }
-
-
-                        //}
                         //}
                     </script>
 

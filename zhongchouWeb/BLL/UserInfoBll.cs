@@ -45,10 +45,15 @@ namespace BLL
             object rows = ud.getLogins(Name, Pwds);
             return rows;
         }
-
-        public DataSet getDataSetImg()
+        /// <summary>
+        /// 用户登录状态
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <param name="Pwds"></param>
+        /// <returns></returns>
+        public DataSet getLoginState(string nameOremail)
         {
-            DataSet ds = ud.getDataSetImg();
+            DataSet ds = ud.getLoginState(nameOremail);
             return ds;
         }
     }

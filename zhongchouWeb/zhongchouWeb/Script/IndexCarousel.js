@@ -1,7 +1,7 @@
 ﻿//TODO banner轮播效果
 function turnPics() {
     var index = 0;
-    var stop = false;
+    //var stop = false;
     var $li = $(".indexBannerView").find("#slider li");
     $("#bannerPre").hide(); //隐藏左右图标
     $("#bannerNext").hide();
@@ -11,7 +11,7 @@ function turnPics() {
             index = 0;
         }
         $li.eq(index).stop(true, true).fadeIn("slow").siblings().fadeOut("slow");
-        $pagesLis.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
+        //$pagesLis.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
     });
     $("#bannerNext").click(function () {
         index++;
@@ -19,7 +19,7 @@ function turnPics() {
             index = 0;
         }
         $li.eq(index).stop(true, true).fadeIn("slow").siblings().fadeOut("slow");
-        $pagesLis.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
+        //$pagesLis.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
     });
     setInterval(function () {
         index++;
@@ -27,7 +27,7 @@ function turnPics() {
             index =0;
         }
         $li.eq(index).stop(true, true).fadeIn("slow").siblings().fadeOut("slow");
-        $pagesLis.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
+        //$pagesLis.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
     }, 7000);
 
     $(".indexBannerView").mouseover(function () {//鼠标移入轮播图片内显示左右图标

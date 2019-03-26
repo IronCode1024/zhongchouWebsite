@@ -99,6 +99,8 @@
     <Content Include="Content\Images\LoginImg\xl.jpg" />
     <Content Include="Content\Images\MasterEditionImg\logo02.png" />
     <None Include="Script\jQuerys\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\Images\publicImg\SupportHeart.jpg" />
+    <Content Include="Content\Images\publicImg\SupportHearts.jpg" />
     <Content Include="Script\IndexCarousel.js" />
     <Content Include="Script\jQuerys\jquery-1.10.2.js" />
     <Content Include="Script\jQuerys\jquery-1.10.2.min.js" />

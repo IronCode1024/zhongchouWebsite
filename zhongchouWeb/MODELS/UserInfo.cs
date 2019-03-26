@@ -23,6 +23,9 @@ namespace MODELS
 
         public string VerificationCode { get; set; }  //验证码
 
+
+        public string UserHeadPortrait { get; set; }//用户头像地址
+
         public string State { get; set; }      //在线状态      true在线    false离线
     }
 }

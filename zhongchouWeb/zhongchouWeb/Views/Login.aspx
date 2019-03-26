@@ -43,7 +43,7 @@
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBox3"  class="form-Tips">*密码不能为空</asp:RequiredFieldValidator>
                         <div class="form-group" style="margin-left: 41px">
-                            密码：<asp:TextBox ID="TextBox3" runat="server" class="form-control" placeholder = "密码"></asp:TextBox>
+                            密码：<asp:TextBox TextMode="Password" ID="TextBox3" runat="server" class="form-control" placeholder = "密码"></asp:TextBox>
                         </div>
 
                         <br />

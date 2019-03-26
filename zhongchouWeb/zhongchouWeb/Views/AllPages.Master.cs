@@ -11,7 +11,22 @@ namespace zhongchouWeb.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+               
+                //string nn = Session["UserNames"].ToString();
+                //Response.Write("<script>alert('"+nn+"')</script>");
 
+            }
+            else 
+            {
+                Session["Logins"] = null;
+            }
+        }
+
+        public void endLogin()
+        {
+            Response.Write("<script>alert('登败')</script>");
         }
     }
 }

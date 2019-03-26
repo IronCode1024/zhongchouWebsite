@@ -18,6 +18,10 @@ namespace zhongchouWeb.Views
         UserInfoBll ub = new UserInfoBll();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                //this.Obtain.Attributes.Add("OnClick", "return time(" + this.Obtain.ID + ")"); 
+            }
             this.LabelEmail.Visible = false;
         }
 
@@ -78,7 +82,7 @@ namespace zhongchouWeb.Views
                 else
                 {
                     Sends = SendEmails();
-                    Response.Write("<script>alert('" + Sends + "');</script>");
+                    //Response.Write("<script>alert('" + Sends + "');</script>");
                 }
             }
             else
@@ -128,6 +132,9 @@ namespace zhongchouWeb.Views
 
                 //Response.Write("<script>alert('发送邮件成功')</script>");
                 //Send = "发送成功";
+                //this.Obtain.Text = "获取成功";
+                //ClientScript.RegisterStartupScript(Page.GetType(), "", "time(" + this.Obtain.ID + ");", true);
+                
                 return InputVerificationCode;
             }
             catch (SmtpException ex)

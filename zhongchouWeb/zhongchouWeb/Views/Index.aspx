@@ -62,59 +62,193 @@
 
 
 
+            <div class="RepeaterBoxMaster">
 
-
-            <div class="RepeaterBox">
-                <%--<asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Views/Login.aspx">登录</asp:LinkButton>--%>
-                <asp:Repeater ID="Repeater1" runat="server">
-                    <ItemTemplate>
-                        <!--一级div-->
-                        <div class="RepeaterItemBox">
-                            <!--二级图片进度div-->
-                            <div class="RepeaterItmeImg">
-                                <%--<%#((Container.ItemIndex + 1) % 3 == 0 && Container.ItemIndex > 0) ? "<br/><br/>" : ""%>--%>
-                                <a href="#">
-                                    <img style="width: 248px; height: 180px;" src="<%#Eval("ImageUrl") %>" /></a>
-
-                                <!--众筹进度详情div-->
-                                <div class="indCardICBox siteCardICBox">
-                                    <div class="indCardICText">    <%--target="_blank"新打开一个浏览器窗体标签--%>
-                                        <a href="#" class="siteCardICH3" target="_blank">《水灯之城》 梁俪千/著  单价53元</a>
-                                        <p class="siteCardIC_p">目标：<span class="ftP"><%#Eval("ProjectTargetDays") %>天 ￥<%#Eval("TargetAmountOfMoney") %></span></p>
-                                    </div>
-                                    <!--进度条div-->
-                                    <div class="siteCardFBox">
-                                        <div class="siteCardRatio">
-                                            <!--进度条百分比-->
-                                            <div class="siteCardRatioInner" style="width:<%# Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100 %>%;"></div>
+                <div class="RepeaterBox">
+                    <%--<asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Views/Login.aspx">登录</asp:LinkButton>--%>
+                    <!--使用Repeater显示图片-->
+                    <asp:Repeater ID="Repeater1" runat="server">
+                        <HeaderTemplate>
+                            <div class="RepeaterTitle">
+                                <h1>众筹精选</h1>
+                                <div>
+                                    <a href="#" class="btn_ALink">最新上线</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">科技</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">艺术</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">农业</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">音乐</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">设计</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">公益</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">公开课</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">更多>></a>&nbsp;&nbsp;
+                                </div>
+                            </div>
+                            <table style="height:15px;"></table>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <!--一级div-->
+                            <div class="RepeaterItemBox">
+                                <!--二级图片进度div-->
+                                <div class="RepeaterItmeImg" style="margin-bottom:20px;">
+                                    <%--<%#((Container.ItemIndex + 1) % 3 == 0 && Container.ItemIndex > 0) ? "<br/><br/>" : ""%>--%>
+                                    <!--支持人数心形图标和数字显示-->
+                                    <div class="SupportNumber" style="width: 20%;">
+                                        <div class="SupportHeart">
+                                            <%--<img style="border-radius:0px;" src="../Content/Images/publicImg/SupportHeart.jpg" />--%>
                                         </div>
-                                        <!--div-->
-                                        <div class="siteCardFData">
-                                            <div class="ydDiv">
-                                                <!--已达百分比-->
-                                                <p class="ftP"><%# Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100 %>%</p>
-                                                <p class="scP">已达</p>
+                                        <!--数据库读取支持人数数字-->
+                                        <span style="font-size: 11px; top: -15px; position: absolute; left: 18px; text-align: center; line-height: 50px;"><%#Eval("NumberOfProjectSupport") %></span>
+                                    </div>
+                                    <a href="#">
+                                        <img style="width: 248px; height: 180px;" src="<%#Eval("ImageUrl") %>" /></a>
+
+                                    <!--众筹进度详情div-->
+                                    <div class="indCardICBox siteCardICBox">
+                                        <div class="indCardICText">
+                                            <%--target="_blank"新打开一个浏览器窗体标签--%>
+                                            <a href="#" class="siteCardICH3" target="_blank"><%#Eval("ProjectName") %></a>
+                                            <p class="siteCardIC_p">目标：<span class="ftP"><%#Eval("ProjectTargetDays") %>天 ￥<%#Eval("TargetAmountOfMoney") %></span></p>
+                                        </div>
+                                        <!--进度条div-->
+                                        <div class="siteCardFBox">
+                                            <div class="siteCardRatio">
+                                                <!--进度条百分比-->
+                                                <div class="siteCardRatioInner" style="width: <%# Math.Round(Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100) %>%;"></div>
                                             </div>
-                                            <div class="ycDiv">
-                                                <!--已筹资-->
-                                                <p class="ftP">￥<%#Eval("AlreadyRaisedMoney") %></p>
-                                                <p class="scP">已筹资</p>
-                                            </div>
-                                            <div class="sjDiv">
-                                                <!--剩余时间-->
-                                                <p class="ftP"><%#Eval("ProjectTargetDays") %>天</p>
-                                                <p class="scP">剩余时间</p>
+                                            <!--div-->
+                                            <div class="siteCardFData">
+                                                <div class="ydDiv">
+                                                    <!--已达百分比-->
+                                                    <p class="ftP"><%# Math.Round(Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100) %>%</p>
+                                                    <p class="scP">已达</p>
+                                                </div>
+                                                <div class="ycDiv">
+                                                    <!--已筹资-->
+                                                    <p class="ftP">￥<%#Eval("AlreadyRaisedMoney") %></p>
+                                                    <p class="scP">已筹资</p>
+                                                </div>
+                                                <div class="sjDiv">
+                                                    <!--剩余时间-->
+                                                    <!--时间差计算  目标天数-项目发起到现在的天数-->
+                                                    <p class="ftP" id="Surplustimes"><%# Math.Round(Convert.ToDouble(Eval("ProjectTargetDays")) - GetDateTimeSpan(Convert.ToDateTime(Eval("ReleaseDate")))) %>天</p>
+                                                    <p class="scP">剩余时间</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </div>
+                        </ItemTemplate>
+                        
+                        <FooterTemplate>
+                            <div>
+                                
+                            </div>
+                        </FooterTemplate>
+                        <FooterTemplate>
+                            <table style="height:20px;">
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </FooterTemplate>
+                    </asp:Repeater>
+                    
+                </div>
 
+
+            <%--    <div style="margin-top:380px;height:20px;width:1042px;border:1px solid red"></div>--%>
+
+                <div class="RepeaterBox">
+                    <%--<asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Views/Login.aspx">登录</asp:LinkButton>--%>
+                    <!--使用Repeater显示图片-->
+                    <asp:Repeater ID="Repeater2" runat="server">
+                        <HeaderTemplate>
+                            <div class="RepeaterTitle">
+                                <h1>热门项目</h1>
+                                <div>
+                                    <a href="#" class="btn_ALink">最新上线</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">科技</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">艺术</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">农业</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">音乐</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">设计</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">公益</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">公开课</a>&nbsp;&nbsp;
+                                    <a href="#" class="btn_ALink">更多>></a>&nbsp;&nbsp;
+                                </div>
+                            </div>
+                            <table style="height:15px;"></table>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <!--一级div-->
+                            <div class="RepeaterItemBox">
+                                <!--二级图片进度div-->
+                                <div class="RepeaterItmeImg" style="margin-bottom:20px;">
+                                    <!--支持人数心形图标和数字显示-->
+                                    <div class="SupportNumber" style="width: 20%;">
+                                        <div class="SupportHeart">
+                                            <%--<img style="border-radius:0px;" src="../Content/Images/publicImg/SupportHeart.jpg" />--%>
+                                        </div>
+                                        <!--数据库读取支持人数数字-->
+                                        <span style="font-size: 11px; top: -15px; position: absolute; left: 18px; text-align: center; line-height: 50px;"><%#Eval("NumberOfProjectSupport") %></span>
+                                    </div>
+                                    <a href="javascript:;">
+                                        <img style="width: 248px; height: 180px;" src="<%#Eval("ImageUrl") %>" /></a>
+
+                                    <!--众筹进度详情div-->
+                                    <div class="indCardICBox siteCardICBox">
+                                        <div class="indCardICText">
+                                            <%--target="_blank"新打开一个浏览器窗体标签--%>
+                                            <a href="#" class="siteCardICH3" target="_blank"><%#Eval("ProjectName") %></a>
+                                            <p class="siteCardIC_p">目标：<span class="ftP"><%#Eval("ProjectTargetDays") %>天 ￥<%#Eval("TargetAmountOfMoney") %></span></p>
+                                        </div>
+                                        <!--进度条div-->
+                                        <div class="siteCardFBox">
+                                            <div class="siteCardRatio">
+                                                <!--进度条百分比-->
+                                                <div class="siteCardRatioInner" style="width: <%# Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100 %>%;"></div>
+                                            </div>
+                                            <!--div-->
+                                            <div class="siteCardFData">
+                                                <div class="ydDiv">
+                                                    <!--已达百分比-->
+                                                    <p class="ftP"><%# Math.Round(Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100) %>%</p>
+                                                    <p class="scP">已达</p>
+                                                </div>
+                                                <div class="ycDiv">
+                                                    <!--已筹资-->
+                                                    <p class="ftP">￥<%#Eval("AlreadyRaisedMoney") %></p>
+                                                    <p class="scP">已筹资</p>
+                                                </div>
+                                                <div class="sjDiv">
+                                                    <!--剩余时间-->
+                                                    <!--时间差计算  目标天数-项目发起到现在的天数-->
+                                                    <p class="ftP" id="Surplustimes"><%# Convert.ToInt32(Eval("ProjectTargetDays")) - GetDateTimeSpan(Convert.ToDateTime(Eval("ReleaseDate"))) %>天</p>
+                                                    <p class="scP">剩余时间</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+
+                        <FooterTemplate>
+                             <%--<table style="height:10px;"><tr><td></td></tr></table>--%><!--让下面的table向下间距20px-->
+                            <a href="http://www.baidu.com"><table border="0" style="margin-left:15px;text-align:center;">
+                                <tr>
+                                    <td class="tableMoreTd">查看更多项目</td>
+                                </tr>
+                            </table>
+                                </a>
+                        </FooterTemplate>
+                    </asp:Repeater>
+                    <div style="height:30px;"></div>
+                </div>
+            </div>
         </div>
+
     </body>
     </html>
 </asp:Content>

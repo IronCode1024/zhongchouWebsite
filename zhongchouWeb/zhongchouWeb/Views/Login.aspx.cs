@@ -32,6 +32,16 @@ namespace zhongchouWeb.Views
             if (Convert.ToInt32(rows) > 0)
             {
                 //Response.Write("<script>alert('登录成功')</script>");
+                DataSet ds = ub.getLoginState(Name);
+                DataTable dt = ds.Tables["zcDB"];
+                Session["UserNames"] = dt.Rows[0][0].ToString();//获取DataTable的第一行第一列
+                //foreach (DataRow item in dt.Rows)
+                //{
+                //    Session["UserNames"] = item;
+                //Response.Write("<script>alert('" + Name + ":" + Session["UserNames"].ToString() + "')</script>");
+                //}
+                
+                Session["Logins"] = "登录成功";
                 Response.Redirect("Index.aspx");
             }
             else

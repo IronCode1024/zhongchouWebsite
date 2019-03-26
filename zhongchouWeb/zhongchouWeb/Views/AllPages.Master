@@ -57,11 +57,27 @@
 
             <a href="javascript:;" data-href="http://f.zhongchou.cn/project/launch/dist" class="siteM_fqBtn btn_ALink js-checkLogin"><i></i>发起众筹</a>
             <!-- 未登录状态 begin 网站登录框siteHLoginBox-->
-            <div class="siteHLoginBox clearfix">
+            <div class="siteHLoginBox clearfix" runat="server" id="logins">
+                <a><%  this.notlogins.Style.Add("display", "block");
+                       
+                       if (Session["Logins"] != null && Session["Logins"] != "")
+                       {
+                           Session["Logins"] = null;
+                           //Literal lt = new Literal();
+                           //lt.Text = "<a>Session[\"UserNames\"].ToString()</a>";
+                           //form1.Controls.Add(lt);
+                           this.notlogins.Style.Add("display", "none");
+                           //this.logins.Style.Add("display", "block");
+                           Response.Write(Session["UserNames"].ToString() + "<span class=\"line\">&nbsp;|&nbsp;</span><a href=\"Index.aspx\" style=\"color:red;\">退出</a>");
+                       }%></a>
+            </div>
+            <div class="siteHLoginBox clearfix" runat="server" id="notlogins">
                 <a href="../Views/Login.aspx" class="siteH_login Js-showLogin">登录</a>
                 <span class="line">|</span>
                 <a href="../Views/Register.aspx" class="siteH_register Js-showRegister">注册</a>
             </div>
+
+
             <!--其他登录-->
             <div class="other-login">
                 <a class="qq" href="/qq-login"></a>
@@ -224,5 +240,10 @@
             </div>
         </div>
     </div>
+    <script>
+        function endLogin() {
+            alert('你好啥')
+            <% endLogin(); %>}
+    </script>
 </body>
 </html>
