@@ -13,20 +13,43 @@ namespace zhongchouWeb.Views
         {
             if (!IsPostBack)
             {
-               
+                if (Session["Logins"] != null && Session["Logins"].ToString() != "")
+                {
+                    //Session["Logins"] = null;
+                    //Literal lt = new Literal();
+                    //lt.Text = "<a>Session[\"UserNames\"].ToString()</a>";
+                    //form1.Controls.Add(lt);
+                    this.notlogins.Style.Add("display", "none");
+                    this.logins.Style.Add("display", "block");
+                    this.Label1.Text = Session["UserNames"].ToString();
+                    this.HeadPortraits.ImageUrl = Session["UserHeadPortrait"].ToString();
+                }
+
                 //string nn = Session["UserNames"].ToString();
                 //Response.Write("<script>alert('"+nn+"')</script>");
-
             }
-            else 
+            else
             {
                 Session["Logins"] = null;
             }
         }
 
-        public void endLogin()
+        /// <summary>
+        /// 登出
+        /// </summary>
+        /// <returns></returns>
+        public bool LoginOuts(bool b)
         {
-            Response.Write("<script>alert('登败')</script>");
+            if (b == true)
+            {
+                Session["Logins"] = null;
+                return true;
+            }
+            else
+            {
+                Response.Write("<script>alert('vzbz')</script>");
+                return false;
+            }
         }
     }
 }

@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorsBll\AdminInfoBll.cs" />
+    <Compile Include="AdministratorsBll\AdminShowUserInfoBll.cs" />
     <Compile Include="IndexBll.cs" />
     <Compile Include="UserInfoBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,8 +1,9 @@
 ﻿body {
     color: #333;
 }
+
 a img {
-    border:none;
+    border: none;
 }
 
 
@@ -60,10 +61,53 @@ a {
     text-decoration: none;
 }
 
-a, .btn {
+sw a, .btn {
     cursor: pointer;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
+}
+
+/*登录成功样式*/
+.Userlogins {
+    width: 100px;
+    margin-top: 0px;
+    text-align: center;
+    position: relative;
+}
+
+.UserInfoBox {
+    width: 100px;
+    margin-top: 20px;
+    margin-right: -10px;
+    float: right;
+    text-align: center;
+}
+
+.UserInfoDrop_downBox {
+    width: 100px;
+    border: 2px solid #979597;
+    border-radius: 10px 10px;
+    margin-top: 10px;
+    padding-right: 20px;
+    z-index: 9999;
+    position: absolute;
+    right: -9px;
+    background-color: #ffffff;
+    padding-top:10px;
+}
+
+    .UserInfoDrop_downBox ul li {
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .UserInfoDrop_downBox ul li:hover {
+        margin-bottom: 10px;
+        cursor: pointer;
+        color:red;
+    }
+/*用户头像image*/
+.HeadPortrait {
+    border-radius: 50px;
 }
 
 
@@ -89,7 +133,6 @@ a, .btn {
         margin-left: 20px;
         line-height: 30px;
         border-bottom: 2px solid red;
-        
         height: 49px;
         /*border-bottom-color:red;*/
     }
@@ -137,6 +180,7 @@ a, .btn {
     float: left;
     margin-top: 22px;
     line-height: 20px;
+    margin-left: -50px;
 }
 /*搜索框第二级div样式*/
 .search-input {
@@ -155,8 +199,8 @@ a, .btn {
     /*position: relative;*/
     position: absolute;
     /*z-index: 10;*/
-    padding-right:30px;
-    border-radius:10px 10px;
+    padding-right: 30px;
+    border-radius: 10px 10px;
 }
 /*搜索按钮*/
 .fr {
@@ -186,7 +230,7 @@ a, .btn {
     width: 100%;
     margin: 0px auto;
     display: block;
-    font-size:12px;
+    font-size: 12px;
     /*font-size: inherit;*/
     /*border: 1px solid red;*/
 }
@@ -197,16 +241,15 @@ a, .btn {
     margin: 0px auto;
     height: 180px;
     /*border: 1px solid red;*/
-    border-bottom:1px solid #505050;
-    background-color:#5a5a5a;
+    border-bottom: 1px solid #505050;
+    background-color: #5a5a5a;
 }
 /*内容上部*/
 .mainTopMiddle {
-    width:1140px;
-    margin:0px auto;
+    width: 1140px;
+    margin: 0px auto;
     /*border:1px solid red;*/
     height: 180px;
-
     background-image: url(/Content/Images/MasterEditionImg/logo02.png);
     background-repeat: no-repeat;
     background-position-x: 962px;
@@ -226,22 +269,24 @@ a, .btn {
     line-height: 30px;
 }
 
-    ul {
-        list-style: none;
-    }
+ul {
+    list-style: none;
+}
 
-    .sitebottomHNavItem li {
-        float: left;
-    }
+.sitebottomHNavItem li {
+    float: left;
+}
+
 .topitemUl li a {
-    color:white;
+    color: white;
 }
-.topitemUl li a:hover {
-    color:#ff8e54;
-}
+
+    .topitemUl li a:hover {
+        color: #ff8e54;
+    }
 
 .topitemUl li span {
-    color:#6f6b60;
+    color: #6f6b60;
 }
 
 
@@ -252,11 +297,12 @@ a, .btn {
     margin: 0px auto;
     height: 120px;
     /*border: 1px solid red;*/
-    background-color:#505050;
+    background-color: #505050;
 }
+
 .sitebottomItem {
-    width:1140px;
-    margin:0px auto;
-    border:1px solid #505050;
-    height:115px;
+    width: 1140px;
+    margin: 0px auto;
+    border: 1px solid #505050;
+    height: 115px;
 }
