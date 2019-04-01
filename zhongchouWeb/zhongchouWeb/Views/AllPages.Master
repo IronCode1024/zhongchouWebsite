@@ -78,6 +78,7 @@
                         this.logins.Style.Add("display", "block");
                         Response.Write("<a class=\"siteH_register Js-showRegister\">" + Session["UserNames"].ToString() + "</a>&nbsp;|&nbsp;<a href=\"Index.aspx\" class=\"siteH_register Js-showRegister\">退出</a>");
                     }%>--%>
+
                 <%--登录成功用户信息下拉框--%>
                 <ul class="UserInfoBox">
                     <li id="UserSpinner" style="width: 100px; height: 20px; cursor: pointer">
@@ -91,20 +92,31 @@
                             <li><a href="javascript:">喜欢的项目</a></li>
                             <li><a href="javascript:">支持的项目</a></li>
                             <li>个人设置</li>
-                            <li id="LoginOut">退出</li>
+                            <li id="LoginOut" runat="server">退出</li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <script>
                 $(function () {//用户信息下列表
+                    var aa = "ss";
                     $('#LoginOut').click(function () {//登出方法
                         //ajaxhtml：$.ajax({ url : "clear_session.php'", success : function(msg){ alert(msg); }}); clear_session.php; $_SESSION = array()
-
-                        '<%=LoginOuts(true)%>'//调用后台LoginOuts()函数  使Session=null   登出
+                         
+                        
+                        //调用后台LoginOuts()函数  使Session=null   登出}
+                        <%--'<%=LoginOuts(true)%>'--%>
+                        
                         //window.location.href = "Index.aspx";//重新跳转首页  重新加载
-                        window.parent.location.reload();
+                        //$('#LoginOut').text("");
+                        //$('#LoginOut').html("n");
+                        //window.parent.location.reload();
+
+                        window.location.href = "Index.aspx";
                     });
+                    
+                    
+
                     $('#UserSpinner').mousemove(function () {
                         //$('#UserSpinner').css("margin-left","30px");
                         $('#UserSpinnerdisplay').show();

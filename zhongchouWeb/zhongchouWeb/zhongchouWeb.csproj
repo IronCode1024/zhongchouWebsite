@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\packages\AspNetPager_CN.7.5.1\lib\AspNetPager.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
@@ -58,10 +61,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrators\AdminContent\CSS\AdminIndexStyle.css" />
+    <Content Include="Administrators\AdminContent\CSS\AdminOverallSituationStyle.css" />
     <Content Include="Administrators\AdminIndex.aspx" />
+    <Content Include="Administrators\AdvertisementInfoAdmin.aspx" />
+    <Content Include="Administrators\FooterAdmin.aspx" />
+    <Content Include="Administrators\HeaderAdmin.aspx" />
+    <Content Include="Administrators\ProjectInfoAdmin.aspx" />
+    <Content Include="Administrators\UserCommentaryInfoAdmin.aspx" />
+    <Content Include="Administrators\UserInfoAdmin.aspx" />
     <Content Include="Content\Css\HeadFootStyle.css" />
     <Content Include="Content\Css\IndexStyle.css" />
     <Content Include="Content\Css\LoginRegisteStyle.css" />
+    <Content Include="Content\Css\OverallSituationStyle.css" />
     <Content Include="Content\Images\IndexImg\1.jpg" />
     <Content Include="Content\Images\IndexImg\10.jpg" />
     <Content Include="Content\Images\IndexImg\11.jpg" />
@@ -100,8 +111,10 @@
     <Content Include="Content\Images\LoginImg\wx.jpg" />
     <Content Include="Content\Images\LoginImg\xl.jpg" />
     <Content Include="Content\Images\MasterEditionImg\logo02.png" />
+    <Content Include="packages.config" />
     <None Include="Script\jQuerys\jquery-1.10.2.intellisense.js" />
     <Content Include="Content\Images\MasterEditionImg\sanjiao.jpg" />
+    <Content Include="Content\Images\publicImg\backtop.png" />
     <Content Include="Content\Images\publicImg\SupportHeart.jpg" />
     <Content Include="Content\Images\publicImg\SupportHearts.jpg" />
     <Content Include="Content\Images\UserHeadPortrait\NikolaTesla.jpg" />
@@ -113,6 +126,7 @@
     <Content Include="Script\jQuerys\jquery.validate.min.js" />
     <Content Include="Script\jQuerys\jquery.validate.unobtrusive.js" />
     <Content Include="Script\jQuerys\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Script\OverallSituationjs.js" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
@@ -125,6 +139,48 @@
     </Compile>
     <Compile Include="Administrators\AdminIndex.aspx.designer.cs">
       <DependentUpon>AdminIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrators\AdvertisementInfoAdmin.aspx.cs">
+      <DependentUpon>AdvertisementInfoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrators\AdvertisementInfoAdmin.aspx.designer.cs">
+      <DependentUpon>AdvertisementInfoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrators\FooterAdmin.aspx.cs">
+      <DependentUpon>FooterAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrators\FooterAdmin.aspx.designer.cs">
+      <DependentUpon>FooterAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrators\HeaderAdmin.aspx.cs">
+      <DependentUpon>HeaderAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrators\HeaderAdmin.aspx.designer.cs">
+      <DependentUpon>HeaderAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrators\ProjectInfoAdmin.aspx.cs">
+      <DependentUpon>ProjectInfoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrators\ProjectInfoAdmin.aspx.designer.cs">
+      <DependentUpon>ProjectInfoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrators\UserCommentaryInfoAdmin.aspx.cs">
+      <DependentUpon>UserCommentaryInfoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrators\UserCommentaryInfoAdmin.aspx.designer.cs">
+      <DependentUpon>UserCommentaryInfoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrators\UserInfoAdmin.aspx.cs">
+      <DependentUpon>UserInfoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrators\UserInfoAdmin.aspx.designer.cs">
+      <DependentUpon>UserInfoAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AllPages.Master.cs">

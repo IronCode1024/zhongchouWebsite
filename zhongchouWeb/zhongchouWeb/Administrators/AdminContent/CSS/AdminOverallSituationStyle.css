@@ -1,0 +1,68 @@
+﻿body {
+    text-align: center;
+}
+/*form表单外的大div样式*/
+.InfoDataShowBox {
+    width: 1024px;
+    height: auto;
+    margin: 0px auto;
+    /*border:1px solid red;*/
+}
+
+/*form里面的div，repeater外面的第一个div*/
+.InfoDataBox {
+    margin: 0px auto;
+    width: 1024px;
+    /*border:1px solid blue;*/
+}
+
+/*repeater里面的table表格样式*/
+.TableBox {
+    border-collapse: collapse; /*合并边框*/
+    width: 100%;
+}
+    /*table*/
+    .TableBox tr th, td {
+        width: auto;
+        border: 1px solid #000000;
+    }
+
+
+
+/*.AspNetPaging {
+    margin:0px auto;
+    border: 1px solid blue;
+}
+
+.pull-right {
+    margin:0px auto;
+    border: 1px solid blue;
+}*/
+
+/*分页按钮样式*/
+.anpager {
+    margin-left:-50px;
+}
+.anpager .cpb {
+    background: #1F3A87 none repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 5px 4px 0 0;
+    padding: 4px 10px;
+}
+
+.anpager a {
+    background: #FFFFFF none repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
+    color: #1F3A87;
+    margin: 5px 4px 0 0;
+    padding: 4px 10px;
+    text-decoration: none;
+}
+
+    .anpager a:hover {
+        background: #1F3A87 none repeat scroll 0 0;
+        border: 1px solid #1F3A87;
+        color: #FFFFFF;
+    }

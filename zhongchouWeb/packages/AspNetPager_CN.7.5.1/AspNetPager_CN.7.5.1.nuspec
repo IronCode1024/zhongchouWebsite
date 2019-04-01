@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>AspNetPager_CN</id>
+    <version>7.5.1</version>
+    <title>AspNetPager 分页控件</title>
+    <authors>Webdiyer</authors>
+    <owners>Webdiyer</owners>
+    <licenseUrl>http://www.webdiyer.com/aspnetpager/license/</licenseUrl>
+    <projectUrl>http://www.webdiyer.com/aspnetpager/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AspNetPager是ASP.NET网站或Web应用程序中用于分页的自定义控件，功能强大、灵活，使用方便，同时支持回发（Postback）和url两种分页方式。
+在线示例：http://www.webdiyer.com/aspnetpager/demos/
+
+在线帮助文档：http://www.webdiyer.com/aspnetpager/docs/</description>
+    <summary>AspNetPager是ASP.NET网站或Web应用程序中用于分页的自定义控件，功能强大、灵活，使用方便，同时支持回发（Postback）和url两种分页方式。</summary>
+    <releaseNotes>修正了ShowDisabledButtons为false时html闭合标签丢失的bug；
+改为从WebControl 继承而不是Panel；
+去除属性Wrap；
+枚举LayoutType添加新项Ul；</releaseNotes>
+    <copyright>©2002-2015 Webdiyer</copyright>
+    <language>zh-CN</language>
+    <tags>AspNetPager ASP.NET分页控件 ASP.NET分页 Paging Pagination</tags>
+  </metadata>
+</package>

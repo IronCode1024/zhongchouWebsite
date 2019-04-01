@@ -7,3 +7,7 @@ F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BL
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\MODELS.dll
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\DAL.pdb
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\MODELS.pdb
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\AspNetPager.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\AspNetPager.xml
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\en\AspNetPager.resources.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\BLL\bin\Debug\zh-CHT\AspNetPager.resources.dll

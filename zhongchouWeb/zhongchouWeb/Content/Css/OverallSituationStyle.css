@@ -1,0 +1,28 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    z-index:0;
+}
+
+a img {
+    border: none;
+}
+
+
+/*回到顶部按钮小火箭样式*/
+.backtopImgDiv {
+    width:33px;
+    height:46px;
+    position:fixed;
+    /*border:1px solid red;*/
+    background-image:url(/Content/Images/publicImg/backtop.png);
+    background-repeat:no-repeat;
+    background-position-x:2px;
+    cursor:pointer;
+
+    right:300px;
+    bottom:350px;
+}
+    .backtopImgDiv:hover {
+    background-position-x:-36px;
+    }

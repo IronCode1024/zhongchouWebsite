@@ -2,3 +2,7 @@ F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\MO
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\MODELS\bin\Debug\MODELS.pdb
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\MODELS\obj\Debug\MODELS.dll
 F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\MODELS\obj\Debug\MODELS.pdb
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\MODELS\bin\Debug\AspNetPager.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\MODELS\bin\Debug\AspNetPager.xml
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\MODELS\bin\Debug\en\AspNetPager.resources.dll
+F:\VS项目源码文件\拾柴众筹网项目\项目解决方案\zhongchouWeb\MODELS\bin\Debug\zh-CHT\AspNetPager.resources.dll

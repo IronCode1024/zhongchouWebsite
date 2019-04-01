@@ -15,40 +15,54 @@ namespace zhongchouWeb.Views
             {
                 if (Session["Logins"] != null && Session["Logins"].ToString() != "")
                 {
+                    //this.LoginOut.InnerHtml = "n";
                     //Session["Logins"] = null;
                     //Literal lt = new Literal();
-                    //lt.Text = "<a>Session[\"UserNames\"].ToString()</a>";
+                    //lt.Text = "<a>Session[\"UserNames\"].ToString()</a>";3
                     //form1.Controls.Add(lt);
                     this.notlogins.Style.Add("display", "none");
                     this.logins.Style.Add("display", "block");
                     this.Label1.Text = Session["UserNames"].ToString();
                     this.HeadPortraits.ImageUrl = Session["UserHeadPortrait"].ToString();
                 }
+                if (this.LoginOut.InnerHtml == "n")
+                {
+                    Session["Logins"] = null;
+                }
 
                 //string nn = Session["UserNames"].ToString();
                 //Response.Write("<script>alert('"+nn+"')</script>");
+
             }
             else
             {
-                Session["Logins"] = null;
+                //Session["Logins"] = null;
             }
+
         }
 
         /// <summary>
         /// 登出
         /// </summary>
         /// <returns></returns>
-        public bool LoginOuts(bool b)
+        public int LoginOuts(bool b)
         {
-            if (b == true)
+            if (!IsPostBack)
             {
-                Session["Logins"] = null;
-                return true;
+                if (b == true)
+                {
+                    Session["Logins"] = null;
+                    return 12;
+                }
+                else
+                {
+                    Response.Write("<script>alert('vzbz')</script>");
+                    return 0;
+                }
             }
             else
             {
-                Response.Write("<script>alert('vzbz')</script>");
-                return false;
+                return 1;
             }
         }
     }

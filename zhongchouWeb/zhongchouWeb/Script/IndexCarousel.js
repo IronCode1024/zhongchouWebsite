@@ -1,4 +1,4 @@
-﻿//TODO banner轮播效果
+﻿//banner轮播效果
 function turnPics() {
     var index = 0;
     //var stop = false;
@@ -39,6 +39,10 @@ function turnPics() {
     });
 
 }
+
+
+
 $(function () {
-    turnPics();
+    turnPics();//banner轮播效果
 });
+

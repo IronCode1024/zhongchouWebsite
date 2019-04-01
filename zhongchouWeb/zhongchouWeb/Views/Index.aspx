@@ -3,9 +3,14 @@
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="head">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../Content/Css/OverallSituationStyle.css" rel="stylesheet" />
     <script src="../Script/jQuerys/jquery-1.10.2.min.js"></script>
+    <script src="../Script/OverallSituationjs.js"></script>
     <script src="../Script/IndexCarousel.js"></script>
+
     <link href="../Content/Css/IndexStyle.css" rel="stylesheet" />
+
+
     <title>拾柴众筹网--首页</title>
 </asp:Content>
 
@@ -14,6 +19,10 @@
     <html xmlns="http://www.w3.org/1999/xhtml">
 
     <body>
+        <div class="backtopImgDiv" id="backtopDiv">
+            <%--<img src="../Content/Images/publicImg/backtop.png" />--%></div>
+
+
         <div class="siteHNavIndex">
             <div class="siteHNavInner">
                 <a href="#" class="btn_ALink">浏览项目</a>

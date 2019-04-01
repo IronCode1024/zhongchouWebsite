@@ -33,7 +33,7 @@ public static class DBHelper
     /// <param name="str">传入一个sql语句</param>
     /// <param name="pms">传入sql参数对象</param>
     /// <returns></returns>
-    public static object ExecuteScalar(string str,params SqlParameter[] pms)
+    public static object ExecuteScalar(string str, params SqlParameter[] pms)
     {
         conn.Open();
         SqlCommand comm = new SqlCommand(str, conn);
@@ -82,6 +82,55 @@ public static class DBHelper
     //    return x;
     //}
 
+
+
+
+
+
+
+
+
+    public static SqlCommand cmd;//分页cmd全局变量
+
+    /// <summary>
+    /// 执行带参数的查询SQL语句或存储过程
+    /// </summary>
+    /// <param name="cmdText">查询SQL语句或存储过程</param>
+    /// <param name="paras">参数集合</param>
+    /// <param name="ct">命令类型</param>
+    /// <returns></returns>
+    public static DataTable ExecuteQueryPager(string cmdText, SqlParameter[] paras, CommandType ct)
+    {
+        conn.Open();
+        DataTable dt = new DataTable();
+        cmd = new SqlCommand(cmdText, conn);
+        cmd.CommandType = ct;
+        cmd.Parameters.AddRange(paras);
+        SqlDataReader sdr;
+        //SqlDataAdapter sdr = new SqlDataAdapter();
+        using (sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+        {
+            dt.Load(sdr);
+        }
+        conn.Close();
+        return dt;
+    }
+    /// <summary>
+    /// 分页序号
+    /// </summary>
+    /// <param name="cmdText"></param>
+    /// <param name="ct"></param>
+    /// <returns></returns>
+    public static object ExecuteScalarPager(string cmdText, CommandType ct)
+    {
+        conn.Close();
+        conn.Open();
+        cmd = new SqlCommand(cmdText,conn);
+        cmd.CommandType = ct;
+        object val = cmd.ExecuteScalar();
+        conn.Close();
+        return val;
+    }
 
 }
 

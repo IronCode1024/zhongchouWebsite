@@ -1,5 +1,56 @@
 ﻿body {
-
+    text-align:center;
+}
+.WelcomeBox {
+    width:1024px;
+    margin:0px auto;
 }
 
+.DataShowListBox {
+    width:1024px;
+    height:auto;
+    margin:0px auto;
+    /*border:1px solid red;*/
+}
+
+/*用户信息*/
+.UserInfoGridViewBox {
+    margin: 0px auto;
+    width: 1024px;
+    /*border:1px solid blue;*/
+}
+.UserInfoGridView {
+    width:1024px;
+    margin:0px auto;
+}
+/*查看更能多*/
+.ViewMoreBoxDiv{
+    
+    width:1024px;
+    margin:0px auto;
+}
+.ViewMore {
+    width:1024px;
+    height:40px;
+    background-color:#d0cbcb;
+    border-radius:10px;
+    cursor:pointer;
+}
+.ViewMore:hover {
+    background-color:#a49d9d;
+}
+
+
+/*项目信息*/
+.ProjectGridViewBox {
+    margin: 0px auto;
+    width: 1024px;
+    /*border:1px solid blue;*/
+    float:left;
+}
+.ProjectGridView{
+    margin: 0px auto;
+    width: 1024px;
+    float:left;
+}
 

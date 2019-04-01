@@ -14,18 +14,14 @@ namespace zhongchouWeb.Administrators
     {
         AdminInfos ai = new AdminInfos();
         AdminInfoBll ab = new AdminInfoBll();
-        AdminShowUserInfoBll asuib = new AdminShowUserInfoBll();
+        AdminShowIndexBll asuib = new AdminShowIndexBll();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                if (Session["AdminLogins"] != null && Session["AdminLogins"].ToString() != "")
-                {
-                    this.notlogins.Style.Add("display", "none");
-                    this.logins.Style.Add("display", "block");
-                    this.Label1.Text = Session["AdminNames"].ToString();
-                }
-                gridViewDataShow();
+                gridViewDataShow();//用户信息
+                projectGridViewShow();//项目信息
+                userCommentaryGridViewShow();//评论信息
             }
         }
 
@@ -33,30 +29,27 @@ namespace zhongchouWeb.Administrators
         void gridViewDataShow()
         {
             DataSet ds = asuib.gridViewDataShow();
-            this.UserInfoGridView1.DataSource=ds.Tables["zcDB"];
-            this.UserInfoGridView1.DataBind();
+            this.UserInfoGridView.DataSource=ds.Tables["zcDB"];
+            this.UserInfoGridView.DataBind();
         }
 
-
-
-
-
-        /// <summary>
-        /// 登出
-        /// </summary>
-        /// <returns></returns>
-        public bool AdminLoginOuts(bool b)
+        void projectGridViewShow()
         {
-            if (b == true)
-            {
-                Session["AdminLogins"] = null;
-                return true;
-            }
-            else
-            {
-                Response.Write("<script>alert('vzbz')</script>");
-                return false;
-            }
+            DataSet ds = asuib.projectGridViewShow();
+            this.ProjectGridView.DataSource=ds.Tables["zcDB"];
+            this.ProjectGridView.DataBind();
         }
+
+        void userCommentaryGridViewShow()
+        {
+            DataSet ds = asuib.userCommentaryGridViewShow();
+            this.UserCommentaryGridView.DataSource = ds.Tables["zcDB"];
+            this.UserCommentaryGridView.DataBind();
+        }
+
+
+
+
+
     }
 }
