@@ -69,10 +69,26 @@
     <Content Include="Administrators\ProjectInfoAdmin.aspx" />
     <Content Include="Administrators\UserCommentaryInfoAdmin.aspx" />
     <Content Include="Administrators\UserInfoAdmin.aspx" />
+    <Content Include="Content\Css\BrowseCss.css" />
+    <Content Include="Content\Css\BrowseProjectStyle.css" />
     <Content Include="Content\Css\HeadFootStyle.css" />
     <Content Include="Content\Css\IndexStyle.css" />
+    <Content Include="Content\Css\InitiateProjectStyle.css" />
+    <Content Include="Content\Css\LaunchCss.css" />
     <Content Include="Content\Css\LoginRegisteStyle.css" />
     <Content Include="Content\Css\OverallSituationStyle.css" />
+    <Content Include="Content\Css\Personal.css" />
+    <Content Include="Content\Css\StartUpProjectStyle.css" />
+    <Content Include="Content\Images\BrowseProjectImg\1.jpg" />
+    <Content Include="Content\Images\BrowseProjectImg\8415405_cover.jpg" />
+    <Content Include="Content\Images\BrowseProjectImg\ceshi1.jpg" />
+    <Content Include="Content\Images\BrowseProjectImg\gycb.jpg" />
+    <Content Include="Content\Images\BrowseProjectImg\QQ.png" />
+    <Content Include="Content\Images\BrowseProjectImg\V.PNG" />
+    <Content Include="Content\Images\BrowseProjectImg\weibo.png" />
+    <Content Include="Content\Images\BrowseProjectImg\weixin.png" />
+    <Content Include="Content\Images\BrowseProjectImg\yhtx.png" />
+    <Content Include="Content\Images\BrowseProjectImg\zzimg.jpg" />
     <Content Include="Content\Images\IndexImg\1.jpg" />
     <Content Include="Content\Images\IndexImg\10.jpg" />
     <Content Include="Content\Images\IndexImg\11.jpg" />
@@ -104,6 +120,10 @@
     <Content Include="Content\Images\IndexImg\siteHTopBg.png" />
     <Content Include="Content\Images\IndexImg\sosuo.jpg" />
     <Content Include="Content\Images\IndexImg\sousuo.PNG" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\1.jpg" />
+    <Content Include="Content\Images\publicImg\notLogin.png" />
+    <Content Include="Content\Images\LaunchImg\EI2{DJV4FJ%29EOX`YKJZ%40%28DB.png" />
+    <Content Include="Content\Images\LaunchImg\RNG%404}RKZ2_5F}SGBBVD4J0.png" />
     <Content Include="Content\Images\LoginImg\bgLoginImg.PNG" />
     <Content Include="Content\Images\LoginImg\share.png" />
     <Content Include="Content\Images\LoginImg\smallico.png" />
@@ -111,6 +131,17 @@
     <Content Include="Content\Images\LoginImg\wx.jpg" />
     <Content Include="Content\Images\LoginImg\xl.jpg" />
     <Content Include="Content\Images\MasterEditionImg\logo02.png" />
+    <Content Include="Content\Images\StartUpProjectImg\jiantou.png" />
+    <Content Include="Content\Images\StartUpProjectImg\jiantou2.png" />
+    <Content Include="Script\BrowseJs.js" />
+    <Content Include="Script\InitiateProjectScripr.js" />
+    <Content Include="Script\LaunchJS.js" />
+    <Content Include="Script\PersonalSettings.js" />
+    <Content Include="Views\BrowseProject.aspx" />
+    <Content Include="Views\ClassificationProject.aspx" />
+    <Content Include="Views\ForgetPassword.aspx" />
+    <Content Include="Views\InitiateProject.aspx" />
+    <Content Include="Views\Launch.aspx" />
     <Content Include="packages.config" />
     <None Include="Script\jQuerys\jquery-1.10.2.intellisense.js" />
     <Content Include="Content\Images\MasterEditionImg\sanjiao.jpg" />
@@ -127,9 +158,14 @@
     <Content Include="Script\jQuerys\jquery.validate.unobtrusive.js" />
     <Content Include="Script\jQuerys\jquery.validate.unobtrusive.min.js" />
     <Content Include="Script\OverallSituationjs.js" />
+    <Content Include="Views\FooterPage.aspx" />
+    <Content Include="Views\HeaderPage.aspx" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Views\Login.aspx" />
+    <Content Include="Views\PeopleHelp.aspx" />
+    <Content Include="Views\PersonalSettings.aspx" />
     <Content Include="Views\Register.aspx" />
+    <Content Include="Views\StartUpProject.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +218,41 @@
     <Compile Include="Administrators\UserInfoAdmin.aspx.designer.cs">
       <DependentUpon>UserInfoAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\BrowseProject.aspx.cs">
+      <DependentUpon>BrowseProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BrowseProject.aspx.designer.cs">
+      <DependentUpon>BrowseProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClassificationProject.aspx.cs">
+      <DependentUpon>ClassificationProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClassificationProject.aspx.designer.cs">
+      <DependentUpon>ClassificationProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InitiateProject.aspx.cs">
+      <DependentUpon>InitiateProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\InitiateProject.aspx.designer.cs">
+      <DependentUpon>InitiateProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Launch.aspx.cs">
+      <DependentUpon>Launch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Launch.aspx.designer.cs">
+      <DependentUpon>Launch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AllPages.Master.cs">
       <DependentUpon>AllPages.Master</DependentUpon>
@@ -189,6 +260,20 @@
     </Compile>
     <Compile Include="Views\AllPages.Master.designer.cs">
       <DependentUpon>AllPages.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FooterPage.aspx.cs">
+      <DependentUpon>FooterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\FooterPage.aspx.designer.cs">
+      <DependentUpon>FooterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HeaderPage.aspx.cs">
+      <DependentUpon>HeaderPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\HeaderPage.aspx.designer.cs">
+      <DependentUpon>HeaderPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -204,12 +289,33 @@
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\PeopleHelp.aspx.cs">
+      <DependentUpon>PeopleHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PeopleHelp.aspx.designer.cs">
+      <DependentUpon>PeopleHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonalSettings.aspx.cs">
+      <DependentUpon>PersonalSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PersonalSettings.aspx.designer.cs">
+      <DependentUpon>PersonalSettings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartUpProject.aspx.cs">
+      <DependentUpon>StartUpProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\StartUpProject.aspx.designer.cs">
+      <DependentUpon>StartUpProject.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +340,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrators\AdminScript\" />
+    <Folder Include="Content\Images\InitiateProjectImg\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -19,12 +19,13 @@ select * from AdministrationTb
 CREATE TABLE UserInfoTb
 (
 	Id INT IDENTITY(1001,1) PRIMARY KEY NOT NULL, --用户ID
-	UserName NVARCHAR(20) NOT NULL,--用户名
-	UserEmail NVARCHAR(50) NOT NULL,--密码
-	UserPassword NVARCHAR(32) NOT NULL,--邮箱
-	UserAddress NVARCHAR(200) NOT NULL,--用户地址
-	PersonalizedSignature NVARCHAR(100) NULL,--个性签名
-	UserHeadPortrait NVARCHAR(100) NULL,--用户头像路径
+	UserName NVARCHAR(50) NOT NULL,--用户名
+	UserSex NVARCHAR(20) NULL,
+	UserEmail NVARCHAR(50) NOT NULL,--邮箱
+	UserPassword NVARCHAR(50) NOT NULL,--密码
+	UserAddress NVARCHAR(200) NULL,--用户地址
+	PersonalizedSignature NVARCHAR(500) NULL,--个性签名
+	UserHeadPortrait NVARCHAR(500) NULL,--用户头像路径
 	State BIT NOT NULL,--在线状态
 	RegistrationTime DATETIME NOT NULL,--用户注册日期
 )
@@ -35,10 +36,10 @@ select * from UserInfoTb
 CREATE TABLE UserRelatedItems
 (
 	RelatedID INT IDENTITY(101,1) PRIMARY KEY NOT NULL,
-	UserEmail NVARCHAR(50) NOT NULL,--用户邮箱  关联用户表  一个用户可以有多个项目
-	ProjectsInitiated NVARCHAR(50) NULL, --发起的项目
-	ProjectsSupported NVARCHAR(50) NULL, --支持的项目
-	FavoriteProjects NVARCHAR(50) NULL, --喜欢的项目
+	UserEmail NVARCHAR(50) NOT NULL,--用户邮箱  关联用户表  一个用户可以有多个项目  11
+	ProjectsInitiated NVARCHAR(50) NULL, --发起的项目ProjectID   1  12  3
+	ProjectsSupported NVARCHAR(50) NULL, --支持的项目ProjectID
+	FavoriteProjects NVARCHAR(50) NULL, --喜欢的项目ProjectID
 )
 --drop table UserRelatedItems
 select * from UserRelatedItems
@@ -46,7 +47,7 @@ select * from UserRelatedItems
 --项目表
 CREATE TABLE ProjectTb
 (
-	ProjectID INT IDENTITY(101,1) NOT NULL, --编号
+	ProjectID INT IDENTITY(101,1) PRIMARY KEY NOT NULL, --编号
 	ProjectCover NVARCHAR(500) NOT NULL,	--项目封面
 	UserID INT NOT NULL,					--关联用户表
 	UserEmail NVARCHAR(50) NOT NULL,		--发起人邮箱
@@ -58,8 +59,8 @@ CREATE TABLE ProjectTb
 	TargetAmountOfMoney DECIMAL(15,2),		--目标金额
 	AlreadyRaisedMoney DECIMAL(15,2),		--已筹金额
     NumberOfProjectSupport INT NULL,		--项目支持人数
-	ProjectAddress NVARCHAR(500) NOT NULL,	--项目发起地址
-	ReleaseStatus NVARCHAR(20) NOT NULL,	--发布状态
+	ProjectAddress NVARCHAR(500) NULL,      --项目发起地址
+	ReleaseStatus NVARCHAR(20) NOT NULL,	--发布状态      (发布中、已成功、已失败)
 	ProjectUpdateTime DATETIME,				--项目更新时间
 	ReleaseDate DATETIME NOT NULL			--发布日期（发布日的日期）
 )											
@@ -89,3 +90,16 @@ CREATE TABLE UserCommentaryTb
     CommentaryDate DATETIME
 )
 
+--银行表
+CREATE TABLE BankTb
+(
+	BankID INT IDENTITY(101,1) NOT NULL, --ID
+	BankAccount NVARCHAR(200) NOT NULL,  --银行账号
+	BankUserName NVARCHAR(200) NOT NULL, --银行账户名
+	BanName NVARCHAR(200) NOT NULL,      --银行名称
+	BankBranch NVARCHAR(200) NOT NULL,   --开户支行
+	UserEmail NVARCHAR(200) NOT NULL     --用户邮箱
+)
+--drop table BankTb
+select * from BankTb
+insert into BankTb values('884488123545987142','小罗伯特唐尼','中国银行','中国银行华中农大支行','123456789@qq.com')

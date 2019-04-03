@@ -9,7 +9,9 @@
     <title></title>
 </head>
 <body>
-    <!--页眉-->
+    <form id="form1" runat="server">
+    <div>
+        <!--页眉-->
     <div class="siteMTopBox">
         <div class="mainInnerBox clearfix relative">
             <a href="/Administrators/AdminIndex.aspx" class="siteMIndexA">
@@ -48,24 +50,22 @@
                         <asp:Label ID="Label1" runat="server" Text="Label" Height="20"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;<img style="margin-bottom: 0px;" src="../Content/Images/MasterEditionImg/sanjiao.jpg" width="10" height="10" /></li>
                     <li id="UserSpinnerdisplay" class="UserInfoDrop_downBox" style="display: none;">
                         <ul style="width: 100px; margin-left: -30px;">
-                            <li><a href="javascript:">发起的项目</a></li>
+                            <%--<li><a href="javascript:">发起的项目</a></li>
                             <li><a href="javascript:">喜欢的项目</a></li>
-                            <li><a href="javascript:">支持的项目</a></li>
-                            <li>个人设置</li>
-                            <li id="LoginOut">退出</li>
+                            <li><a href="javascript:">支持的项目</a></li>--%>
+                            <%--<li>个人设置</li>--%>
+                            <li id="LoginOut">
+                                <asp:LinkButton ID="OuttLoginLinkBtn" runat="server" OnClick="OuttLoginLinkBtn_Click">退出</asp:LinkButton></li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <script>
                 $(function () {//用户信息下列表
-                    $('#LoginOut').click(function () {//登出方法u
-                        //ajaxhtml：$.ajax({ url : "clear_session.php'", success : function(msg){ alert(msg); }}); clear_session.php; $_SESSION = array()
-
-                       <%--'<%=AdminLoginOuts(true)%>'--%>//调用后台LoginOuts()函数  使Session=null   登出
-                        //window.location.href = "Index.aspx";//重新跳转首页  重新加载
-                        window.parent.location.reload();
-                    });
+                    //$('#LoginOut').click(function () {
+                    //    //window.location.href = "Index.aspx";//重新跳转首页  重新加载
+                    //    window.parent.location.reload();
+                    //});
                     $('#UserSpinner').mousemove(function () {
                         //$('#UserSpinner').css("margin-left","30px");
                         $('#UserSpinnerdisplay').show();
@@ -90,11 +90,6 @@
             </div>-->
         </div>
     </div>
-
-
-    <form id="form1" runat="server">
-    <div>
-    
     </div>
     </form>
 </body>

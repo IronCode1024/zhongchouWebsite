@@ -22,23 +22,15 @@ namespace zhongchouWeb.Administrators
             }
         }
 
-
         /// <summary>
         /// 登出
         /// </summary>
-        /// <returns></returns>
-        public bool AdminLoginOuts(bool b)
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void OuttLoginLinkBtn_Click(object sender, EventArgs e)
         {
-            if (b == true)
-            {
-                Session["AdminLogins"] = null;
-                return true;
-            }
-            else
-            {
-                Response.Write("<script>alert('vzbz')</script>");
-                return false;
-            }
+            Session["AdminLogins"] = null;
+            Response.Redirect("AdminIndex.aspx");
         }
     }
 }

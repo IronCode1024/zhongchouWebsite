@@ -8,8 +8,6 @@
     <script src="../Script/jQuerys/jquery-1.10.2.min.js"></script>
     <link rel="icon" href="../Content/Images/IndexImg/icons.PNG" />
     <link href="../Content/Css/OverallSituationStyle.css" rel="stylesheet" />
-
-    
     <link href="AdminContent/CSS/AdminIndexStyle.css" rel="stylesheet" />
 
     <script src="../Script/OverallSituationjs.js"></script>

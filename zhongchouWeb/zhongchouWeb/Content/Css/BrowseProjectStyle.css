@@ -1,0 +1,109 @@
+﻿body {
+}
+/*浏览项目的样式，总体分为两个div*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.btn {
+    cursor:pointer;
+}
+.btn:hover {
+    color:red;
+}
+
+/*分为三个盒子*/
+.content {
+    width: 1024px;
+    height: 1200px;
+    /*border: 1px solid red;*/
+    margin: 0px auto;
+}
+.line {
+    position:absolute;
+    right:30px;
+}
+.shang {
+    width: 1010px;
+    height: 200px;
+    /*border: 1px solid red;*/
+    margin: 10px;
+}
+
+.shang1 {
+    width: 1000px;
+    height: 40px;
+    /*border: 1px solid red;*/
+    margin: 10px;
+}
+.shang1-1 {
+    border:1px solid blue;
+    float:left;
+}
+/*repetear1，button中的样式*/
+.shang1-2 {
+    float:left;
+    /*border:1px solid blue;*/
+    font-size:15px;
+    margin-left:30px;
+    margin-top:0px;
+
+}
+shang1-2-2 {
+ float:left;
+    /*border:1px solid blue;*/
+    font-size:15px;
+    /*margin-left:10px;*/
+    /*margin-top:5px;*/
+}
+.shang2 {
+    width: 1000px;
+    height: 40px;
+    /*border: 1px solid red;*/
+    margin: 10px;
+}
+
+.shang3 {
+    width: 1000px;
+    height: 40px;
+    /*border: 1px solid red;*/
+    margin: 10px;
+}
+
+
+
+/*‘按什么’的样式*/
+.an {
+    font-weight:bold;
+    font-size:25px;
+    float: left;
+}
+
+    .shang ul li {
+        width:80px;
+        height:35px;
+        position: relative;
+        margin-left: 30px;
+        float: left;
+        /*border:1px solid blue;*/
+        text-align:center;
+    }
+/*为li设置的jq改变样式*/ 
+.bian {
+    background-color:orange;
+}
+
+
+#xia {
+    width: 1070px;
+    height: 700px;
+    border: 1px solid #fdffff;
+    /*margin-right:20px;
+    position:relative;*/
+}
+
+/*在峰哥的基础场修饰*/
+.RepeaterItemBox {
+   
+}
+                 

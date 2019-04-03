@@ -18,6 +18,7 @@ public static class DBHelper
     /// <returns></returns>
     public static int ExecuteNonQuery(string str, params SqlParameter[] pms)
     {
+        conn.Close();
         conn.Open();
         SqlCommand comm = new SqlCommand(str, conn);
         //comm.CommandType = ct;
@@ -35,6 +36,7 @@ public static class DBHelper
     /// <returns></returns>
     public static object ExecuteScalar(string str, params SqlParameter[] pms)
     {
+        conn.Close();
         conn.Open();
         SqlCommand comm = new SqlCommand(str, conn);
         //StoredProcedure 传入进来的字符串当成存储过程解析
@@ -55,6 +57,7 @@ public static class DBHelper
     /// <returns></returns>
     public static DataSet GetTable(string str, params SqlParameter[] pms)//, params SqlParameter[] pms
     {
+        conn.Close();
         conn.Open();
         SqlCommand comm = new SqlCommand(str, conn);
         comm.Parameters.AddRange(pms);
@@ -101,6 +104,7 @@ public static class DBHelper
     /// <returns></returns>
     public static DataTable ExecuteQueryPager(string cmdText, SqlParameter[] paras, CommandType ct)
     {
+        conn.Close();
         conn.Open();
         DataTable dt = new DataTable();
         cmd = new SqlCommand(cmdText, conn);

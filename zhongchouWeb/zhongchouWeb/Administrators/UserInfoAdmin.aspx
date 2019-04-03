@@ -41,6 +41,7 @@
                                 <tr>
                                     <th style="width: 0%;">编号</th>
                                     <th style="width: 0%;">用户名</th>
+                                    <th style="width: 0%;">性别</th>
                                     <th style="width: 0%;">邮箱</th>
                                     <th style="width: 0%;">密码</th>
                                     <th style="width: 0%;">头像路径</th>
@@ -54,6 +55,7 @@
                             <tr>
                                 <td><%#Eval("Id") %></td>
                                 <td><%#Eval("UserName") %></td>
+                                <td><%#Eval("UserSex") %></td>
                                 <td><%#Eval("UserEmail") %></td>
                                 <td><%#Eval("UserPassword") %></td>
                                 <td><%#Eval("UserHeadPortrait") %></td>

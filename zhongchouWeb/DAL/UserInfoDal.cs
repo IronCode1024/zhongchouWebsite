@@ -32,13 +32,14 @@ namespace DAL
             {
                 try
                 {
-                    string sql = "insert into UserInfoTb values(@a,@b,@c,@e,@d)";
+                    string sql = "insert into UserInfoTb (UserName,UserEmail,UserPassword,UserHeadPortrait,State,RegistrationTime) values(@a,@b,@c,@e,@d,@f)";
                     SqlParameter[] prm = new SqlParameter[]{
                             new SqlParameter("@a",Users.Name),  //用户名
                             new SqlParameter("@b",Users.Email), //邮箱
                             new SqlParameter("@c",Users.Password),    //密码
                             new SqlParameter("@e",""),
-                            new SqlParameter("@d","0")   //默认登录状态为0    --不在线
+                            new SqlParameter("@d","0"),  //默认登录状态为0    --不在线
+                            new SqlParameter("@f",DateTime.Now)
                         };
                     int rows = DBHelper.ExecuteNonQuery(sql, prm);
                     return rows;//注册之后返回数据库受影响行数
@@ -93,12 +94,45 @@ namespace DAL
         {
             //select Id,UserName,UserEmail,UserHeadPortrait from UserInfoTb
             //用户登录成功后查询用户名和图像  并显示到页面中的用户信息处
-            string sql = "select UserName,UserHeadPortrait from UserInfoTb where (UserName=@nameOremail or UserEmail=@nameOremail)";
+            string sql = "select UserName,UserEmail,UserHeadPortrait from UserInfoTb where (UserName=@nameOremail or UserEmail=@nameOremail)";
             SqlParameter[] prm = new SqlParameter[]{
                         new SqlParameter("@nameOremail",nameOremail),  //用户名
                     };
             DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
+
+
+
+
+
+        //个人设置==================================================================================================================================================================//
+        #region MyRegion
+        public DataSet getUserInfo(string email)
+        {
+            string sql = string.Format("select UserName,UserSex,UserEmail,PersonalizedSignature,RegistrationTime,UserAddress,UserHeadPortrait from UserInfoTb where UserEmail='{0}'", email);
+            DataSet ds = DBHelper.GetTable(sql);
+            return ds;
+        }
+        public int update(UserInfo ui)
+        {
+            string sql = string.Format("update UserInfoTb set UserName='{0}',UserSex='{1}',UserAddress='{2}',PersonalizedSignature='{3}' where UserEmail='{4}'", ui.Name, ui.Email, ui.UserSex, ui.PersonalizedSignature, ui.Email);
+            int rows = DBHelper.ExecuteNonQuery(sql);
+            return rows;
+        }
+        public int updatemm(UserInfo ui)
+        {
+            string sql = string.Format("update UserInfoTb set UserPassword='{0}'  where UserEmail='{1}'", ui.Password, ui.Email);
+            int rows = DBHelper.ExecuteNonQuery(sql);
+            return rows;
+        }
+        public int updateimg(UserInfo ui)
+        {
+            string sql = string.Format("update UserInfoTb set PersonalizedSignature='{0}'  where UserEmail='{1}'", ui.UserHeadPortrait, ui.Email);
+            int rows = DBHelper.ExecuteNonQuery(sql);
+            return rows;
+        } 
+        #endregion
+        //个人设置  结束==============================================================================================================================================================//
     }
 }

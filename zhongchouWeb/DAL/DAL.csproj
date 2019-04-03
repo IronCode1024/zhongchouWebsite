@@ -47,8 +47,14 @@
     <Compile Include="AdministratorsDal\AdminProjectInfoDal.cs" />
     <Compile Include="AdministratorsDal\AdminShowIndexDal.cs" />
     <Compile Include="AdministratorsDal\AdminUserInfoDal.cs" />
+    <Compile Include="ClassificationProjectDAL.cs" />
     <Compile Include="DBHelper.cs" />
+    <Compile Include="ForgetPasswordDal.cs" />
     <Compile Include="IndexDal.cs" />
+    <Compile Include="ProjectDal.cs" />
+    <Compile Include="ProjectTbDAL.cs" />
+    <Compile Include="StartUpProjectDal.cs" />
+    <Compile Include="UserCommentaryTbDal.cs" />
     <Compile Include="UserInfoDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

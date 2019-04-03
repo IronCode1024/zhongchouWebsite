@@ -1,0 +1,396 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+#a {
+    text-decoration: none;
+}
+
+.big {
+    width: 1024px;
+    height: 100%;
+    margin: 0px auto;
+    position: relative;
+}
+
+.mine {
+    width: 1024px;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.tiao {
+    border: 1px solid #F0F0F0;
+    width: 200px;
+    position: absolute;
+    height: 500px;
+    border-radius: 5px;
+    background-color: #F0F0F0;
+}
+
+.tiaotiao {
+    border: 1px solid #F0F0F0;
+    width: 824px;
+    position: absolute;
+    left: 200px;
+    height: 500px;
+}
+
+/*每个修改页面左边的背景图片*/
+#JKDiv_0 {
+    width: 824px;
+    height: 500px;
+    background-image: url("/Content/Images/LoginImg/bgLoginImg.PNG");
+    background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: -50px;
+    background-size: 500px;
+}
+
+#JKDiv_1 {
+    width: 824px;
+    height: 500px;
+    background-image: url("/Content/Images/LoginImg/bgLoginImg.PNG");
+    background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: -50px;
+    background-size: 500px;
+}
+
+#JKDiv_2 {
+    width: 824px;
+    height: 500px;
+    background-image: url("/Content/Images/LoginImg/bgLoginImg.PNG");
+    background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: -50px;
+    background-size: 500px;
+}
+
+#JKDiv_3 {
+    width: 824px;
+    height: 500px;
+    background-image: url("/Content/Images/LoginImg/bgLoginImg.PNG");
+    background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: -50px;
+    background-size: 500px;
+}
+/*.col {
+width:5px;
+height:25px;
+background-color:red;
+border-radius:5px;
+margin-top:-20px;
+}*/
+.one {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    background-image: url(/Content/Images/IndexImg/siteHTopBg.png);
+    background-repeat: no-repeat;
+    background-position-x: 26px;
+    background-position-y: -10px;
+    background-size: 25px;
+    border-bottom: 1px dashed #D6D6D6;
+}
+
+    .one:hover {
+        background-color: white;
+    }
+
+.two:hover {
+    background-color: white;
+}
+
+.three:hover {
+    background-color: white;
+}
+
+.foure:hover {
+    background-color: white;
+}
+
+.five:hover {
+    background-color: white;
+}
+
+
+/*每个选择样式*/
+.two {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    background-image: url(/Content/Images/IndexImg/siteHTopBg.png);
+    background-repeat: no-repeat;
+    background-position-x: 26px;
+    background-position-y: -118px;
+    background-size: 25px;
+    border-bottom: 1px dashed #D6D6D6;
+}
+
+.three {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    background-image: url(/Content/Images/IndexImg/siteHTopBg.png);
+    background-repeat: no-repeat;
+    background-position-x: 26px;
+    background-position-y: -926px;
+    background-size: 25px;
+    border-bottom: 1px dashed #D6D6D6;
+}
+
+/*.foure {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    background-image: url(/Content/Images/IndexImg/siteHTopBg.png);
+    background-repeat: no-repeat;
+    background-position-x: 8px;
+    background-position-y: -966px;
+    background-size: 25px;
+}*/
+
+.foure {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    background-image: url(/Content/Images/IndexImg/siteHTopBg.png);
+    background-repeat:no-repeat;
+    background-position-x: 16px;
+    background-position-y: -698px;
+    background-size: 25px;
+    border-bottom: 1px dashed #D6D6D6;
+}
+
+#Label2 {
+    position: relative;
+    left: 100px;
+    top: 30px;
+}
+
+#Label3 {
+    position: relative;
+    left: 120px;
+    top: 30px;
+}
+
+#Label4 {
+    position: relative;
+    left: 82px;
+    top: 40px;
+}
+
+#TextBox1 {
+    position: relative;
+    left: 100px;
+    top: 31px;
+    height: 25px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#Label5 {
+    position: relative;
+    left: 100px;
+    top: 30px;
+}
+
+#Label9 {
+    position: relative;
+    left: 176px;
+    top: 48px;
+    color: #808080;
+}
+
+.RadioButton1 {
+    position: relative;
+    left: 120px;
+    top: 30px;
+}
+
+.RadioButton2 {
+    position: relative;
+    left: 140px;
+    top: 30px;
+}
+
+.RadioButton3 {
+    position: relative;
+    left: 160px;
+    top: 30px;
+}
+
+#Label6 {
+    position: relative;
+    left: 82px;
+    top: 34px;
+}
+
+.DropDownList1 {
+    position: relative;
+    left: 100px;
+    top: 34px;
+    border-radius: 5px;
+}
+
+#Label7 {
+    position: relative;
+    left: 100px;
+    top: 42px;
+}
+
+#Label17 {
+    position: relative;
+    left: 130px;
+    top: 34px;
+}
+
+#Label16 {
+    position: relative;
+    left: 118px;
+    top: 42px;
+}
+
+#TextBox3 {
+    position: relative;
+    left: 82px;
+    top: 50px;
+    border-radius: 5px;
+}
+
+#Label8 {
+    position: relative;
+    left: 65px;
+}
+
+.Button1 {
+    border-radius: 5px;
+    position: relative;
+    left: 174px;
+    top: 60px;
+}
+
+#Label10 {
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+
+#TextBox4 {
+    position: relative;
+    left: 130px;
+    top: 100px;
+    height: 25px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#Label11 {
+    position: relative;
+    left: -184px;
+    top: 140px;
+}
+
+#TextBox5 {
+    position: relative;
+    left: -154px;
+    top: 140px;
+    height: 25px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#Label12 {
+    position: relative;
+    left: -484px;
+    top: 180px;
+}
+
+#TextBox6 {
+    position: relative;
+    left: 206px;
+    top: 140px;
+    height: 25px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.CompareValidator1 {
+    position: relative;
+    left: 286px;
+    top: 140px;
+    color: red;
+}
+
+.Button2 {
+    border-radius: 5px;
+    position: relative;
+    left: 0px;
+    top: 200px;
+    border-radius: 5px;
+}
+
+#Label13 {
+    position: relative;
+    left: 82px;
+    top: 20px;
+}
+
+.FileUpload1 {
+    position: relative;
+    left: 82px;
+    top: 20px;
+}
+
+.Image1 {
+    position: relative;
+    left: 92px;
+    top: 150px;
+    border-radius:5px;
+}
+
+.Button3 {
+    position: relative;
+    left: -450px;
+    top: 80px;
+    border-radius: 5px;
+}
+
+.Button4 {
+    position: relative;
+    left: -400px;
+    top: 80px;
+    border-radius: 5px;
+}
+
+#Label14 {
+    margin: 0px auto;
+    position: absolute;
+}
+
+.fhsy {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+}
+
+    #Label15:hover {
+        color: orange;
+        cursor: pointer;
+    }

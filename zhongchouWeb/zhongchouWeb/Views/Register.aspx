@@ -36,7 +36,7 @@
                 </div>
                 <div class="panel-body">
 
-                    <form id="form1" runat="server">
+                    <form id="form1" runat="server" defaultbutton="ButReSubmit"> <!--defaultbutton="ButReSubmit" from默认button  按下enter执行按钮点击事件-->
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBox1" class="form-Tips">*用户名不能空</asp:RequiredFieldValidator>
                         <div class="form-group" style="margin-left: 26px">
                             用户名：<asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="用户名"></asp:TextBox>
@@ -111,6 +111,8 @@
                         //        time(document.getElementsByClassName("btn"));
                         //    }
                         //}
+
+                            
                     </script>
 
                     <br />

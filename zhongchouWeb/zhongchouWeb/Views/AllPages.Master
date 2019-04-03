@@ -83,7 +83,7 @@
                 <ul class="UserInfoBox">
                     <li id="UserSpinner" style="width: 100px; height: 20px; cursor: pointer">
                         <asp:Image ID="HeadPortraits" CssClass="HeadPortrait" Width="30" Height="30" runat="server" />&nbsp;&nbsp;&nbsp;&nbsp;<img style="margin-bottom: 5px;" src="../Content/Images/MasterEditionImg/sanjiao.jpg" width="12" height="12" /></li>
-                    <li id="UserSpinnerdisplay" class="UserInfoDrop_downBox" style="display: none;">
+                    <li id="UserSpinnerdisplay" class="UserInfoDrop_downBox" style="display:block;">
                         <ul style="width: 100px; margin-left: -30px;">
                             <li>
                                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
@@ -92,18 +92,17 @@
                             <li><a href="javascript:">喜欢的项目</a></li>
                             <li><a href="javascript:">支持的项目</a></li>
                             <li>个人设置</li>
-                            <li id="LoginOut" runat="server">退出</li>
+                            <li id="LoginOut" runat="server" onclick="">退出</li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <script>
                 $(function () {//用户信息下列表
-                    var aa = "ss";
                     $('#LoginOut').click(function () {//登出方法
                         //ajaxhtml：$.ajax({ url : "clear_session.php'", success : function(msg){ alert(msg); }}); clear_session.php; $_SESSION = array()
-                         
-                        
+                        $('#logins').hide();
+                        $('#notlogins').show();
                         //调用后台LoginOuts()函数  使Session=null   登出}
                         <%--'<%=LoginOuts(true)%>'--%>
                         
@@ -112,11 +111,11 @@
                         //$('#LoginOut').html("n");
                         //window.parent.location.reload();
 
-                        window.location.href = "Index.aspx";
+                        //window.location.href = "Index.aspx";
                     });
                     
                     
-
+                    //用户信息下拉框
                     $('#UserSpinner').mousemove(function () {
                         //$('#UserSpinner').css("margin-left","30px");
                         $('#UserSpinnerdisplay').show();
@@ -161,7 +160,7 @@
     <!-------------------------------内容页--------------------------------->
 
     <form id="form1" runat="server">
-
+        <asp:Button ID="Button1" runat="server" Text="Button" />
         <div>
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"><%--首页--%></asp:ContentPlaceHolder>

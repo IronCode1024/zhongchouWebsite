@@ -71,14 +71,15 @@ namespace zhongchouWeb.Views
                     //UserNames.Expires = DateTime.Now.AddMinutes(1);
                     //Response.Cookies.Add(UserNames);
 
-                    Session["UserNames"] = dt.Rows[0][0].ToString();//获取DataTable的第一行第一列
+                    Session["UserNames"] = dt.Rows[0]["UserName"].ToString();//获取DataTable的第一行第一列
 
 
                     //HttpCookie UserHeadPortrait = new HttpCookie("UserHeadPortrait", dt.Rows[0][1].ToString());
                     //UserHeadPortrait.Expires = DateTime.Now.AddMinutes(1);
                     //Response.Cookies.Add(UserHeadPortrait);
-
-                    Session["UserHeadPortrait"] = dt.Rows[0][1].ToString();//获取用户头像路径
+                    Session["UserEmail"] = dt.Rows[0]["UserEmail"].ToString();
+                    Session["UserHeadPortrait"] = dt.Rows[0]["UserHeadPortrait"].ToString();//获取用户头像路径
+                    
                     //foreach (DataRow item in dt.Rows)
                     //{
                     //    Session["UserNames"] = item;

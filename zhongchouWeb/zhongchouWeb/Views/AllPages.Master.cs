@@ -25,10 +25,10 @@ namespace zhongchouWeb.Views
                     this.Label1.Text = Session["UserNames"].ToString();
                     this.HeadPortraits.ImageUrl = Session["UserHeadPortrait"].ToString();
                 }
-                if (this.LoginOut.InnerHtml == "n")
-                {
-                    Session["Logins"] = null;
-                }
+                //if (this.LoginOut.InnerHtml == "n")
+                //{
+                //    Session["Logins"] = null;
+                //}
 
                 //string nn = Session["UserNames"].ToString();
                 //Response.Write("<script>alert('"+nn+"')</script>");

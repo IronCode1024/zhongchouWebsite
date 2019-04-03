@@ -1,0 +1,235 @@
+﻿body {
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/*主体div修饰*/
+#content {
+    width: 1024px;
+    height: 1250px;
+    margin: 0px auto;
+    /*border: 1px solid black;*/
+}
+/*箭头式导航栏修饰*/
+.jindutiao {
+    width: 1024px;
+    height: 50px;
+    /*border: 1px solid red;*/
+    margin: 0px auto;
+}
+
+ul {
+    list-style: none; /*去掉li前面的点*/
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+    ul li {
+        width: 250px;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+        background: #6cf;
+        text-align: center;
+        margin-left: -15px;
+        background: url(/Content/Images/StartUpProjectImg/jiantou.png) no-repeat 100% 0; /*不知道意思*/
+        position: relative; /*让matgin-left生效*/
+        /*border: 1px solid red;*/
+    }
+/*点击时加的样式*/
+.one {
+    margin-left: -15px;
+    background: url(/Content/Images/StartUpProjectImg/jiantou2.png) no-repeat 100% 0; /*不知道意思*/
+    position: relative; /*让matgin-left生效*/
+}
+
+.one1 {
+    /*点击时样式改变*/
+    margin-left: -15px;
+    background: url(/Content/Images/StartUpProjectImg/jiantou.png) no-repeat 100% 0; /*不知道意思*/
+    position: relative; /*让matgin-left生效*/
+}
+/*给点击的button按钮加背景*/
+.but {
+    background-color:orange;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    /*font-size:10px;*/
+}
+/*在第一个div中用盒子挤的位置*/
+.tian1 {
+    width: 1024px;
+    height: 30px;
+    /*border:1px solid red;*/
+    float: left;
+}
+/*在第一个div中用盒子挤的位置*/
+.tian2 {
+    /*卡位置用地*/
+    width: 35px;
+    height: 1000px;
+    float: left;
+    /*border: 1px solid blue;*/
+}
+/*第一个div左边重要部分，后面命名以此类推*/
+.center-left {
+    width: 750px;
+    height: 900px;
+    border: 1px solid #dad7d7;
+    float: left;
+    background-color: #fdffff;
+}
+
+.tian3 {
+    width: 15px;
+    height: 1000px;
+    /*border:1px solid red;*/
+    float: left;
+}
+/*右边部分*/
+.center-right {
+    width: 210px;
+    height: 280px;
+    border: 1px solid #dad7d7;
+    float: left;
+}
+    /*右边上边部分*/
+    .center-right .shang {
+        width: 208px;
+        height: 150px;
+        border: 1px solid #dad7d7;
+        background-color: orange;
+    }
+
+.gridview {
+    text-align: center;
+}
+/*第一个div右上两个label的修饰*/
+/*.label2 {
+    font-size:20px;
+    width:200px;
+    height:300px;
+    margin-left:20px;
+    border:1px solid red;
+}*/
+
+
+/*第二个div*/
+#content2 {
+    width: 1024px;
+    height: 1250px;
+    margin: 0px auto;
+    /*border: 1px solid red;*/
+    display: none;
+}
+
+.center-left2 {
+    width: 750px;
+    height: 900px;
+    border: 1px solid #dad7d7;
+    float: left;
+    background-color: #fdffff;
+    margin-top: 30px;
+    margin-left: 35px;
+}
+
+.center-right2 {
+    width: 210px;
+    height: 300px;
+    border: 1px solid #dad7d7;
+    background-color: #fdffff;
+    float: right;
+    margin-top: 30px;
+}
+
+#Button3 {
+    float: right;
+    /*border:1px solid red;*/
+    position: relative;
+    margin-top: 120px;
+    margin-right: 20px;
+    background-color: orange;
+}
+
+#Button4 {
+    float: right;
+    /*border:1px solid red;*/
+    position: relative;
+    margin-top: 120px;
+    margin-right: 20px;
+    background-color: orange;
+}
+
+#Button12 {
+    float: right;
+    margin-right: 30px;
+}
+
+
+
+
+#content3 {
+    width: 1024px;
+    height: 1250px;
+    margin: 0px auto;
+    border: 1px solid black;
+    display: none;
+}
+
+.center-left3 {
+    width: 750px;
+    height: 900px;
+    border: 1px solid #dad7d7;
+    float: left;
+    background-color: #fdffff;
+    margin-top: 30px;
+    margin-left: 35px;
+}
+
+.center-right3 {
+    width: 210px;
+    height: 280px;
+    background-color: #fdffff;
+    border: 1px solid #dad7d7;
+    float: right;
+    margin-top: 30px;
+}
+
+#Bt1 {
+    background-color: orange;
+    margin-left: 130px;
+}
+
+#Bt2 {
+    background-color: orange;
+    margin-left: 30px;
+}
+
+#Bt3 {
+    background-color: orange;
+    margin-left: 30px;
+}
+
+
+
+#content4 {
+    width: 1024px;
+    height: 1200px;
+    margin: 0px auto;
+    border: 1px solid black;
+    display: none;
+}
+
+.xian {
+    width: 400px;
+    height: 400px;
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    margin-top: 200px;
+}

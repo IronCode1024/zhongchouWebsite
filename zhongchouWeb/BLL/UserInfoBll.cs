@@ -56,5 +56,29 @@ namespace BLL
             DataSet ds = ud.getLoginState(nameOremail);
             return ds;
         }
+
+
+
+        //个人设置==================================================================================================================================================================//
+        #region MyRegion
+        public DataSet getUserInfo(string email)
+        {
+            DataSet ds = ud.getUserInfo(email);
+            return ds;
+        }
+        public int update(UserInfo ui)
+        {
+            return ud.update(ui);
+        }
+        public int updatemm(UserInfo ui)
+        {
+            return ud.updatemm(ui);
+        }
+        public int updateimg(UserInfo ui)
+        {
+            return ud.updateimg(ui);
+        } 
+        #endregion
+        //个人设置  结束==============================================================================================================================================================//
     }
 }

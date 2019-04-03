@@ -95,6 +95,10 @@ sw a, .btn {
     background-color: #ffffff;
     padding-top:10px;
 }
+    .UserInfoDrop_downBoxUl {
+         width: 100px;
+         margin-left: -28px;
+    }
 
     .UserInfoDrop_downBox ul li {
         margin-bottom: 10px;

@@ -12,7 +12,7 @@ namespace DAL.AdministratorsDal
     {
         public DataSet getDataShowPage()
         {
-            string Sql = "select Id,UserName,UserEmail,UserPassword,UserHeadPortrait,State from UserInfoTb";
+            string Sql = "select Id,UserName,UserSex,UserEmail,UserPassword,UserHeadPortrait,State from UserInfoTb";
             return DBHelper.GetTable(Sql);
         }
 

@@ -47,7 +47,13 @@
     <Compile Include="AdministratorsBll\AdminProjectInfoBll.cs" />
     <Compile Include="AdministratorsBll\AdminShowIndexBll.cs" />
     <Compile Include="AdministratorsBll\AdminUserInfoBll.cs" />
+    <Compile Include="ClassificationProjectBLL.cs" />
+    <Compile Include="ForgetPasswordBll.cs" />
     <Compile Include="IndexBll.cs" />
+    <Compile Include="ProjectBll.cs" />
+    <Compile Include="ProjectTbBLL.cs" />
+    <Compile Include="StartUpProjectBll.cs" />
+    <Compile Include="UserCommentaryTbBll.cs" />
     <Compile Include="UserInfoBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
