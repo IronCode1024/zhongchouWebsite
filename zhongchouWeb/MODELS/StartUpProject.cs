@@ -11,6 +11,8 @@ namespace MODELS
         //对应项目那张表
         public int ProjectID { set; get; }
         public string ProjectCover { get; set; }
+        public string ProjectImageUrl { get; set; }
+
         public int UserID { set; get; }
         public string UserEmail { get; set; }
         public string ProjectType { set; get; }
@@ -22,6 +24,7 @@ namespace MODELS
         public decimal AlreadyRaisedMoney { set; get; }
         public int NumberOfProjectSupport { get; set; }
         public string ProjectAddress { get; set; }
+        public string PublicWelfare { get; set; }
         public string ReleaseStatus { set; get; }
         public DateTime ProjectUpdateTime { get; set; }
         public DateTime ReleaseDate { set; get; }

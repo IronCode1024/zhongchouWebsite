@@ -16,12 +16,11 @@ namespace DAL
 
             string sql = @"select UserHeadPortrait,ProjectName,UserName
 from ProjectTb pro ,UserInfoTb usin
-where pro.UserID=usin.Id and ProjectID='101'";
-            //SqlParameter[] prm = new SqlParameter[]{
-            //                new SqlParameter("@a",ut.ProjectID),  //用户名
-
-            //            };
-            DataSet ds = DBHelper.GetTable(sql);
+where pro.UserID=usin.Id and ProjectID=@a";
+            SqlParameter[] prm = new SqlParameter[]{
+                            new SqlParameter("@a",ut.ProjectID),  //用户名
+                        };
+            DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
 
@@ -30,27 +29,26 @@ where pro.UserID=usin.Id and ProjectID='101'";
 
             string sql = @"select ProjectUpdateTime, UserName,ProjectOverview
 from ProjectTb pro ,UserInfoTb usin
-where pro.UserID=usin.Id and ProjectID='101'";
-            //SqlParameter[] prm = new SqlParameter[]{
-            //                new SqlParameter("@a",ut.ProjectID),  //用户名
+where pro.UserID=usin.Id and ProjectID=@a";
+            SqlParameter[] prm = new SqlParameter[]{
+                            new SqlParameter("@a",ut.ProjectID),
 
-            //            };
-            DataSet ds = DBHelper.GetTable(sql);
+                        };
+            DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
 
         public static DataSet Zcxqxs(UserCommentaryTb ut)
         {
 
-            string sql = @"select ProjectCover,NumberOfProjectSupport,
+            string sql = @"select ProjectCover,ProjectImageUrl,NumberOfProjectSupport,
 AlreadyRaisedMoney,TargetAmountOfMoney,AlreadyRaisedMoney/TargetAmountOfMoney*100 mubiaojine
-from ProjectTb pro ,UserInfoTb usin
-where pro.UserID=usin.Id and ProjectID='101'";
-            //SqlParameter[] prm = new SqlParameter[]{
-            //                new SqlParameter("@a",ut.ProjectID),  //用户名
-
-            //            };
-            DataSet ds = DBHelper.GetTable(sql);
+from ProjectTb pro,UserInfoTb usin
+where pro.UserID=usin.Id and ProjectID=@a";
+            SqlParameter[] prm = new SqlParameter[]{
+                            new SqlParameter("@a",ut.ProjectID),
+                        };
+            DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
 
@@ -58,43 +56,54 @@ where pro.UserID=usin.Id and ProjectID='101'";
         {
 
             string sql = @"select UserHeadPortrait,UserName,Content,CommentaryDate from UserCommentaryTb,UserInfoTb,ProjectTb
-where UserCommentaryTb.UserID=UserInfoTb.Id 
-and UserCommentaryTb.ProjectID=ProjectTb.ProjectID 
-and UserCommentaryTb.ProjectID='101'";
-            //SqlParameter[] prm = new SqlParameter[]{
-            //                new SqlParameter("@a",ut.ProjectID),  //用户名
-                            
-            //            };
-            DataSet ds = DBHelper.GetTable(sql);
+where UserCommentaryTb.ProjectID=ProjectTb.ProjectID and UserCommentaryTb.CommentatorID=UserInfoTb.Id
+and UserCommentaryTb.ProjectID=@a";
+            SqlParameter[] prm = new SqlParameter[]{
+                            new SqlParameter("@a",ut.ProjectID), 
+                        };
+            DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
-        //关于作者查询
+        //项目概述查询
         public static DataSet GyzzC(UserCommentaryTb ut)
         {
 
-            string sql = @"select ImageUrl
-from ProjectImageTb img,UserInfoTb inf,ProjectTb pro
-where inf.Id=img.UserID and img.ProjectID=pro.ProjectID and img.UserID='1001' and img.ProjectID='101'";
-            //SqlParameter[] prm = new SqlParameter[]{
-            //                new SqlParameter("@a",ut.UserID),
-            //                new SqlParameter("@b",ut.ProjectID)
+            string sql = @"select ProjectImageUrl,ProjectOverview
+from UserInfoTb inf,ProjectTb pro
+where inf.Id=pro.UserID and pro.ProjectID=@b";
+            SqlParameter[] prm = new SqlParameter[]{
+                            //new SqlParameter("@a",ut.UserID),
+                            new SqlParameter("@b",ut.ProjectID)
 
-            //            };
-            DataSet ds = DBHelper.GetTable(sql);
+                        };
+            DataSet ds = DBHelper.GetTable(sql, prm);
+            return ds;
+        }
+
+        //项目详情
+        public static DataSet ProxQ(UserCommentaryTb ut)
+        {
+
+            string sql = @"select ProjectImageUrl,ProjectDetailedPictures
+from UserInfoTb inf,ProjectTb pro
+where inf.Id=pro.UserID and pro.ProjectID=@b";
+            SqlParameter[] prm = new SqlParameter[]{
+                            //new SqlParameter("@a",ut.UserID),
+                            new SqlParameter("@b",ut.ProjectID)
+
+                        };
+            DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
 
         //联系方式
         public static DataSet Lxfs(UserCommentaryTb ut)
         {
-
-            string sql = @"select UserName,UserAddress,UserEmail from UserInfoTb where id='1001'";
-            //SqlParameter[] prm = new SqlParameter[]{
-            //                new SqlParameter("@a",ut.UserID),
-            //                new SqlParameter("@b",ut.ProjectID)
-
-            //            };
-            DataSet ds = DBHelper.GetTable(sql);
+            string sql = @"select UserName,UserAddress,pt.UserEmail from UserInfoTb uit,ProjectTb pt where uit.Id=pt.UserID and pt.ProjectID=@a";
+            SqlParameter[] prm = new SqlParameter[]{
+                            new SqlParameter("@a",ut.ProjectID)
+                        };
+            DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
 
@@ -102,28 +111,26 @@ where inf.Id=img.UserID and img.ProjectID=pro.ProjectID and img.UserID='1001' an
         public static DataSet Tmc(UserCommentaryTb ut)
         {
 
-            string sql = @"select TargetAmountOfMoney,NumberOfProjectSupport,ReleaseStatus  from ProjectTb where ProjectID='101'";
-            //SqlParameter[] prm = new SqlParameter[]{
-            //                new SqlParameter("@a",ut.UserID),
-            //                new SqlParameter("@b",ut.ProjectID)
-
-            //            };
-            DataSet ds = DBHelper.GetTable(sql);
+            string sql = @"select TargetAmountOfMoney,NumberOfProjectSupport,ReleaseStatus  from ProjectTb where ProjectID=@a";
+            SqlParameter[] prm = new SqlParameter[]{
+                            new SqlParameter("@a",ut.ProjectID)
+                        };
+            DataSet ds = DBHelper.GetTable(sql, prm);
             return ds;
         }
 
         public static int Zjpl(UserCommentaryTb ut)
         {
-            string sql =@"insert into UserCommentaryTb(UserID,ProjectID,CommentatorID,Content,CommentaryDate ) 
+            string sql = @"insert into UserCommentaryTb(UserEmail,ProjectID,CommentatorID,Content,CommentaryDate) 
 values(@a,@b,@c,@d,@e)";
             SqlParameter[] prm = new SqlParameter[]{
-                            new SqlParameter("@a",ut.UserID),  
+                            new SqlParameter("@a",ut.UserEmail),  
                             new SqlParameter("@b",ut.ProjectID), 
                             new SqlParameter("@c",ut.CommentatorID),
                             new SqlParameter("@d",ut.Content),
                             new SqlParameter("@e",DateTime.Now.ToUniversalTime())
                         };
-            int rows = DBHelper.ExecuteNonQuery(sql,prm);
+            int rows = DBHelper.ExecuteNonQuery(sql, prm);
             return rows;
         }
 

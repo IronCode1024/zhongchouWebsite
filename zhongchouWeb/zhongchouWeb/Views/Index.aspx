@@ -106,15 +106,15 @@
                         <div class="RepeaterTitle">
                             <h1>众筹精选</h1>
                             <div>
-                                <a href="#" class="btn_ALink">最新上线</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">科技</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">艺术</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">农业</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">音乐</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">设计</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">公益</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">公开课</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">更多>></a>&nbsp;&nbsp;
+                                <a href="ClassificationProject.aspx" class="btn_ALink">最新上线</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">科技</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">艺术</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">农业</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">音乐</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">设计</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">公益</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">公开课</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">更多>></a>&nbsp;&nbsp;
                             </div>
                         </div>
                         <table style="height: 15px;"></table>
@@ -147,7 +147,7 @@
                                     <div class="siteCardFBox">
                                         <div class="siteCardRatio">
                                             <!--进度条百分比-->
-                                            <div class="siteCardRatioInner" style="width: <%# Math.Round(Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100) %>%;"></div>
+                                            <div class="siteCardRatioInner" style="width: <%# Math.Round(Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100) %>%;max-width:100%"></div>
                                         </div>
                                         <!--div-->
                                         <div class="siteCardFData">
@@ -200,15 +200,15 @@
                         <div class="RepeaterTitle">
                             <h1>热门项目</h1>
                             <div>
-                                <a href="#" class="btn_ALink">最新上线</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">科技</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">艺术</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">农业</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">音乐</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">设计</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">公益</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">公开课</a>&nbsp;&nbsp;
-                                    <a href="#" class="btn_ALink">更多>></a>&nbsp;&nbsp;
+                                <a href="ClassificationProject.aspx" class="btn_ALink">最新上线</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">科技</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">艺术</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">农业</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">音乐</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">设计</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">公益</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">公开课</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx" class="btn_ALink">更多>></a>&nbsp;&nbsp;
                             </div>
                         </div>
                         <table style="height: 15px;"></table>
@@ -240,7 +240,7 @@
                                     <div class="siteCardFBox">
                                         <div class="siteCardRatio">
                                             <!--进度条百分比-->
-                                            <div class="siteCardRatioInner" style="width: <%# Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100 %>%;"></div>
+                                            <div class="siteCardRatioInner" style="width: <%# Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100 %>%;max-width:100%"></div>
                                         </div>
                                         <!--div-->
                                         <div class="siteCardFData">

@@ -31,7 +31,7 @@
                     <a href="AdvertisementInfoAdmin.aspx" class="siteHNavItemA">广告管理</a>
                 </div>
                 <div class="siteHNavItem">
-                    <a rel="nofollow" href="/download" class="siteHNavItemA" target="_blank">基础配置</a>
+                    <a rel="nofollow" href="javascript;" class="siteHNavItemA" target="_blank">基础配置</a>
                 </div>
             </div>
             <!-- 未登录状态 begin 网站登录框siteHLoginBox-->

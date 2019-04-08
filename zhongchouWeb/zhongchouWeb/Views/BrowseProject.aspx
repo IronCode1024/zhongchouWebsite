@@ -78,7 +78,7 @@
             <div id="zx"></div>
             <%--众筹详情--%>
             <div id="browse">
-                <asp:Repeater ID="Repeater4" runat="server">
+                <asp:Repeater ID="Repeater4" runat="server" OnItemCommand="Repeater4_ItemCommand">
                     <HeaderTemplate></HeaderTemplate>
                     <ItemTemplate>
                         <div id="browseimgdiv">
@@ -90,16 +90,19 @@
                             <asp:Label ID="Label4" runat="server" CssClass="Label1" Text='<%#Eval("AlreadyRaisedMoney") %>' Font-Size="35pt"></asp:Label>
                             <asp:Label ID="Label5" runat="server" Text="已筹款"></asp:Label>
                             <div id="zs">
-                                <p id="Label6"><%#Eval("mubiaojine")%></p>
-                                <asp:Button ID="Button2" CssClass="Button2" runat="server" Text="" Enabled="False" />
+                                <p id="Label6" style="margin-top:-25px;"><%#Convert.ToDecimal(Eval("mubiaojine")).ToString("F2")%>%</p>
+                               <%-- <asp:Button ID="Button2" CssClass="Button2" runat="server" Text="" Enabled="False" />--%>
+                                <div class="siteCardRatio">
+                                            <!--进度条百分比-->
+                                            <div class="siteCardRatioInner" style="width: <%# Convert.ToDecimal(Eval("mubiaojine")) %>%;max-width:100%"></div>
+                                        </div>
                                 <div id="dbz">
-
                                     <asp:Label ID="Label7" runat="server" Text="成功结束"></asp:Label>
                                     <asp:Label ID="Label8" CssClass="Label8" runat="server" Text="目标筹资"></asp:Label>
                                     <asp:Label ID="Label9" CssClass="Label9" runat="server" Text='<%#Eval("TargetAmountOfMoney")%>'></asp:Label>
                                 </div>
                                 <div id="anniu">
-                                    <asp:Button ID="Button3" CssClass="Button4" runat="server" Text="立 即 支 持" Font-Bold="True" /><br />
+                                    <asp:Button ID="Button3" CssClass="Button4" runat="server" Text="立 即 支 持" Font-Bold="True" CommandArgument="" CommandName="SupportProjects"  /><br />
                                     <asp:Button ID="Button4" CssClass="Button4" runat="server" Text="分 享 到 微 信" Font-Bold="True" />
                                 </div>
                                 <div id="xq">
@@ -164,7 +167,7 @@
                             <asp:Label ID="Label17" runat="server" Text="其他￥"></asp:Label>
                             <asp:TextBox ID="TextBox1" runat="server" Height="30px" Width="157px"></asp:TextBox>
                         </div>
-                        <asp:Button ID="Button5" runat="server" Text="立即支持" />
+                        <asp:Button ID="Button5" runat="server" Text="立即支持" OnClick="Button5_Click" />
                         <div id="zhix">
                         </div>
                         <div id="zc">
@@ -181,7 +184,7 @@
 
                     </div>
                     <div id="b_zc">
-                        <asp:Button ID="Button6" runat="server" Text="支持此项目" Height="42px" Width="260px" />
+                        <asp:Button ID="Button6" runat="server" Text="支持此项目" Height="42px" Width="260px" OnClick="Button6_Click" />
                     </div>
                     <div id="lxwm">
                         <asp:Repeater ID="Repeater7" runat="server">
@@ -270,7 +273,7 @@
                         </div>
                         <div class="wz">
                             <p>
-                                关于作者
+                                项目概述
                             </p>
                         </div>
                     </div>
@@ -280,12 +283,13 @@
                             <ItemTemplate>
                                 <table>
                                     <tr>
-                                        <td class="Label24" style="border: none; width: 675px">梁俪千，字玉蝶， 1970年生，河南省舞钢市人，鲁迅文学院2005高级班学员。多次获各级各类文学奖，有作品被收录散文年选，《散文选刊》、《初中生学习》、《语文报》中考“名篇赏读”曾转载她的作品。出版散文集《两棵树》《书恩书缘》《千花集·卷一》，诗集《春天的名字叫绽放》《我的竖琴》等。中国散文学会会员，中国散文家协会理事，河南省作家协会会员，舞钢市作家协会主席。舞钢市政协委员，平顶山市拔尖人才。现供职于河南省舞钢市文联，2015年开始扶贫，2018年5月担任脱贫攻坚驻村工作队队长。
+                                        <td class="Label24" style="border: none; width: 675px"><%--梁俪千，字玉蝶， 1970年生，河南省舞钢市人，鲁迅文学院2005高级班学员。多次获各级各类文学奖，有作品被收录散文年选，《散文选刊》、《初中生学习》、《语文报》中考“名篇赏读”曾转载她的作品。出版散文集《两棵树》《书恩书缘》《千花集·卷一》，诗集《春天的名字叫绽放》《我的竖琴》等。中国散文学会会员，中国散文家协会理事，河南省作家协会会员，舞钢市作家协会主席。舞钢市政协委员，平顶山市拔尖人才。现供职于河南省舞钢市文联，2015年开始扶贫，2018年5月担任脱贫攻坚驻村工作队队长。--%>
+                                            <%#Eval("ProjectOverview") %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="border: none">
-                                            <asp:Image ID="Image2" Width="675px" runat="server" ImageUrl='<%#Eval("ImageUrl")%>' />
+                                            <asp:Image ID="Image2" Width="675px" runat="server" ImageUrl='<%#Eval("ProjectImageUrl")%>' />
                                         </td>
                                     </tr>
                                 </table>
@@ -295,26 +299,28 @@
                     </div>
                 </div>
 
-                <%--关于出版方--%>
+                <%--项目详情--%>
                 <div id="gycbm">
                     <div id="gycb">
                         <div class="zx">
                         </div>
                         <div class="wz">
                             <p>
-                                关于出版方
+                                项目详情
                             </p>
                         </div>
                     </div>
                     <div id="gycbnr">
-                        <ul class="Label24">
-                            <li>博客中国（blogchina.com）作为中国博客的发源地，汇聚国内众多具有新锐思想的意见领袖、历史、文化名人，从创立至今，博客中国跟专栏作家已经风雨同舟了十五年。博客平台自创建以来，一直服务于每位想要写作、发表、分享自己佳作的专栏作家，让他们把自己的专业知识、前沿技术和思想文化，通过博客的形式传播出去，吸引更多人的关注，并影响着渴望知识、想要写作、想要提升写作能力的新一代作家。</li>
-                            <li>回顾博客十六年的发展历程，我们共同见证了博客对社会的影响，和我们作为博客人的社会责任。无论是在互联网或移动互联网，博客或微博、微信，人们只是传播的路径不一样而已，但实质上都是在分享成长，分享影响，分享思想，分享生活的价值观，分享我们共同的快乐！这也是博客中国平台创建的基本价值所在，我们可以将技术知识、文化教育、生活感悟、文学见解、旅行趣闻等等通称为思想，我们的宗旨“每天5分钟 给思想加油”。</li>
-                            <li>让我们共同分享自己的收获与感悟，理想与抱负，思想与文化，成为具有影响力的名家。我们诚邀专栏作家一起共筑这伟大的理想，创建《博客中国名家书库》。</li>
-                            <li>邮箱：publish@blogchina.com</li>
+                        <asp:Repeater ID="Repeater8" runat="server">
+                            <ItemTemplate>
+                                <ul class="Label24">
+                            <li><%#Eval("ProjectDetailedPictures") %></li>
                             <li>
-                                <asp:Image ID="Image3" Width="675px" runat="server" ImageUrl="~/Content/Images/gycb.jpg" /></li>
+                                <asp:Image ID="Image3" Width="675px" runat="server" ImageUrl='<%#Eval("ProjectImageUrl") %>' /></li>
                         </ul>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        
                     </div>
                 </div>
                 <div class="fx" style="margin-left: 20px; width: 670px">
@@ -401,8 +407,7 @@
                         <li style="margin-left: 83px;">支持数</li>
                         <li style="margin-left: 40px">项目状态</li>
                     </ul>
-                    <asp:Button ID="Button8" runat="server" Text="立即支持" />
-
+                    <asp:Button ID="Button8" runat="server" Text="立即支持" OnClick="Button8_Click" />
                 </div>
                 <%--风险说明--%>
                 <div id="fxsm">

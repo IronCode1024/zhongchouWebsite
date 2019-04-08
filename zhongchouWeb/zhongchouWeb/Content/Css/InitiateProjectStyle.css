@@ -20,14 +20,14 @@
     margin: 0px auto;
 }
 
-ul {
+.jindutiao ul {
     list-style: none; /*去掉li前面的点*/
     float: left;
     margin-left: 50px;
     margin-top: 10px;
 }
 
-    ul li {
+    .jindutiao ul li {
         width: 250px;
         height: 30px;
         line-height: 30px;
@@ -40,7 +40,7 @@ ul {
         /*border: 1px solid red;*/
     }
 /*点击时加的样式*/
-.one {
+.jindutiao .one {
     margin-left: -15px;
     background: url(/Content/Images/StartUpProjectImg/jiantou2.png) no-repeat 100% 0; /*不知道意思*/
     position: relative; /*让matgin-left生效*/

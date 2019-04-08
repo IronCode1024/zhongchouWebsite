@@ -15,7 +15,7 @@ namespace zhongchouWeb.Views
         ClassificationProjectBLL bb = new ClassificationProjectBLL();
         ProjectTbS pt = new ProjectTbS();
 
-        static string ProjectType = "";//类型
+        static string ProjectType = "0";//类型
         static int ProjectTargetDays = 0;//天数 
         static decimal TargetAmountOfMoney = 0; //金额
         protected void Page_Load(object sender, EventArgs e)
@@ -59,20 +59,26 @@ namespace zhongchouWeb.Views
         // 类型点击 全部
         protected void Button8_Click(object sender, EventArgs e)
         {
-            ProjectType = "";
+            ProjectType = "0";//类型
+            ProjectTargetDays = 0;//天数 
+            TargetAmountOfMoney = 0; //金额
             show2();
 
         }
         // 金额 点击全部
         protected void Button2_Click(object sender, EventArgs e)
         {
-            TargetAmountOfMoney = 0;
+            ProjectType = "0";//类型
+            ProjectTargetDays = 0;//天数 
+            TargetAmountOfMoney = 0; //金额
             show2();
         }
         // 天数 点击全部
         protected void Button5_Click(object sender, EventArgs e)
         {
-            ProjectTargetDays = 0;
+            ProjectType = "0";//类型
+            ProjectTargetDays = 0;//天数 
+            TargetAmountOfMoney = 0; //金额
             show2();
         }
         // 金额 大于10000
@@ -102,7 +108,7 @@ namespace zhongchouWeb.Views
 
         protected void AspNetPager1_PageChanged(object sender, EventArgs e)
         {
-            getProDataShowPage();
+            //getProDataShowPage();
         }
 
         void getProDataShowPage()
@@ -113,10 +119,10 @@ namespace zhongchouWeb.Views
             //int totalOrders = (int)auib.getDataShowPage(CommandType.StoredProcedure, "P_GetOrderNumber");
             //AspNetPager1.RecordCount = totalOrders;
 
-            int totalOrders = bb.getExecuteScalar("GetProjectOrderNumber"); //GetOrderNumber储存过程
-            AspNetPager1.RecordCount = totalOrders;
-            Repeater1.DataSource = bb.Bind("GetProjectPagedOrders", AspNetPager1.StartRecordIndex, AspNetPager1.EndRecordIndex); //GetPagedOrders储存过程
-            Repeater1.DataBind();
+            //int totalOrders = bb.getExecuteScalar("GetProjectOrderNumber"); //GetOrderNumber储存过程
+            //AspNetPager1.RecordCount = totalOrders;
+            //Repeater2.DataSource = bb.Bind("GetProjectPagedOrders", AspNetPager1.StartRecordIndex, AspNetPager1.EndRecordIndex); //GetPagedOrders储存过程
+            //Repeater2.DataBind();
         }
     }
 }

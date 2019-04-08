@@ -37,4 +37,4 @@ select UserName from UserInfoTb where UserName='ÖÚ³ïÖ®¹â'
 update ProjectImageTb set ImageUrl='../Content/Images/IndexImg/20.jpg'where ProjectID='120'
 
 
-
+select * from ProjectImageTb

@@ -219,10 +219,10 @@ namespace zhongchouWebYZ
             //判断fileupload有没有文件
             if (FileUpload1.HasFile)
             {
-                Guid g = new Guid();
+                //Guid g = new Guid();
                 string filename = FileUpload1.FileName;
-                FileUpload1.SaveAs(Server.MapPath(".") + "//Content/image//" + g.ToString() + filename);//将图片路径存在image中
-                pi.ImageUrl = "~/image/" + g.ToString() + filename;
+                FileUpload1.SaveAs(Server.MapPath("/") + "//Content/Images/ProjectImages/InitiateProjectImg//" + filename);//将图片路径存在image中
+                pi.ImageUrl = "../Content/Images/ProjectImages/InitiateProjectImg/" + filename;
             }
             else
             {

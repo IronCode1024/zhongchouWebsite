@@ -16,7 +16,7 @@
             border-radius: 10px;
         }
         .siteBoxs {
-            width: 300px;
+            width: 413px;
             height: 300px;
             margin: 0px auto;
         }
@@ -52,9 +52,11 @@
                 <span style="color:red">*</span>验证码：<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox><asp:Button ID="Button2" runat="server" Text="发送" OnClick="Button2_Click" />
                 <br />
                 <br />
-                <span style="color:red">*</span>新密码：<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox><br />
+                <span style="color:red">*</span>新密码：<asp:TextBox ID="TextBox3" runat="server" Height="19px"></asp:TextBox><asp:Label ID="Label1" runat="server" Text="*请输入密码" ForeColor="Red" Visible="False"></asp:Label><br />
                 <br />
-                <span style="color:red">*</span>确认密码：<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox><br />
+                <span style="color:red">*</span>确认密码：<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="*两次输入的密码不一致" Visible="False"></asp:Label>
+                <br />
                 <br />
 
                 <asp:Button ID="Button1" runat="server" Text="确定" OnClick="Button1_Click" />

@@ -15,11 +15,11 @@ namespace DAL
         //新增项目信息
         public int XzXmxx(StartUpProjects pt)
         {
-            string sql = string.Format(@"insert into ProjectTb(ProjectCover,UserID,UserEmail,ProjectType,ProjectName,ProjectTargetDays,
-ProjectOverview,ProjectDetailedPictures,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ProjectAddress,ReleaseStatus,ProjectUpdateTime,ReleaseDate)
-values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')",
-                   pt.ProjectCover, pt.UserID, pt.UserEmail, pt.ProjectType, pt.ProjectName, pt.ProjectTargetDays, pt.ProjectOverview, pt.ProjectDetailedPictures,
-                  pt.TargetAmountOfMoney, pt.AlreadyRaisedMoney, pt.NumberOfProjectSupport, pt.ProjectAddress, pt.ReleaseStatus, pt.ProjectUpdateTime, pt.ReleaseDate
+            string sql = string.Format(@"insert into ProjectTb(ProjectCover,ProjectImageUrl,UserID,UserEmail,ProjectType,ProjectName,ProjectTargetDays,
+ProjectOverview,ProjectDetailedPictures,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ProjectAddress,PublicWelfare,ReleaseStatus,ProjectUpdateTime,ReleaseDate)
+values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}')",
+                   pt.ProjectCover,pt.ProjectImageUrl, pt.UserID, pt.UserEmail, pt.ProjectType, pt.ProjectName, pt.ProjectTargetDays, pt.ProjectOverview, pt.ProjectDetailedPictures,
+                  pt.TargetAmountOfMoney, pt.AlreadyRaisedMoney, pt.NumberOfProjectSupport, pt.ProjectAddress,pt.PublicWelfare, pt.ReleaseStatus, pt.ProjectUpdateTime, pt.ReleaseDate
                 );
             int i = DBHelper.ExecuteNonQuery(sql);
             return i;

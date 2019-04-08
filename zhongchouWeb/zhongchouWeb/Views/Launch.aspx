@@ -43,21 +43,21 @@
                     <div id="tiaoz">
                         <%--支持的项目--%>
                         <div id="one1">
-                            <a onmousemove="ChangeDiv('0','JKDiv_',2)" style="color: black;">支持的项目</a>
+                            <a onclick="ChangeDiv('0','JKDiv_',2)" style="color: black;">支持的项目</a>
                             <div id="num1">
                                 <asp:Label ID="Label6" runat="server" Text="Label" Font-Size="Large"></asp:Label>
                             </div>
                         </div>
                         <%--发起的项目--%>
                         <div id="one2">
-                            <a onmouseover="ChangeDiv('1','JKDiv_',2)" style="color: black;">发起的项目</a>
+                            <a onclick="ChangeDiv('1','JKDiv_',2)" style="color: black;">发起的项目</a>
                             <div id="num2">
                                 <asp:Label ID="Label7" runat="server" Text="Label" Font-Size="Large"></asp:Label>
                             </div>
                         </div>
                         <%--喜欢的项目--%>
                         <div id="one3">
-                            <a onmouseover="ChangeDiv('2','JKDiv_',2)" style="color: black;">喜欢的项目</a>
+                            <a onclick="ChangeDiv('2','JKDiv_',2)" style="color: black;">喜欢的项目</a>
                             <div id="num3">
                                 <asp:Label ID="Label5" runat="server" Text="Label5" Font-Size="Large"></asp:Label>
                             </div>

@@ -70,7 +70,7 @@ namespace zhongchouWeb.Views
                     //HttpCookie UserNames = new HttpCookie("UserNames", dt.Rows[0][0].ToString());
                     //UserNames.Expires = DateTime.Now.AddMinutes(1);
                     //Response.Cookies.Add(UserNames);
-
+                    Session["Id"] = dt.Rows[0]["Id"].ToString();
                     Session["UserNames"] = dt.Rows[0]["UserName"].ToString();//获取DataTable的第一行第一列
 
 

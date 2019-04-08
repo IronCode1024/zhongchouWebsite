@@ -64,6 +64,7 @@ exec u_id 1
 select * from UserInfoTb
 
 update UserInfoTb set UserHeadPortrait='../Content/Images/UserHeadPortrait/NikolaTesla.jpg' where UserName='众筹之光'
+update UserInfoTb set PersonalizedSignature='你好骚啊' where UserName='众筹之光'
 
 select Id,UserName,UserEmail,UserPassword,UserHeadPortrait,State from UserInfoTb
 
@@ -72,4 +73,4 @@ select count(0) from UserInfoTb where UserName='钢铁侠'
 insert into UserInfoTb (UserName,UserEmail,UserPassword,UserHeadPortrait,RegistrationTime,State) values('我是钢铁侠','123@qq.com','123','../Content/Images/UserHeadPortrait/NikolaTesla.jpg',getdate(),0)
 
 
-update UserInfoTb set UserEmail='1453190098@qq.com' where Id='1001'
+update UserInfoTb set UserEmail='123456789@qq.com' where Id='1001'

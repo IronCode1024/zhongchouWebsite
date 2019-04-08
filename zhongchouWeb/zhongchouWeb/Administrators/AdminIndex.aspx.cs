@@ -42,9 +42,9 @@ namespace zhongchouWeb.Administrators
 
         void userCommentaryGridViewShow()
         {
-            DataSet ds = asuib.userCommentaryGridViewShow();
-            this.UserCommentaryGridView.DataSource = ds.Tables["zcDB"];
-            this.UserCommentaryGridView.DataBind();
+            //DataSet ds = asuib.userCommentaryGridViewShow();
+            //this.UserCommentaryGridView.DataSource = ds.Tables["zcDB"];
+            //this.UserCommentaryGridView.DataBind();
         }
 
 

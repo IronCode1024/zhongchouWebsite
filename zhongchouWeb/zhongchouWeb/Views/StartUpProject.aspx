@@ -16,10 +16,33 @@
             height: 139px;
             width: 212px;
         }
+
+        .headerPage .UserInfoDrop_downBoxUl {
+            width: 150px;
+            margin-left: -12px;
+        }
     </style>
 
 </head>
 <body>
+
+    <!-- 顶部导航 页眉 -->
+    <div class="headerPage"></div>
+    <!--顶部导航 over-->
+
+    <script>
+        $(function () {
+            /*公共部分
+             * 导航栏
+             * footer CopyRight
+             */
+            $(".headerPage").load("HeaderPage.aspx");//引用页眉
+
+            $(".footerPage").load("FooterPage.aspx");//引用页脚
+        });
+    </script>
+
+
     <form id="form1" runat="server">
         <div class="jindutiao">
             <ul>
@@ -35,34 +58,31 @@
 
             <div class="tian2"></div>
             <div class="center-left">
-                &nbsp;
-                &nbsp;&nbsp;<br />
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label1" runat="server" Font-Size="Large" Text="项目详情"></asp:Label>
-                <br />
-                <br />
+               <%-- <asp:Label ID="Label1" runat="server" Font-Size="Large" Text="项目详情"></asp:Label>--%>
+                <br /><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="color: red">*</span><asp:Label ID="Label2" runat="server" Text="项目名称："></asp:Label>
+                <asp:TextBox ID="TextBox1" runat="server" Width="140px" Height="20px" CssClass="" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label21" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label2" runat="server" Text="项目名称："></asp:Label>
-                <asp:TextBox ID="TextBox1" runat="server" Width="360px" Height="30px" CssClass="" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
-                <br />
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label3" runat="server" Text="目标金额：" Height="30px"></asp:Label>
+                <span style="color: red">*</span><asp:Label ID="Label3" runat="server" Text="目标金额：" Height="30px"></asp:Label>
                 <asp:TextBox ID="TextBox2" runat="server" Height="20px" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
                 &nbsp;<asp:Label ID="Label6" runat="server" Text="元"></asp:Label>
+                &nbsp;<asp:Label ID="Label22" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label4" runat="server" Text="目标天数：" Height="30px"></asp:Label>
+                <span style="color: red">*</span><asp:Label ID="Label4" runat="server" Text="目标天数：" Height="30px"></asp:Label>
                 <asp:TextBox ID="TextBox3" runat="server" Height="20px"></asp:TextBox>
                 &nbsp;<asp:Label ID="Label7" runat="server" Text="天"></asp:Label>
+                &nbsp;<asp:Label ID="Label23" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label5" runat="server" Text="类别："></asp:Label>
+                <span style="color: red">*</span><asp:Label ID="Label5" runat="server" Text="类别："></asp:Label>
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="Buttonn1" CssClass="buttoncs" runat="server" Text="科技" OnClick="Buttonn1_Click" />
@@ -75,7 +95,7 @@
                 <asp:Button ID="Buttonn8" CssClass="buttoncs" runat="server" Text="工艺" OnClick="Buttonn8_Click" />
                 <asp:Button ID="Buttonn9" CssClass="buttoncs" runat="server" Text="公开课" OnClick="Buttonn9_Click" />
                 <asp:Button ID="Buttonn10" CssClass="buttoncs" runat="server" Text="农业" OnClick="Buttonn10_Click" />
-                <br />
+                &nbsp;<br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 项目地点：<%--<asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="43px">
                 </asp:DropDownList>--%>
@@ -203,7 +223,7 @@
                     });
                 </script>
 
-                <asp:Label ID="Label20" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label20" runat="server" Text="请选择地址"></asp:Label>
 
                 &nbsp;<%--<asp:DropDownList ID="DropDownList2" runat="server" Height="16px" Width="43px">
                 </asp:DropDownList>--%>
@@ -213,6 +233,13 @@
                 <asp:Label ID="Label8" runat="server" Text="项目封面："></asp:Label>
                 &nbsp;<asp:FileUpload ID="FileUpload1" runat="server" />
                 &nbsp;&nbsp;<asp:Label ID="Label9" runat="server" Font-Size="Smaller" Text="支持jpg,jpeg,png,gif格式。大小不超过5M. 建议尺寸  ： 600*450px"></asp:Label>
+                <br />
+                <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label18" runat="server" Text="项目图片：" Width="80px"></asp:Label>
+                &nbsp;<asp:FileUpload ID="FileUpload2" runat="server" />
+                &nbsp;&nbsp;<asp:Label ID="Label24" runat="server" Font-Size="Smaller" Text="支持jpg,jpeg,png,gif格式。大小不超过5M. 建议尺寸  ： 600*450px"></asp:Label>
                 <br />
                 <br />
 
@@ -226,6 +253,15 @@
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 标签：<asp:TextBox ID="TextBox7" runat="server" Height="43px" Width="500px"></asp:TextBox>
                 <br />
+                <br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label25" runat="server" Text="是否已为公益："></asp:Label>
+                <select runat="server" id="Welfare">
+                    <option>--请选择--</option>
+                    <option>是</option>
+                    <option>否</option>
+                </select>
                 <br />
                 <br />
 
@@ -252,10 +288,10 @@
                     <br />
                     <br />
                     &nbsp;
-                    <asp:Label ID="Label14" runat="server" Font-Size="Smaller" Text="目标："></asp:Label>
-                    <asp:Label ID="Label15" runat="server" Font-Size="Smaller" Text="Label"></asp:Label>
+                    <asp:Label ID="Label14" runat="server" Font-Size="Smaller" Text="目标金额："></asp:Label>
                     &nbsp;<asp:Label ID="Label16" runat="server" Text="￥"></asp:Label>
-                    <asp:Label ID="Label17" runat="server" Font-Size="Smaller" Text="0"></asp:Label>
+                    <asp:Label ID="Label15" runat="server" Font-Size="Smaller" Text="Label"></asp:Label>
+                    <%--<asp:Label ID="Label17" runat="server" Font-Size="Smaller" Text="0"></asp:Label>--%>
                     <br />
                 </div>
             </div>
@@ -450,7 +486,7 @@
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label_4" runat="server" Text="用户邮箱："></asp:Label>
-                <asp:TextBox ID="TextBox_2" runat="server" Height="30px"></asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" Height="30px"></asp:TextBox>
                 <br />
                 <br />
                 <br />
@@ -462,22 +498,22 @@
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label_6" runat="server" Text="银行名称："></asp:Label>
-                &nbsp;<asp:TextBox ID="TextBox_3" runat="server" Height="30px"></asp:TextBox>
+                &nbsp;<asp:TextBox ID="TextBox6" runat="server" Height="30px"></asp:TextBox>
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label_7" runat="server" Text="开户支行："></asp:Label>
-                &nbsp;<asp:TextBox ID="TextBox_4" runat="server" Height="30px"></asp:TextBox>
+                &nbsp;<asp:TextBox ID="TextBox9" runat="server" Height="30px"></asp:TextBox>
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Labe_l8" runat="server" Text="开户名称："></asp:Label>
-                &nbsp;<asp:TextBox ID="TextBox_5" runat="server" Height="30px"></asp:TextBox>
+                &nbsp;<asp:TextBox ID="TextBox10" runat="server" Height="30px"></asp:TextBox>
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Labe_l9" runat="server" Text="银行账号："></asp:Label>
-                &nbsp;<asp:TextBox ID="TextBox_6" runat="server" Height="30px"></asp:TextBox>
+                &nbsp;<asp:TextBox ID="TextBox11" runat="server" Height="30px"></asp:TextBox>
                 <br />
                 <br />
                 <br />
@@ -486,7 +522,7 @@
 
                 <asp:Button ID="Bt1" runat="server" CssClass="buttoncs" Text="上一步" OnClientClick="bb1()" />
                 &nbsp;&nbsp;
-                <asp:Button ID="Bt2" runat="server" CssClass="buttoncs" Text="保存草稿" />
+                <%--<asp:Button ID="Bt2" runat="server" CssClass="buttoncs" Text="保存草稿" />--%>
                 <asp:Button ID="Bt3" runat="server" CssClass="buttoncs" Text="提交审核" OnClick="Bt3_Click" />
 
             </div>
@@ -509,10 +545,16 @@
                 <br />
                 <br />
                 <br />
-                现在可以进入：<a href="PersonalSettings.aspx" style="color:blue">个人中心</a>
+                现在可以进入：<a href="PersonalSettings.aspx" style="color: blue">个人中心</a>
             </div>
         </div>
     </form>
+
+    <!-- 底部导航 页脚 -->
+    <div class="footerPage"></div>
+    <!--底部导航 over-->
+
+
 </body>
 </html>
 

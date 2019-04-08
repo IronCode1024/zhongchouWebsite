@@ -54,6 +54,7 @@
     <Compile Include="ProjectDal.cs" />
     <Compile Include="ProjectTbDAL.cs" />
     <Compile Include="StartUpProjectDal.cs" />
+    <Compile Include="SupportProjectDal.cs" />
     <Compile Include="UserCommentaryTbDal.cs" />
     <Compile Include="UserInfoDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -47,8 +47,7 @@
                     <a rel="nofollow" href="/download" class="siteHNavItemA" target="_blank">APP</a>
                 </div>
             </div>
-
-            <a href="StartUpProject.aspx" data-href="StartUpProject.aspx" class="siteM_fqBtn btn_ALink js-checkLogin"><i></i>发起众筹</a>
+            <a id="StartUpzx" data-href="StartUpProject.aspx" class="siteM_fqBtn btn_ALink js-checkLogin" runat="server"><i></i>发起众筹</a>
             <!-- 未登录状态 begin 网站登录框siteHLoginBox-->
             <div class="siteHLoginBox clearfix" runat="server" id="notlogins">
                 <a href="../Views/Login.aspx" class="siteH_login Js-showLogin">登录</a>
@@ -124,9 +123,9 @@
 
             <!--其他登录-->
             <div class="other-login">
-                <a class="qq" href="/qq-login"></a>
-                <a class="wechat" href="/weixin-login"></a>
-                <a class="sina" href="/sina-login"></a>
+                <a class="qq"></a>
+                <a class="wechat"></a>
+                <a class="sina"></a>
             </div>
             <!-- 未登录状态 end -->
 

@@ -7,9 +7,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../Content/Css/OverallSituationStyle.css" rel="stylesheet" />
     <link href="../Content/Css/BrowseProjectStyle.css" rel="stylesheet" />
     <script src="../Script/jQuerys/jquery-1.10.2.min.js"></script>
     <script src="../Script/IndexCarousel.js"></script>
+    <script src="../Script/OverallSituationjs.js"></script>
     <link href="../Content/Css/IndexStyle.css" rel="stylesheet" />
     <title></title>
     <script type="text/javascript">
@@ -59,7 +61,9 @@
         });
     </script>
 
-
+    <div class="backtopImgDiv" id="backtopDiv">
+        <%--<img src="../Content/Images/publicImg/backtop.png" />--%>
+    </div>
     <form id="form1" runat="server">
         <div class="content">
             <div class="shang">
@@ -121,7 +125,7 @@
                                     <!--数据库读取支持人数数字-->
                                     <span style="font-size: 11px; top: -15px; position: absolute; left: 18px; text-align: center; line-height: 50px;"><%#Eval("NumberOfProjectSupport") %></span>
                                 </div>
-                                <a href="BrowseProject.aspx">
+                                <a href='<%#"BrowseProject.aspx?ProjectID="+Eval("ProjectID") %>' runat="server">
                                     <img style="width: 248px; height: 180px;" src="<%#Eval("ImageUrl") %>" /></a>
 
                                 <!--众筹进度详情div-->
@@ -135,7 +139,7 @@
                                     <div class="siteCardFBox">
                                         <div class="siteCardRatio">
                                             <!--进度条百分比-->
-                                            <div class="siteCardRatioInner" style="width: <%# Math.Round(Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100) %>%;"></div>
+                                            <div class="siteCardRatioInner" style="width: <%# Math.Round(Convert.ToDecimal(Eval("AlreadyRaisedMoney"))/Convert.ToDecimal(Eval("TargetAmountOfMoney"))*100) %>%;max-width:100%"></div>
                                         </div>
                                         <!--div-->
                                         <div class="siteCardFData">

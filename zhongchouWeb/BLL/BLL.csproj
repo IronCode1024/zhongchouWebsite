@@ -53,6 +53,7 @@
     <Compile Include="ProjectBll.cs" />
     <Compile Include="ProjectTbBLL.cs" />
     <Compile Include="StartUpProjectBll.cs" />
+    <Compile Include="SupportProjectBll.cs" />
     <Compile Include="UserCommentaryTbBll.cs" />
     <Compile Include="UserInfoBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

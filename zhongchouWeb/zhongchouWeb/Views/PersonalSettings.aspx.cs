@@ -41,17 +41,18 @@ namespace zhongchouWeb.Views
         {
             if (FileUpload1.HasFile)
             {
-                Guid g = Guid.NewGuid();
+                //Guid g = Guid.NewGuid();
                 filename = FileUpload1.FileName;
-                string hzm = filename.Substring(filename.LastIndexOf(".") + 1);
+                string hzm = filename.Substring(filename.LastIndexOf(".") + 1).ToLower();
+                Response.Write("<script>alert('" + hzm + "')</script>");
                 if (hzm != "jpg" && hzm != "png" && hzm != "jpeg" && hzm != "pic")
                 {
                     Response.Write("<script>alert('" + "选择的文件不是图片" + "')</script>");
                 }
                 else
                 {
-                    FileUpload1.SaveAs(Server.MapPath("/") + "//Content/Images//" + g.ToString() + filename);
-                    Image1.ImageUrl = "~/Content/Images/" + g.ToString() + filename;
+                    FileUpload1.SaveAs(Server.MapPath("/") + "//Content/Images/ProjectImages/InitiateProjectImg//" + filename);
+                    Image1.ImageUrl = "~/Content/Images/ProjectImages/InitiateProjectImg/" + filename;
                 }
             }
         }

@@ -37,7 +37,7 @@ namespace BLL
             int rows = UserCommentaryTbDal.Zjpl(ut);
             return rows;
         }
-        public DataSet  Xmgxc(UserCommentaryTb ut)
+        public DataSet Xmgxc(UserCommentaryTb ut)
         {
             DataSet ds = UserCommentaryTbDal.XmgxC(ut);
             return ds;
@@ -50,6 +50,12 @@ namespace BLL
         public DataSet GyzzC(UserCommentaryTb ut)
         {
             DataSet ds = UserCommentaryTbDal.GyzzC(ut);
+            return ds;
+        }
+
+        public DataSet ProxQ(UserCommentaryTb ut)
+        {
+            DataSet ds = UserCommentaryTbDal.ProxQ(ut);
             return ds;
         }
     }

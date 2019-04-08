@@ -15,9 +15,7 @@ namespace zhongchouWeb.Views
         ProjectImageTb pi = new ProjectImageTb();
         public static StartUpProjects pt = new StartUpProjects();
         StartUpProjectBll pb = new StartUpProjectBll();
-        static string imgurl;//获取路径，当不改图片路径时在将这个值赋给他
         //static string ProjectType; //获取类型，刚加载时就为其赋值，点击时也为其赋值
-
 
         static int ProjectID = 101;
 
@@ -34,29 +32,71 @@ namespace zhongchouWeb.Views
         //小框显示
         void Xk()
         {
-            this.Label12.Text = TextBox1.Text; ;
+            this.Label12.Text = TextBox1.Text;
             this.Label15.Text = TextBox2.Text;
         }
 
         //发起众筹 新建众筹项目
         public void Button12_Click(object sender, EventArgs e)
         {
-            //字段不够项目表里的，所以用修改语句 
-            //先忽略文件判断
-            //判断fileupload有没有文件
-            if (FileUpload1.HasFile)
+            if (this.TextBox1.Text == "")
             {
-                Guid g = new Guid();
-                string filename = FileUpload1.FileName;
-                FileUpload1.SaveAs(Server.MapPath(".") + "//Content/image//" + g.ToString() + filename);//将图片路径存在image中
-                pi.ImageUrl = "~/image/" + g.ToString() + filename;
-                pt.ProjectCover = "~/image/" + g.ToString() + filename;
+                this.Label21.Visible = true;
+                this.Label21.Text = "*项目名称不能为空";
+                return;
             }
             else
             {
-                pt.ProjectCover = imgurl;
+                this.Label21.Visible = false;
             }
-            pt.UserID = 1001;//获取用户ID 我能力有限
+            if (this.TextBox2.Text == "")
+            {
+                this.Label22.Visible = true;
+                this.Label22.Text = "*目标金额不能为空";
+                return;
+            }
+            else
+            {
+                this.Label22.Visible = false;
+            }
+            if (this.TextBox3.Text == "")
+            {
+                this.Label23.Visible = true;
+                this.Label23.Text = "*目标天数不能为空";
+                return;
+            }
+            else
+            {
+                this.Label23.Visible = false;
+            }
+            //字段不够项目表里的，所以用修改语句 
+            //先忽略文件判断
+            //判断fileupload有没有文件    封面图片
+            if (FileUpload1.HasFile)
+            {
+                //Guid g = new Guid();
+                string filename = FileUpload1.FileName;
+                FileUpload1.SaveAs(Server.MapPath("/") + "//Content/Images/ProjectImages/ProjectCoverImg//" + filename);//将图片路径存在image中
+                //pi.ImageUrl = "~/Content/Images/ProjectImages/ProjectCoverImg/" + filename;
+                pt.ProjectCover = "../Content/Images/ProjectImages/ProjectCoverImg/" + filename;
+            }
+            else
+            {
+
+            }
+            //项目内容图片
+            if (FileUpload2.HasFile)
+            {
+                string filenameProject = FileUpload2.FileName;
+                FileUpload2.SaveAs(Server.MapPath("/") + "//Content/Images/ProjectImages/InitiateProjectImg//" + filenameProject);//将图片路径存在image中
+                //pi.ImageUrl = "~/Content/Images/ProjectImages/InitiateProjectImg/" + filenameProject;
+                pt.ProjectImageUrl = "../Content/Images/ProjectImages/InitiateProjectImg/" + filenameProject;
+            }
+            else
+            {
+
+            }
+            pt.UserID = Convert.ToInt32(Session["Id"]); ;//获取用户ID 我能力有限
 
             pt.ProjectName = TextBox1.Text;
             pt.ProjectTargetDays = int.Parse(TextBox3.Text);
@@ -66,7 +106,8 @@ namespace zhongchouWeb.Views
             pt.NumberOfProjectSupport = 0;
             pt.AlreadyRaisedMoney = 0;
             pt.ProjectAddress = this.Label20.Text;
-            pt.ReleaseStatus = "发布中";
+            pt.PublicWelfare = this.Welfare.Value;
+            pt.ReleaseStatus = "待审核";
             pt.ProjectUpdateTime = DateTime.Now.ToUniversalTime();
             pt.ReleaseDate = DateTime.Now.ToUniversalTime();
 
@@ -238,99 +279,27 @@ namespace zhongchouWeb.Views
 
         }
 
-        //编辑后进行显示
-
-        void xian2()
-        {
-            DataSet ds = pb.gettable(ProjectID);
-            this.GridView1.DataSource = ds.Tables["zcDB"];
-            this.GridView1.DataBind();
-        }
-        //对要编辑的项目进行显示
-        void xian()
-        {
-
-
-            DataSet ds = pb.gettable(ProjectID);
-            DataTable dt = ds.Tables["zcDB"];
-            foreach (DataRow item in dt.Rows)
-            {
-                this.TextBox1.Text = item["ProjectName"].ToString();
-                this.TextBox2.Text = item["TargetAmountOfMoney"].ToString();
-                this.TextBox3.Text = item["ProjectTargetDays"].ToString();
-                this.TextBox5.Text = item["ProjectOverview"].ToString();//项目简介
-                this.TextBox8.Text = item["ProjectDetailedPictures"].ToString();
-                imgurl = item["ImageUrl"].ToString();
-            }
-            string ProjectType = dt.Rows[0][2].ToString();
-            switch (ProjectType)
-            {
-                case "科技":
-                    this.Buttonn1.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn1.Text;
-                    break;
-                case "艺术":
-                    this.Buttonn2.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn2.Text;
-                    break;
-                case "设计":
-                    this.Buttonn3.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn3.Text;
-                    break;
-                case "音乐":
-                    this.Buttonn4.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn4.Text;
-                    break;
-                case "影视":
-                    this.Buttonn5.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn5.Text;
-                    break;
-                case "出版":
-                    this.Buttonn6.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn6.Text;
-                    break;
-                case "动漫游戏":
-                    this.Buttonn7.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn7.Text;
-                    break;
-                case "工艺":
-                    this.Buttonn8.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn8.Text;
-                    break;
-                case "公开课":
-                    this.Buttonn9.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn9.Text;
-                    break;
-                case "农业":
-                    this.Buttonn10.BackColor = System.Drawing.Color.Orange;
-                    ProjectType = this.Buttonn10.Text;
-                    break;
-                default:
-                    this.Buttonn1.BackColor = System.Drawing.Color.Orange;
-                    break;
-
-            }
-
-            //为下拉框加值
-
-
-        }
-
-
-
         protected void Bt3_Click(object sender, EventArgs e)
         {
             UserInfoTb ut = new UserInfoTb();
             BankTb bt = new BankTb();
-            ut.UserName = this.TextBox_1.Text;
-            //ut.UserAddress=//地点待定
-            bt.UserEmail = this.TextBox_2.Text;
-            bt.BanName = this.TextBox_3.Text;
-            bt.BankBranch = this.TextBox_4.Text;
-            bt.BankUserName = this.TextBox_5.Text;//开户名称
-            bt.BankAccount = this.TextBox_6.Text;
-            pt.UserEmail = this.Label_4.Text;
-            //Response.Write("<script>alert('" + pt.ProjectName + "')</script>");
+            if (this.TextBox4.Text != "," && this.TextBox6.Text != "," && this.TextBox9.Text != "," && this.TextBox10.Text != "," && this.TextBox11.Text != ",")
+            {
+                ut.UserName = this.TextBox_1.Text;
+                ut.UserAddress =//地点待定
+                bt.UserEmail = this.TextBox4.Text;
+                bt.BanName = this.TextBox6.Text;
+                bt.BankBranch = this.TextBox9.Text;
+                bt.BankUserName = this.TextBox10.Text;//开户名称
+                bt.BankAccount = this.TextBox11.Text;
+                pt.UserEmail = this.TextBox4.Text;
+                //Response.Write("<script>alert('" + pt.ProjectName + "')</script>");
+            }
+            if (this.TextBox4.Text == ",")
+            {
+                bt.UserEmail = Session["UserEmail"].ToString();
+                pt.UserEmail = Session["UserEmail"].ToString();
+            }
             int s = pb.Xzxmxx(pt);
             int i = pb.insert(bt);
             if (i + s > 1)

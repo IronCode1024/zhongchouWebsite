@@ -13,6 +13,7 @@ namespace zhongchouWeb.Views
         {
             if (!IsPostBack)
             {
+                this.StartUpzx.HRef = "Login.aspx";
                 if (Session["Logins"] != null && Session["Logins"].ToString() != "")
                 {
                     //this.LoginOut.InnerHtml = "n";
@@ -23,6 +24,8 @@ namespace zhongchouWeb.Views
                     this.notlogins.Style.Add("display", "none");
                     this.logins.Style.Add("display", "block");
                     this.Label1.Text = Session["UserNames"].ToString();//用户名
+
+                    this.StartUpzx.HRef = "StartUpProject.aspx";
                     
                     if (Session["UserHeadPortrait"].ToString()!="")//有图像就像是用户头像
                     {

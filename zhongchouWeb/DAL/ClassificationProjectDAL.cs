@@ -22,42 +22,73 @@ namespace DAL
             string type = pt.ProjectType;
             int day = pt.ProjectTargetDays;
             decimal money = pt.TargetAmountOfMoney;
-            string sql = "select top 20 ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID ";
-            if (type == "" && day == 0 && money == 0)
-            {
-                sql = string.Format("select top 20 ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID ");
-            }
-            else if (type != "" || day != 0 || money != 0)
-            {
-                string sql2 = sql;
-                if (type != "")
-                {
-                    sql = sql2 + ("and ProjectType like '%" + type + "%'");
-                }
+            string sql = "";
 
-                if (day != 0)
+            if (type=="0" && day==0 && money==0)
+            {
+                sql = "select top 20 ProjectCover, ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID";
+            }
+            else if (type!="0")
+            {
+                sql = string.Format("select top 20  ProjectCover,ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID and ProjectType='{0}'", type);
+            }
+            else if (day!=0)
+            {
+                if (day==1)
                 {
-                    if (day == 1)
-                    {
-                        sql = sql2 + ("and ProjectTargetDays>80 ");
-                    }
-                    else if (day == 2)
-                    {
-                        sql = sql2 + ("and ProjectTargetDays<80 ");
-                    }
+                    sql = string.Format("select top 20 ProjectCover, ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID and ProjectTargetDays>=80");
                 }
-                if (money != 0)
+                else if (day==2)
                 {
-                    if (money == 1)
-                    {
-                        sql = sql2 + ("and TargetAmountOfMoney>10000 ");
-                    }
-                    else if (money == 2)
-                    {
-                        sql = sql2 + ("and TargetAmountOfMoney<10000  ");
-                    }
+                    sql = string.Format("select top 20 ProjectCover,ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID and ProjectTargetDays<80");
                 }
             }
+            else if (money != 0)
+            {
+                if (money == 1)
+                {
+                    sql = string.Format("select top 20 ProjectCover,ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID and TargetAmountOfMoney>=10000");
+                }
+                else if (money == 2)
+                {
+                    sql = string.Format("select top 20 ProjectCover,ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID and TargetAmountOfMoney<10000");
+                }
+            }
+            //if (type == "" && day == 0 && money == 0)
+            //{
+            //    sql = "select top 20 ImageID,ImageUrl,Pi.UserID,Pt.UserID,Pi.ProjectID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,ReleaseStatus,ReleaseDate from ProjectImageTb Pi,ProjectTb Pt where Pt.ProjectID=Pi.ProjectID and Pt.UserID=Pi.UserID";
+            //}
+            //else if (type != "" || day != 0 || money != 0)
+            //{
+            //    string sql2 = sql;
+            //    if (type != "")
+            //    {
+            //        sql = sql2 + ("and ProjectType like '%" + type + "%'");
+            //    }
+
+            //    if (day != 0)
+            //    {
+            //        if (day == 1)
+            //        {
+            //            sql = sql2 + ("and ProjectTargetDays>80 ");
+            //        }
+            //        else if (day == 2)
+            //        {
+            //            sql = sql2 + ("and ProjectTargetDays<80 ");
+            //        }
+            //    }
+            //    if (money != 0)
+            //    {
+            //        if (money == 1)
+            //        {
+            //            sql = sql2 + ("and TargetAmountOfMoney>10000 ");
+            //        }
+            //        else if (money == 2)
+            //        {
+            //            sql = sql2 + ("and TargetAmountOfMoney<10000  ");
+            //        }
+            //    }
+            //}
             DataSet ds = DBHelper.GetTable(sql);
             return ds;
 

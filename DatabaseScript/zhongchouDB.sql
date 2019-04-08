@@ -48,7 +48,8 @@ select * from UserRelatedItems
 CREATE TABLE ProjectTb
 (
 	ProjectID INT IDENTITY(101,1) PRIMARY KEY NOT NULL, --编号
-	ProjectCover NVARCHAR(500) NOT NULL,	--项目封面
+	ProjectCover NVARCHAR(2000) NOT NULL,	--项目封面
+	ProjectImageUrl NVARCHAR(2000) NOT NULL,--项目图片
 	UserID INT NOT NULL,					--关联用户表
 	UserEmail NVARCHAR(50) NOT NULL,		--发起人邮箱
 	ProjectType NVARCHAR(20) NOT NULL,		--项目类型
@@ -60,6 +61,7 @@ CREATE TABLE ProjectTb
 	AlreadyRaisedMoney DECIMAL(15,2),		--已筹金额
     NumberOfProjectSupport INT NULL,		--项目支持人数
 	ProjectAddress NVARCHAR(500) NULL,      --项目发起地址
+	PublicWelfare NVARCHAR(10) NOT NULL,    --众筹类型  （公益（无回报）、非公益（有回报））
 	ReleaseStatus NVARCHAR(20) NOT NULL,	--发布状态      (发布中、已成功、已失败)
 	ProjectUpdateTime DATETIME,				--项目更新时间
 	ReleaseDate DATETIME NOT NULL			--发布日期（发布日的日期）
@@ -83,12 +85,14 @@ select * from ProjectImageTb
 CREATE TABLE UserCommentaryTb
 (
 	CommentaryID int primary key identity(101,1),
-	UserID nvarchar(20),
+	UserEmail NVARCHAR(200) NOT NULL,     --用户邮箱
     ProjectID INT,
     CommentatorID INT,
     Content NVARCHAR(MAX),
     CommentaryDate DATETIME
 )
+--drop table UserCommentaryTb
+select * from UserCommentaryTb
 
 --银行表
 CREATE TABLE BankTb
@@ -103,3 +107,7 @@ CREATE TABLE BankTb
 --drop table BankTb
 select * from BankTb
 insert into BankTb values('884488123545987142','小罗伯特唐尼','中国银行','中国银行华中农大支行','123456789@qq.com')
+
+select UserHeadPortrait,UserName,Content,CommentaryDate from UserCommentaryTb,UserInfoTb,ProjectTb
+where UserCommentaryTb.ProjectID=ProjectTb.ProjectID and UserCommentaryTb.CommentatorID=UserInfoTb.Id
+and UserCommentaryTb.ProjectID='106'

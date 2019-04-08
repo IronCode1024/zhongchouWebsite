@@ -10,7 +10,7 @@
 
 
     <link href="../Content/Css/InitiateProjectStyle.css" rel="stylesheet" />
-    <script src="Script/jquery-1.8.3.min.js"></script>
+    <script src="../Script/jQuerys/jquery-1.10.2.min.js"></script>
     <script src="../Script/InitiateProjectScripr.js"></script>
 
     <style type="text/css">
@@ -18,10 +18,31 @@
             height: 139px;
             width: 212px;
         }
+        .headerPage .UserInfoDrop_downBoxUl {
+            width:150px;
+            margin-left:-12px;
+        }
     </style>
 
 </head>
 <body>
+     <!-- 顶部导航 页眉 -->
+    <div class="headerPage"></div>
+    <!--顶部导航 over-->
+
+    <script>
+        $(function () {
+            /*公共部分
+             * 导航栏
+             * footer CopyRight
+             */
+            $(".headerPage").load("HeaderPage.aspx");//引用页眉
+
+            $(".footerPage").load("FooterPage.aspx");//引用页脚
+        });
+    </script>
+
+
     <form id="form1" runat="server">
         <div class="jindutiao">
             <ul>
@@ -287,11 +308,11 @@
                         <asp:BoundField HeaderText="已筹金额" DataField="AlreadyRaisedMoney" />
                         <asp:BoundField HeaderText="发布状态" DataField="ReleaseStatus" />
                         <asp:BoundField HeaderText="发布时间" DataField="ReleaseDate" />
-                        <asp:BoundField HeaderText="运费" />
-                        <asp:TemplateField HeaderText="操作">
+                        <%--<asp:BoundField HeaderText="运费" />--%>
+                        <%--<asp:TemplateField HeaderText="操作">
 
 
-                            <ItemTemplate>
+                            <%--<ItemTemplate>
                                 <asp:Button ID="Button1" runat="server" ForeColor="#FF3300" Text="删除" />
                                 <br />
                                 <br />
@@ -299,7 +320,7 @@
                             </ItemTemplate>
 
 
-                        </asp:TemplateField>
+                        </asp:TemplateField>--%>
                     </Columns>
                 </asp:GridView>
                 <br />
@@ -521,5 +542,13 @@
             </div>
         </div>
     </form>
+
+
+    <!-- 底部导航 页脚 -->
+    <div class="footerPage"></div>
+    <!--底部导航 over-->
+
+
+
 </body>
 </html>

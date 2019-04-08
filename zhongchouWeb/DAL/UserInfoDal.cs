@@ -94,7 +94,7 @@ namespace DAL
         {
             //select Id,UserName,UserEmail,UserHeadPortrait from UserInfoTb
             //用户登录成功后查询用户名和图像  并显示到页面中的用户信息处
-            string sql = "select UserName,UserEmail,UserHeadPortrait from UserInfoTb where (UserName=@nameOremail or UserEmail=@nameOremail)";
+            string sql = "select Id,UserName,UserEmail,UserHeadPortrait from UserInfoTb where (UserName=@nameOremail or UserEmail=@nameOremail)";
             SqlParameter[] prm = new SqlParameter[]{
                         new SqlParameter("@nameOremail",nameOremail),  //用户名
                     };
@@ -128,7 +128,7 @@ namespace DAL
         }
         public int updateimg(UserInfo ui)
         {
-            string sql = string.Format("update UserInfoTb set PersonalizedSignature='{0}'  where UserEmail='{1}'", ui.UserHeadPortrait, ui.Email);
+            string sql = string.Format("update UserInfoTb set UserHeadPortrait='{0}'  where UserEmail='{1}'", ui.UserHeadPortrait, ui.Email);
             int rows = DBHelper.ExecuteNonQuery(sql);
             return rows;
         } 

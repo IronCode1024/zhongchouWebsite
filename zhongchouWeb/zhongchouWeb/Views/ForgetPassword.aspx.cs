@@ -28,20 +28,39 @@ namespace zhongchouWeb.Views
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (this.TextBox2.Text == Sends)
+            if (this.TextBox3.Text == "")
             {
-                string Emails = this.TextBox1.Text;
-                string NewPwd = this.TextBox3.Text;
-                int rows = fdb.getPassword(NewPwd,Emails);
-                if (rows > 0)
+                this.Label1.Visible = true;
+
+            }
+
+
+            if (this.TextBox3.Text!=this.TextBox4.Text)
+            {
+                this.Label2.Visible = true;
+            }
+            else
+            {
+                if (this.TextBox2.Text == Sends)
                 {
-                    Response.Write("<script>alert('重置密码成功！')</script>");
+                    string Emails = this.TextBox1.Text;
+                    string NewPwd = this.TextBox3.Text;
+                    int rows = fdb.getPassword(NewPwd, Emails);
+                    if (rows > 0)
+                    {
+                        Response.Write("<script>alert('重置密码成功！')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('重置密码失败！')</script>");
+                    }
                 }
                 else
                 {
-                    Response.Write("<script>alert('重置密码失败！')</script>");
+                    Response.Write("<script>alert('验证码错误！')</script>");
                 }
             }
+            
         }
 
         /// <summary>

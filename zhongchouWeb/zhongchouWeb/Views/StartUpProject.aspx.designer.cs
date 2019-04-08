@@ -22,15 +22,6 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Label1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
         /// Label2 控件。
         /// </summary>
         /// <remarks>
@@ -47,6 +38,15 @@ namespace zhongchouWeb.Views {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        
+        /// <summary>
+        /// Label21 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label21;
         
         /// <summary>
         /// Label3 控件。
@@ -76,6 +76,15 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
+        /// Label22 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label22;
+        
+        /// <summary>
         /// Label4 控件。
         /// </summary>
         /// <remarks>
@@ -101,6 +110,15 @@ namespace zhongchouWeb.Views {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label7;
+        
+        /// <summary>
+        /// Label23 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label23;
         
         /// <summary>
         /// Label5 控件。
@@ -256,6 +274,33 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
+        /// Label18 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label18;
+        
+        /// <summary>
+        /// FileUpload2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload2;
+        
+        /// <summary>
+        /// Label24 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label24;
+        
+        /// <summary>
         /// TextBox5 控件。
         /// </summary>
         /// <remarks>
@@ -281,6 +326,24 @@ namespace zhongchouWeb.Views {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        
+        /// <summary>
+        /// Label25 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label25;
+        
+        /// <summary>
+        /// Welfare 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect Welfare;
         
         /// <summary>
         /// Button12 控件。
@@ -319,15 +382,6 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Label14;
         
         /// <summary>
-        /// Label15 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label15;
-        
-        /// <summary>
         /// Label16 控件。
         /// </summary>
         /// <remarks>
@@ -337,13 +391,13 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Label16;
         
         /// <summary>
-        /// Label17 控件。
+        /// Label15 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label17;
+        protected global::System.Web.UI.WebControls.Label Label15;
         
         /// <summary>
         /// Label11 控件。
@@ -436,13 +490,13 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Label_4;
         
         /// <summary>
-        /// TextBox_2 控件。
+        /// TextBox4 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox4;
         
         /// <summary>
         /// Label_5 控件。
@@ -463,13 +517,13 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Label_6;
         
         /// <summary>
-        /// TextBox_3 控件。
+        /// TextBox6 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_3;
+        protected global::System.Web.UI.WebControls.TextBox TextBox6;
         
         /// <summary>
         /// Label_7 控件。
@@ -481,13 +535,13 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Label_7;
         
         /// <summary>
-        /// TextBox_4 控件。
+        /// TextBox9 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_4;
+        protected global::System.Web.UI.WebControls.TextBox TextBox9;
         
         /// <summary>
         /// Labe_l8 控件。
@@ -499,13 +553,13 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Labe_l8;
         
         /// <summary>
-        /// TextBox_5 控件。
+        /// TextBox10 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_5;
+        protected global::System.Web.UI.WebControls.TextBox TextBox10;
         
         /// <summary>
         /// Labe_l9 控件。
@@ -517,13 +571,13 @@ namespace zhongchouWeb.Views {
         protected global::System.Web.UI.WebControls.Label Labe_l9;
         
         /// <summary>
-        /// TextBox_6 控件。
+        /// TextBox11 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_6;
+        protected global::System.Web.UI.WebControls.TextBox TextBox11;
         
         /// <summary>
         /// Bt1 控件。
@@ -533,15 +587,6 @@ namespace zhongchouWeb.Views {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Bt1;
-        
-        /// <summary>
-        /// Bt2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Bt2;
         
         /// <summary>
         /// Bt3 控件。

@@ -139,7 +139,7 @@
 
                 </div>
 
-                <br />
+                <%--<br />
                 <br />
                 <br />
 
@@ -182,9 +182,9 @@
 
                 <br />
                 <br />
-                <br />
+                <br />--%>
 
-                <div class="AdvertisementGridViewBox">
+                <%--<div class="AdvertisementGridViewBox">
                     <div style="margin: 0px auto; width: 200px;">
                         <h2>广告信息</h2>
                     </div>
@@ -216,7 +216,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div>--%>
         </form>
     </div>
 </body>

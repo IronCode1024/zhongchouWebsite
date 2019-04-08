@@ -10,7 +10,8 @@ namespace MODEL
     {
         //评论
         public int CommentaryID { get; set; }
-        public string UserID { get; set; }
+        public int UserID { get; set; }
+        public string UserEmail { get; set; }
         public int ProjectID { get; set; }
         public int CommentatorID { get; set; }
         public string Content { get; set; }

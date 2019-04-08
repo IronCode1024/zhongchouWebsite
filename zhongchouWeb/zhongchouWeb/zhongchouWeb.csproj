@@ -166,6 +166,7 @@
     <Content Include="Views\PersonalSettings.aspx" />
     <Content Include="Views\Register.aspx" />
     <Content Include="Views\StartUpProject.aspx" />
+    <Content Include="Views\SupportProjects.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -317,6 +318,13 @@
     <Compile Include="Views\StartUpProject.aspx.designer.cs">
       <DependentUpon>StartUpProject.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\SupportProjects.aspx.cs">
+      <DependentUpon>SupportProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SupportProjects.aspx.designer.cs">
+      <DependentUpon>SupportProjects.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\AllPages.Master" />
@@ -340,7 +348,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrators\AdminScript\" />
-    <Folder Include="Content\Images\InitiateProjectImg\" />
+    <Folder Include="Content\Images\ProjectImages\InitiateProjectImg\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

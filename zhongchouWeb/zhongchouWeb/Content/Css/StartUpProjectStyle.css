@@ -32,16 +32,17 @@
     background-color: #ed5e58;
     border-radius: 5px;
     border: none;
+    cursor:pointer;
 }
 
-ul {
+.jindutiao ul {
     list-style: none; /*去掉li前面的点*/
     float: left;
     margin-left: 50px;
     margin-top: 10px;
 }
 
-    ul li {
+    .jindutiao ul li {
         width: 250px;
         height: 30px;
         line-height: 30px;
@@ -54,7 +55,7 @@ ul {
         /*border: 1px solid red;*/
     }
 /*点击时加的样式*/
-.one {
+.jindutiao .one {
     margin-left: -15px;
     background: url(/Content/Images/StartUpProjectImg/jiantou2.png) no-repeat 100% 0; /*不知道意思*/
     position: relative; /*让matgin-left生效*/
@@ -94,7 +95,7 @@ a {
 /*第一个div左边重要部分，后面命名以此类推*/
 .center-left {
     width: 750px;
-    height: 900px;
+    height: 1084px;
     border: 1px solid #dad7d7;
     float: left;
     background-color: #fdffff;

@@ -48,6 +48,7 @@
     <Compile Include="Project.cs" />
     <Compile Include="ProjectTb.cs" />
     <Compile Include="StartUpProject.cs" />
+    <Compile Include="SupportProject.cs" />
     <Compile Include="UserCommentaryTb.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
