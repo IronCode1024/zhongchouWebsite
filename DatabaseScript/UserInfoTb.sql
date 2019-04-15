@@ -42,7 +42,7 @@ RETURN 0																		              --|
 
 
 insert into UserInfoTb (UserName,UserSex,UserEmail,UserPassword,UserHeadPortrait,State,RegistrationTime) values('Âõ¿Ë¶û-Ñ·','Å®','123456789@qq.com','123','../Content/Images/UserHeadPortrait/NikolaTesla.jpg',0,getdate())
-
+insert into UserInfoTb (UserName,UserSex,UserEmail,UserPassword,UserHeadPortrait,State,RegistrationTime) values('Âõ¿Ë¶û','ÄÐ','123@qq.com','321','',0,getdate())
 
 select Id,UserName,UserEmail,UserHeadPortrait from UserInfoTb where UserEmail='123456789@qq.com'
 go

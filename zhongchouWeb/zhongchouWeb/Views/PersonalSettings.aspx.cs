@@ -24,7 +24,7 @@ namespace zhongchouWeb.Views
                 this.Label3.Text = dt.Rows[0]["UserEmail"].ToString();
                 this.TextBox1.Text = dt.Rows[0]["UserName"].ToString();
                 this.TextBox3.Text = dt.Rows[0]["PersonalizedSignature"].ToString();
-                this.Label17.Text = dt.Rows[0]["UserAddress"].ToString();
+                //this.Label17.Text = dt.Rows[0]["UserAddress"].ToString();
                 string sex = dt.Rows[0]["UserSex"].ToString();
                 if (sex == "男")
                 {
@@ -57,38 +57,43 @@ namespace zhongchouWeb.Views
             }
         }
 
-        protected void sheng_TextChanged(object sender, EventArgs e)
-        {
-            string script = "<script>window.onload=function(){insertcityfun();}</script>";
-            ClientScript.RegisterStartupScript(this.GetType(), "myscript", script);
-            //  第一个参数： 指当前页面； 
-            //第二个参数：脚本函数的名字，随便起； 
-            //第三个参数： 指脚本内容
+        //protected void sheng_TextChanged(object sender, EventArgs e)
+        //{
+        //    //string script = "<script>window.onload=function(){insertcityfun();}</script>";
+        //    //ClientScript.RegisterStartupScript(this.GetType(), "myscript", script);
+        //    //  第一个参数： 指当前页面； 
+        //    //第二个参数：脚本函数的名字，随便起； 
+        //    //第三个参数： 指脚本内容
 
-        }
+        //}
+        //protected void shi_TextChanged(object sender, EventArgs e)
+        //{
+        //    Response.Write("<script>alert('修srgdsrgdrg h功')</script>");
+        //    this.Label17.Text = this.sheng.Text + this.shi.Text;
+        //}
 
         protected void Button1_Click(object sender, EventArgs e)
         {
 
             ui.Email = Session["UserEmail"].ToString();
             ui.Name = this.TextBox1.Text;
-            string s = this.sheng.Text;
-            string shi = this.shi.Text;
-            ui.UserAddress = s + shi;
+            //string s = this.sheng.Text;
+            //string shi = this.shi.Text;
+            ui.UserAddress = this.sheng.SelectedValue + this.shi.SelectedValue;
             ui.PersonalizedSignature = this.TextBox3.Text;
             string sex;
-            if (this.RadioButton1.Checked)
+            if (this.RadioButton1.Checked == true)
             {
                 sex = "男";
                 ui.UserSex = sex;
             }
-            else if (this.RadioButton2.Checked)
+            else if (this.RadioButton2.Checked == true)
             {
                 sex = "女";
                 ui.UserSex = sex;
             }
             int rows = ud.update(ui);
-            if (rows>0)
+            if (rows > 0)
             {
                 Response.Write("<script>alert('修改成功')</script>");
             }
@@ -132,6 +137,8 @@ namespace zhongchouWeb.Views
                 Response.Write("<script>alert('修改失败')</script>");
             }
         }
+
+       
 
 
     }

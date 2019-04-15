@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>拾柴众筹网-个人设置</title>
     <link href="../Content/Css/Personal.css" rel="stylesheet" />
     <script src="../Script/jQuerys/jquery-1.10.2.min.js"></script>
     <script src="../Script/PersonalSettings.js"></script>
@@ -108,12 +108,14 @@
                         <asp:RadioButton ID="RadioButton2" CssClass="RadioButton2" runat="server" Text="女" GroupName="a" />
                         <br />
                         <asp:Label ID="Label6" runat="server" Text="所在地：" Font-Bold="False" Font-Size="Large"></asp:Label>
-                        <asp:DropDownList ID="sheng" CssClass="DropDownList1" runat="server" Width="80px" Height="25px"   OnTextChanged="sheng_TextChanged">
+                        <asp:DropDownList ID="sheng" CssClass="DropDownList1" runat="server" Width="80px" Height="25px">
                         </asp:DropDownList>
                         <asp:DropDownList ID="shi" CssClass="DropDownList1" runat="server" Width="80px" Height="25px">
                         </asp:DropDownList>
-                        <asp:Label ID="Label17" runat="server" Text="Label17" Font-Bold="False" Font-Size="Large"></asp:Label>
+
+                        <%--<asp:Label ID="Label17" runat="server" Text="Label17" Font-Bold="False" Font-Size="Large"></asp:Label>--%>
                         <br />
+
                         <asp:Label ID="Label7" runat="server" Text="网址：" Font-Bold="False" Font-Size="Large"></asp:Label>
                         <asp:Label ID="Label16" runat="server" Text="www.zhongchou.com" Font-Bold="False" Font-Size="Large"></asp:Label>
                         <br />

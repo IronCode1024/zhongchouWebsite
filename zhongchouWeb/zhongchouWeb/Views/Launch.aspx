@@ -10,7 +10,7 @@
     <link href="../Content/Css/OverallSituationStyle.css" rel="stylesheet" />
     <link href="../Content/Css/LaunchCss.css" rel="stylesheet" />
     <script src="../Script/LaunchJS.js"></script>
-    <title></title>
+    <title>拾柴众筹网-个人中心</title>
 
 </head>
 <body>
@@ -250,10 +250,10 @@
                     <%--个人信息显示控件--%>
                     <div id="lable">
                         <p>
-                            <asp:Label ID="Label1" runat="server" Text="Label" Font-Size="Large"></asp:Label>
-                            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-                            <asp:Label ID="Label3" runat="server" Text="Label3"></asp:Label>
-                            <asp:Label ID="Label4" runat="server" Text="Label4"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="" Font-Size="Large"></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Text="" Width="300"></asp:Label>
+                            <asp:Label ID="Label3" runat="server" Text="" Width="300"></asp:Label>
+                            <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
 
                         </p>
                     </div>

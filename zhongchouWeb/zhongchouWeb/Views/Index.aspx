@@ -50,19 +50,19 @@
 
     <div class="siteHNavIndex">
         <div class="siteHNavInner">
-            <a href="ClassificationProject.aspx" class="btn_ALink">浏览项目</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">科技</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">出版</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">娱乐</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">艺术</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">农业</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">商铺</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">房产</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">音乐</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">设计</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">公益</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">公开课</a>
-            <a href="ClassificationProject.aspx" class="btn_ALink">其他</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">浏览项目</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">科技</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">出版</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">娱乐</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">艺术</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">农业</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">商铺</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">房产</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">音乐</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">设计</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">公益</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">公开课</a>
+            <a href="ClassificationProject.aspx?search=0" class="btn_ALink">其他</a>
         </div>
     </div>
 
@@ -106,15 +106,15 @@
                         <div class="RepeaterTitle">
                             <h1>众筹精选</h1>
                             <div>
-                                <a href="ClassificationProject.aspx" class="btn_ALink">最新上线</a>&nbsp;&nbsp;
-                                    <a href="ClassificationProject.aspx" class="btn_ALink">科技</a>&nbsp;&nbsp;
-                                    <a href="ClassificationProject.aspx" class="btn_ALink">艺术</a>&nbsp;&nbsp;
-                                    <a href="ClassificationProject.aspx" class="btn_ALink">农业</a>&nbsp;&nbsp;
-                                    <a href="ClassificationProject.aspx" class="btn_ALink">音乐</a>&nbsp;&nbsp;
-                                    <a href="ClassificationProject.aspx" class="btn_ALink">设计</a>&nbsp;&nbsp;
-                                    <a href="ClassificationProject.aspx" class="btn_ALink">公益</a>&nbsp;&nbsp;
-                                    <a href="ClassificationProject.aspx" class="btn_ALink">公开课</a>&nbsp;&nbsp;
-                                    <a href="ClassificationProject.aspx" class="btn_ALink">更多>></a>&nbsp;&nbsp;
+                                <a href="ClassificationProject.aspx?search=0" class="btn_ALink">最新上线</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx?search=0" class="btn_ALink">科技</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx?search=0" class="btn_ALink">艺术</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx?search=0" class="btn_ALink">农业</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx?search=0" class="btn_ALink">音乐</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx?search=0" class="btn_ALink">设计</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx?search=0" class="btn_ALink">公益</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx?search=0" class="btn_ALink">公开课</a>&nbsp;&nbsp;
+                                    <a href="ClassificationProject.aspx?search=0" class="btn_ALink">更多>></a>&nbsp;&nbsp;
                             </div>
                         </div>
                         <table style="height: 15px;"></table>
@@ -134,7 +134,7 @@
                                     <span style="font-size: 11px; top: -15px; position: absolute; left: 18px; text-align: center; line-height: 50px;"><%#Eval("NumberOfProjectSupport") %></span>
                                 </div>
                                 <a href="BrowseProject.aspx">
-                                    <img style="width: 248px; height: 180px;" src="<%#Eval("ImageUrl") %>" /></a>
+                                    <img style="width: 248px; height: 180px;" src="<%#Eval("ProjectCover") %>" /></a>
 
                                 <!--众筹进度详情div-->
                                 <div class="indCardICBox siteCardICBox">
@@ -227,7 +227,7 @@
                                     <span style="font-size: 11px; top: -15px; position: absolute; left: 18px; text-align: center; line-height: 50px;"><%#Eval("NumberOfProjectSupport") %></span>
                                 </div>
                                 <a href="BrowseProject.aspx">
-                                    <img style="width: 248px; height: 180px;" src="<%#Eval("ImageUrl") %>" /></a>
+                                    <img style="width: 248px; height: 180px;" src="<%#Eval("ProjectCover") %>" /></a>
 
                                 <!--众筹进度详情div-->
                                 <div class="indCardICBox siteCardICBox">
@@ -269,7 +269,7 @@
 
                     <FooterTemplate>
                         <%--<table style="height:10px;"><tr><td></td></tr></table>--%><!--让下面的table向下间距20px-->
-                        <a href="http://www.baidu.com">
+                        <a href="ClassificationProject.aspx?search=0">
                             <table border="0" style="margin-left: 15px; text-align: center;">
                                 <tr>
                                     <td class="tableMoreTd">查看更多项目</td>

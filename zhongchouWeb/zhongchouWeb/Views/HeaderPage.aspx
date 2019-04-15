@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="../Script/jQuerys/jquery-1.10.2.min.js"></script>
     <link href="../Content/Css/HeadFootStyle.css" rel="stylesheet" />
     <title></title>
 </head>
@@ -21,7 +22,7 @@
                     <a href="Index.aspx" class="siteHNavItemA">首&nbsp;&nbsp;页</a>
                 </div>
                 <div class="siteHNavItem">
-                    <a href="ClassificationProject.aspx" class="siteHNavItemA">浏览项目</a>
+                    <a href="ClassificationProject.aspx?search=0" class="siteHNavItemA" id="browsePro">浏览项目</a>
                     <%--<div class="siteHNavInner">
                         <a href="#" class="btn_ALink">科技</a>
                         <a href="#" class="btn_ALink">出版</a>
@@ -38,13 +39,13 @@
                     </div>--%>
                 </div>
                 <div class="siteHNavItem">
-                    <a href="http://www.zhongchou.cn/gongyi" class="siteHNavItemA">公益众筹</a>
+                    <%--<a href="http://www.zhongchou.cn/gongyi" class="siteHNavItemA">公益众筹</a>--%>
                 </div>
                 <div class="siteHNavItem">
                     <a href="PeopleHelp.aspx" class="siteHNavItemA">新手帮助</a>
                 </div>
                 <div class="siteHNavItem">
-                    <a rel="nofollow" href="/download" class="siteHNavItemA" target="_blank">APP</a>
+                   <%--<a rel="nofollow" href="/download" class="siteHNavItemA" target="_blank">APP</a>--%>
                 </div>
             </div>
             <a id="StartUpzx" data-href="StartUpProject.aspx" class="siteM_fqBtn btn_ALink js-checkLogin" runat="server"><i></i>发起众筹</a>
@@ -134,7 +135,7 @@
                 <div class="search-input">
                     <input type="text" class="siteMSearchInput siteIlB_item sitePHInput" id="searchInput" autocomplete="off" placeholder="绝世倾城" />
                 </div>
-                <a href="javascript:;" class="siteMSearchA siteIlB_item fr" id="searchBtn">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a class="siteMSearchA siteIlB_item fr" id="searchBtn" style="cursor:pointer">&nbsp;&nbsp;&nbsp;&nbsp;</a>
                 <%--<span class="sitePHTip" style="top: 4px; left: 5px;">绝世倾城</span>--%>
 
                 <%--<div class="input-hinter" style="display: none;"></div>--%>
@@ -142,6 +143,15 @@
 
             <%-- <a href="http://www.zhongchou.cn/crowdfund-index" class="wdfq btn_ALink my-zc fr" target="_blank"><i></i>管理众筹</a>--%>
         </div>
+        <script>
+            $(function () {
+                $('#searchBtn').click(function () {
+                    var ss = document.getElementById("searchInput").value;
+                    //alert(ss)
+                    window.location.href = "ClassificationProject.aspx?search=" + ss;
+                });
+            });
+        </script>
     </div>
     </form>
 </body>

@@ -126,7 +126,7 @@
                                     <span style="font-size: 11px; top: -15px; position: absolute; left: 18px; text-align: center; line-height: 50px;"><%#Eval("NumberOfProjectSupport") %></span>
                                 </div>
                                 <a href='<%#"BrowseProject.aspx?ProjectID="+Eval("ProjectID") %>' runat="server">
-                                    <img style="width: 248px; height: 180px;" src="<%#Eval("ImageUrl") %>" /></a>
+                                    <img style="width: 248px; height: 180px;" src="<%#Eval("ProjectCover") %>" /></a>
 
                                 <!--众筹进度详情div-->
                                 <div class="indCardICBox siteCardICBox">

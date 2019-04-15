@@ -42,7 +42,7 @@ where pro.UserID=usin.Id and ProjectID=@a";
         {
 
             string sql = @"select ProjectCover,ProjectImageUrl,NumberOfProjectSupport,
-AlreadyRaisedMoney,TargetAmountOfMoney,AlreadyRaisedMoney/TargetAmountOfMoney*100 mubiaojine
+AlreadyRaisedMoney,TargetAmountOfMoney,AlreadyRaisedMoney,AlreadyRaisedMoney/TargetAmountOfMoney*100 mubiaojine,ReleaseStatus
 from ProjectTb pro,UserInfoTb usin
 where pro.UserID=usin.Id and ProjectID=@a";
             SqlParameter[] prm = new SqlParameter[]{

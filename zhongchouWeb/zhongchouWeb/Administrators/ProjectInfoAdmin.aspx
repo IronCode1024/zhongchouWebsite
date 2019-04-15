@@ -103,14 +103,14 @@
                         <table class="TableBox">
                             <tr>
                                 <th style="width: 0%;">编号</th>
-                                <th style="width: 0%;">项目封面</th>
+                                <%--<th style="width: 0%;">项目封面</th>--%>
                                 <th style="width: 0%;">关联用户表</th>
                                 <th style="width: 0%;">发起人邮箱</th>
                                 <th style="width: 0%;">项目类型</th>
                                 <th style="width: 0%;">项目名称</th>
                                 <th style="width: 0%;">目标众筹天数</th>
                                 <th style="width: 0%;">项目概述</th>
-                                <th style="width: 0%;">项目详情（内容）</th>
+                                <%--<th style="width: 0%;">项目详情（内容）</th>--%>
                                 <th style="width: 0%;">目标金额</th>
                                 <th style="width: 0%;">已筹金额</th>
                                 <th style="width: 0%;">项目支持人数</th>
@@ -125,14 +125,14 @@
                         <%--<table class="ContentTableBox">--%>
                         <tr>
                             <td><%#Eval("ProjectID") %></td>
-                            <td><%#Eval("ProjectCover") %></td>
+                            <%--<td><%#Eval("ProjectCover") %></td>--%>
                             <td><%#Eval("UserID") %></td>
                             <td><%#Eval("UserEmail") %></td>
                             <td><%#Eval("ProjectType") %></td>
                             <td><%#Eval("ProjectName") %></td>
                             <td><%#Eval("ProjectTargetDays") %></td>
                             <td><%#Eval("ProjectOverview") %></td>
-                            <td><%#Eval("ProjectDetailedPictures") %></td>
+                            <%--<td><%#Eval("ProjectDetailedPictures") %></td>--%>
                             <td><%#Eval("TargetAmountOfMoney") %></td>
                             <td><%#Eval("AlreadyRaisedMoney") %></td>
                             <td><%#Eval("NumberOfProjectSupport") %></td>
@@ -176,7 +176,8 @@
                         &nbsp;&nbsp;&nbsp;用户名：<asp:TextBox CssClass="contentBox" ID="TextBox1" runat="server"></asp:TextBox>
                         <br />
                         <br />
-                        发布状态：<asp:TextBox CssClass="contentBox" ID="TextBox2" runat="server"></asp:TextBox>
+                        发布状态：<%--<asp:TextBox CssClass="contentBox" ID="TextBox2" runat="server"></asp:TextBox>--%>
+                        <asp:DropDownList ID="DropDownList1" CssClass="contentBox" runat="server"></asp:DropDownList>
                         <br />
                         <br />
                         <asp:Button ID="EditUpdatebtn" runat="server" Text="确定" OnClientClick="return true" OnClick="EditUpdatebtn_Click" />

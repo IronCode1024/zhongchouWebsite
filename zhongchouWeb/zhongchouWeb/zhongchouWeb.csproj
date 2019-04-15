@@ -120,7 +120,51 @@
     <Content Include="Content\Images\IndexImg\siteHTopBg.png" />
     <Content Include="Content\Images\IndexImg\sosuo.jpg" />
     <Content Include="Content\Images\IndexImg\sousuo.PNG" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\1.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\10.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\11.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\12.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\13.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\14.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\15.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\16.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\17.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\18.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\19.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\2.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\20.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\21.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\22.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\23.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\24.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\3.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\4.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\5.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\6.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\7.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\8.jpg" />
+    <Content Include="Content\Images\ProjectImages\InitiateProjectImg\9.jpg" />
     <Content Include="Content\Images\ProjectImages\ProjectCoverImg\1.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\10.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\11.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\12.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\13.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\14.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\15.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\16.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\17.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\18.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\19.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\2.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\20.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\21.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\3.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\4.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\5.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\6.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\7.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\8.jpg" />
+    <Content Include="Content\Images\ProjectImages\ProjectCoverImg\9.jpg" />
     <Content Include="Content\Images\publicImg\notLogin.png" />
     <Content Include="Content\Images\LaunchImg\EI2{DJV4FJ%29EOX`YKJZ%40%28DB.png" />
     <Content Include="Content\Images\LaunchImg\RNG%404}RKZ2_5F}SGBBVD4J0.png" />
@@ -348,7 +392,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrators\AdminScript\" />
-    <Folder Include="Content\Images\ProjectImages\InitiateProjectImg\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

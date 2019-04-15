@@ -22,6 +22,8 @@ namespace MODELS
         public string ProjectAddress { set; get; }
         public string ReleaseStatus { set; get; }
         public DateTime ReleaseDate { set; get; }
+
+        public string Search { set; get; } //搜索
     }
 
 

@@ -41,6 +41,15 @@ namespace zhongchouWeb.Views
             pt.ProjectType = ProjectType;
             pt.ProjectTargetDays = ProjectTargetDays;
             pt.TargetAmountOfMoney = TargetAmountOfMoney;
+            if (Request["search"].ToString() != "" && Request["search"] != null)
+            {
+                pt.Search = Request["search"].ToString();
+            }
+            else
+            {
+                pt.Search = "0";
+            }
+
             DataSet ds = bb.show2(pt);
             this.Repeater2.DataSource = ds.Tables["zcDB"];
             this.Repeater2.DataBind();

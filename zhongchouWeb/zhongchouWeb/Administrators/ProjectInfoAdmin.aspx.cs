@@ -23,8 +23,6 @@ namespace zhongchouWeb.Administrators
             {
                 this.bgLayer.Style.Add("display", "none");//隐藏修改编辑弹框背景遮挡层
                 this.ProjectEditsBox.Style.Add("display", "none");//隐藏修改编辑弹框
-
-
                 getProDataShowPage();
             }
         }
@@ -53,12 +51,17 @@ namespace zhongchouWeb.Administrators
         {
             if (e.CommandName == "Editbtns")
             {
+                this.DropDownList1.Items.Clear();
                 //Response.Redirect("ProjectInfoAdmin.aspx");
                 ProID = Convert.ToInt32(e.CommandArgument);
                 DataSet ds = apib.getProjectReleaseStatus(ProID);
                 DataTable dt = ds.Tables["zcDB"];
                 this.TextBox1.Text = dt.Rows[0]["ProjectID"].ToString();
-                this.TextBox2.Text = dt.Rows[0]["ReleaseStatus"].ToString();
+                this.DropDownList1.Items.Add(dt.Rows[0]["ReleaseStatus"].ToString());
+                this.DropDownList1.Items.Add("发布中");
+                this.DropDownList1.Items.Add("已成功");
+                this.DropDownList1.Items.Add("已失败");
+                this.DropDownList1.Items.Add("冻结项目");
                 //ClientScript.RegisterStartupScript(Page.GetType(), "", "<script>ProjectEditsBoxShow()</script>");
 
 
@@ -81,7 +84,7 @@ namespace zhongchouWeb.Administrators
         protected void EditUpdatebtn_Click(object sender, EventArgs e)
         {
             apis.ProjectID = Convert.ToInt32(this.TextBox1.Text);
-            apis.ReleaseStatus = this.TextBox2.Text;
+            apis.ReleaseStatus = this.DropDownList1.Text;
             int rows = apib.UpdateProjectReleaseStatus(apis);
             if (rows > 0)
             {

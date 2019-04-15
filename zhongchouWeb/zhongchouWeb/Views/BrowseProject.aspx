@@ -97,7 +97,7 @@
                                             <div class="siteCardRatioInner" style="width: <%# Convert.ToDecimal(Eval("mubiaojine")) %>%;max-width:100%"></div>
                                         </div>
                                 <div id="dbz">
-                                    <asp:Label ID="Label7" runat="server" Text="成功结束"></asp:Label>
+                                    <asp:Label ID="Label7" runat="server" Text='<%#Eval("ReleaseStatus") %>'></asp:Label> <%--发布状态--%>
                                     <asp:Label ID="Label8" CssClass="Label8" runat="server" Text="目标筹资"></asp:Label>
                                     <asp:Label ID="Label9" CssClass="Label9" runat="server" Text='<%#Eval("TargetAmountOfMoney")%>'></asp:Label>
                                 </div>

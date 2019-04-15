@@ -80,7 +80,7 @@ namespace ZhongChouWeb
         {
             UserCommentaryTb ut = new UserCommentaryTb();
             //Session["id"]= 1001;
-            ut.ProjectID=Convert.ToInt32(Request["ProjectID"]);
+            ut.ProjectID = Convert.ToInt32(Request["ProjectID"]);
             //传值请自己写吧
             DataSet ds = ub.Lxfs(ut);
             Repeater7.DataSource = ds.Tables[0];
@@ -129,19 +129,25 @@ namespace ZhongChouWeb
         //添加评论
         protected void Button7_Click(object sender, EventArgs e)
         {
-            UserCommentaryTb ut = new UserCommentaryTb();
-            //这里是一个用户的传值 但是我没想到该怎么传现在没连接上不好弄
-            ut.UserEmail = Session["UserEmail"].ToString();
-            ut.ProjectID = Convert.ToInt32(Request["ProjectID"]);
-            ut.CommentatorID = Convert.ToInt32(Session["Id"]);
-            ut.Content = this.TextBox2.Text;
-            int rows = ub.Zjpl(ut);
-            if (rows>0)
+            if (Session["Logins"] != null)//判断用户是否登录   没有登录则跳转到登录界面，登录成功再跳回来
             {
-                Response.Write("<script>alert('评论成功')</script>");
-                this.TextBox2.Text = null;
-                Plchax();
-
+                UserCommentaryTb ut = new UserCommentaryTb();
+                //这里是一个用户的传值 但是我没想到该怎么传现在没连接上不好弄
+                ut.UserEmail = Session["UserEmail"].ToString();
+                ut.ProjectID = Convert.ToInt32(Request["ProjectID"]);
+                ut.CommentatorID = Convert.ToInt32(Session["Id"]);
+                ut.Content = this.TextBox2.Text;
+                int rows = ub.Zjpl(ut);
+                if (rows > 0)
+                {
+                    Response.Write("<script>alert('评论成功')</script>");
+                    this.TextBox2.Text = null;
+                    Plchax();
+                }
+            }
+            else
+            {
+                Response.Redirect("Login.aspx?ProjectID=" + Convert.ToInt32(Request["ProjectID"]));
             }
         }
         /// <summary>
@@ -175,7 +181,15 @@ namespace ZhongChouWeb
 
         void SupportProjectsBtn()
         {
-            Response.Redirect("SupportProjects.aspx?ProjectID=" + Convert.ToInt32(Request["ProjectID"]));
+            if (Session["Logins"] != null)//判断用户是否登录   没有登录则跳转到登录界面，登录成功再跳回来
+            {
+                Response.Redirect("SupportProjects.aspx?ProjectID=" + Convert.ToInt32(Request["ProjectID"]));
+            }
+            else
+            {
+                Response.Redirect("Login.aspx?ProjectID=" + Convert.ToInt32(Request["ProjectID"]));
+            }
+
             //sp.SupportProjectsMoney = 
         }
         #endregion

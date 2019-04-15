@@ -18,14 +18,14 @@ namespace zhongchouWebXYM
         {
             if (!IsPostBack)
             {
-                DataSet ds = pb.c();
+                DataSet ds = pb.c(Session["UserEmail"].ToString());
                 DataTable dt = ds.Tables[0];
-                this.Label1.Text = dt.Rows[0][0].ToString();
-                this.Label2.Text = "个性签名：" + dt.Rows[0][2].ToString();
-                this.Label3.Text = "加入时间：" + dt.Rows[0][3].ToString();
-                this.Label4.Text = "所在地区：" + dt.Rows[0][4].ToString();
-                this.Image1.ImageUrl = dt.Rows[0][5].ToString();
-                p.UserEmail = dt.Rows[0]["UserEmail"].ToString();
+                this.Label1.Text = dt.Rows[0]["UserName"].ToString();
+                this.Label2.Text = "个性签名：" + dt.Rows[0]["PersonalizedSignature"].ToString();
+                this.Label3.Text = "加入时间：" + dt.Rows[0]["RegistrationTime"].ToString();
+                this.Label4.Text = "所在地区：" + dt.Rows[0]["UserAddress"].ToString();
+                this.Image1.ImageUrl = dt.Rows[0]["UserHeadPortrait"].ToString();
+                p.UserEmail = Session["UserEmail"].ToString();
                 //Response.Write("<script>alert('" + p.UserEmail + "')</script>");
                 DataSet ds1 = pb.repeaterc1(p);
                 this.Repeater1.DataSource = ds1.Tables["zcDB"];

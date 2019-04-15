@@ -55,7 +55,7 @@ namespace zhongchouWeb.Views
                 else
                 {
                     Response.Write("<script>alert('登录失败')</script>");
-                } 
+                }
             }
             else
             {
@@ -79,7 +79,7 @@ namespace zhongchouWeb.Views
                     //Response.Cookies.Add(UserHeadPortrait);
                     Session["UserEmail"] = dt.Rows[0]["UserEmail"].ToString();
                     Session["UserHeadPortrait"] = dt.Rows[0]["UserHeadPortrait"].ToString();//获取用户头像路径
-                    
+
                     //foreach (DataRow item in dt.Rows)
                     //{
                     //    Session["UserNames"] = item;
@@ -89,12 +89,21 @@ namespace zhongchouWeb.Views
                     Session["Logins"] = "登录成功";
                     //Response.Cookies["Logins"].Value = "登录成功";
                     //Response.Cookies["Logins"].Expires = DateTime.Now.AddMinutes(1);
-                    Response.Redirect("Index.aspx");
+
+                    if (Request["ProjectID"] != null && Request["ProjectID"].ToString() != "")
+                    {
+                        Response.Redirect("BrowseProject.aspx?ProjectID=" + Convert.ToInt32(Request["ProjectID"]));//登录成功。如果是从支持项目页面跳过来则再次跳回去
+                    }
+                    else
+                    {
+                        Response.Redirect("Index.aspx");
+                    }
+
                 }
                 else
                 {
                     Response.Write("<script>alert('登录失败')</script>");
-                } 
+                }
             }
         }
     }

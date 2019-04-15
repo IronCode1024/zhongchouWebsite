@@ -116,7 +116,7 @@ namespace DAL
         }
         public int update(UserInfo ui)
         {
-            string sql = string.Format("update UserInfoTb set UserName='{0}',UserSex='{1}',UserAddress='{2}',PersonalizedSignature='{3}' where UserEmail='{4}'", ui.Name, ui.Email, ui.UserSex, ui.PersonalizedSignature, ui.Email);
+            string sql = string.Format("update UserInfoTb set UserName='{0}',UserSex='{1}',UserAddress='{2}',PersonalizedSignature='{3}' where UserEmail='{4}'", ui.Name, ui.UserSex,ui.UserAddress, ui.PersonalizedSignature, ui.Email);
             int rows = DBHelper.ExecuteNonQuery(sql);
             return rows;
         }

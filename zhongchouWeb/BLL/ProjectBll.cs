@@ -35,9 +35,9 @@ namespace BLL
         {
             return pd.cc3(p);
         }
-        public DataSet c()
+        public DataSet c(string email)
         {
-            return pd.c();
+            return pd.c(email);
         }
     }
 }

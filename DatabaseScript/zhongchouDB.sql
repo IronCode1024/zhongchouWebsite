@@ -62,7 +62,7 @@ CREATE TABLE ProjectTb
     NumberOfProjectSupport INT NULL,		--项目支持人数
 	ProjectAddress NVARCHAR(500) NULL,      --项目发起地址
 	PublicWelfare NVARCHAR(10) NOT NULL,    --众筹类型  （公益（无回报）、非公益（有回报））
-	ReleaseStatus NVARCHAR(20) NOT NULL,	--发布状态      (发布中、已成功、已失败)
+	ReleaseStatus NVARCHAR(20) NOT NULL,	--发布状态      (待审核、发布中、已成功、已失败、冻结项目)
 	ProjectUpdateTime DATETIME,				--项目更新时间
 	ReleaseDate DATETIME NOT NULL			--发布日期（发布日的日期）
 )											
@@ -111,3 +111,8 @@ insert into BankTb values('884488123545987142','小罗伯特唐尼','中国银行','中国银
 select UserHeadPortrait,UserName,Content,CommentaryDate from UserCommentaryTb,UserInfoTb,ProjectTb
 where UserCommentaryTb.ProjectID=ProjectTb.ProjectID and UserCommentaryTb.CommentatorID=UserInfoTb.Id
 and UserCommentaryTb.ProjectID='106'
+
+
+
+select top 8 ProjectID,ProjectCover,ProjectImageUrl,UserID,ProjectName,ProjectOverview,ProjectType,ProjectTargetDays,TargetAmountOfMoney,AlreadyRaisedMoney,NumberOfProjectSupport,PublicWelfare,ReleaseStatus,ProjectUpdateTime,ReleaseDate 
+from ProjectTb where ReleaseStatus='发布中' order by AlreadyRaisedMoney desc
