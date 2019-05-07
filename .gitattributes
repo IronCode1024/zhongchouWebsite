@@ -1,3 +1,5 @@
 *.js linguist-language=html 
 *.css linguist-language=html
 *.html linguist-language=html 
+*.cs linguist-language=html 
+*.aspx linguist-language=html 
