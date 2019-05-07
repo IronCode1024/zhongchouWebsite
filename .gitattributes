@@ -1,5 +1,5 @@
-*.js linguist-language=.NET 
-*.css linguist-language=.NET 
-*.html linguist-language=.NET  
-*.cs linguist-language=.NET  
-*.aspx linguist-language=.NET  
+*.js linguist-language=C#
+*.css linguist-language=C#
+*.html linguist-language=C# 
+*.cs linguist-language=C# 
+*.aspx linguist-language=C#
