@@ -113,7 +113,7 @@ namespace zhongchouWeb.Views
                 // 设置发送方的邮件信息,例如使用网易的smtp
                 string smtpServer = "smtp.qq.com"; //SMTP服务器
                 string mailFrom = "jfblackbird@foxmail.com"; //登陆用户名
-                string userPassword = "ltzmudrssqzfhihe";//登陆密码
+                string userPassword = "";//登陆密码 需要在邮箱服务商那申请
 
                 // 邮件服务设置
                 SmtpClient smtpClient = new SmtpClient();
